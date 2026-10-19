@@ -28,7 +28,7 @@
    ```bash
    git add .
    git commit -m "finish my assigned pages"
-  git push origin <ชื่อ Branch ของตัวเอง>
+   git push origin <ชื่อ Branch ของตัวเอง>
    ```
 
 
