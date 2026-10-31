@@ -6,6 +6,7 @@
     <title>Eddoor</title>
     <link rel="stylesheet" href="css/generals.css">
     <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/trade.css">
     <link rel="shortcut icon" href="img/logo/EddoorFavicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
@@ -20,15 +21,16 @@
             </a>
 
             <nav class="navbar_links">
-                <a class="navbar_link is-active" href="index.html">หน้าหลัก</a>
+                <a class="navbar_link" href="index.html">หน้าหลัก</a>
                 <a class="navbar_link" href="activity.html">กิจกรรม</a>
-                <a class="navbar_link" href="trade.html">แลกของรางวัล</a>
+                <a class="navbar_link is-active" href="trade.html">แลกของรางวัล</a>
+                <a class="navbar_link" href="#">วิธีใช้งาน</a>
                 <a class="navbar_link" href="contact.html">ติดต่อเรา</a>
             </nav>
 
             <div class="navbar_actions">
                 <a class="coin-balance" href="trade.html">
-                    <img src="img/assets/coin.svg" alt="Coin balance">0 COIN
+                    <img src="img/assets/coin.svg" alt="Coin balance">1,250 COIN
                 </a>
                 <a class="login-button" href="#">Login / Sign up</a>
             </div>
@@ -42,10 +44,11 @@
                 <nav class="mobile-menu_panel">
                     <a href="index.html">หน้าหลัก</a>
                     <a href="activity.html">กิจกรรม</a>
-                    <a href="trade.html">แลกของรางวัล</a>
+                    <a class="is-active" href="trade.html">แลกของรางวัล</a>
+                    <a href="#">วิธีใช้งาน</a>
                     <a href="contact.html">ติดต่อเรา</a>
                     <a class="coin-balance" href="trade.html">
-                        <img src="img/assets/coin-white.svg" alt="Coin balance">0 COIN
+                        <img src="img/assets/coin-white.svg" alt="Coin balance">1,250 COIN
                     </a>
                     <a class="login-button" href="#login">Login / Sign up</a>
                 </nav>
@@ -55,7 +58,529 @@
 
 
     <!-- BODY -->
-    <main>
+    <main class="trade-page">
+        <!-- กล่องแสดงข้อมูลเหรียญและที่อยู่จัดส่งของผู้ใช้ -->
+        <section class="trade-hero-section">
+            <div class="trade-hero-card">
+                
+                <!-- หัวข้อเปลี่ยน COIN เป็นความสุข -->
+                <div class="hero-top-row">
+                    <!-- ฝั่งซ้าย: หัวข้อและปุ่มจัดการเหรียญ -->
+                    <div class="hero-info-col">
+                        <span class="hero-tag">รางวัลของคนออกไปลอง</span>
+                        <h1 class="hero-title">เปลี่ยน COIN เป็นความสุข</h1>
+                        <p class="hero-subtitle">ความพยายามของคุณ แลกเป็นของที่ใช้ได้จริง</p>
+                        <div class="hero-btn-group">
+                            <a href="#" class="btn btn-exchange-friend">แลกเหรียญกับเพื่อน</a>
+                            <a href="#" class="btn btn-get-coin">รับเหรียญเพิ่ม</a>
+                        </div>
+                    </div>
+
+                    <!-- กล่องแสดงยอดเหรียญสะสม -->
+                    <div class="hero-coin-col">
+                        <div class="my-coin-box">
+                            <div class="my-coin-header">
+                                <img src="img/assets/coin.svg" alt="Coin Icon" class="coin-icon">
+                                <span>เหรียญของคุณตอนนี้</span>
+                            </div>
+                            <div class="my-coin-amount">1,250</div>
+                            <div class="my-coin-footer">
+                                <span>COIN พร้อมแลก · ไม่มีมูลค่าเงินสด</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ที่อยู่สำหรับจัดส่งของรางวัล -->
+                <div class="hero-address-card">
+                    <div class="address-left">
+                        <div class="address-icon-circle">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="address-details">
+                            <h4 class="address-title">ส่งถึง: มินท์</h4>
+                            <p class="address-text">88/8 ถ.พหลโยธิน แขวงสามเสนใน เขตพญาไท กรุงเทพฯ 10400 · 089-959-1234</p>
+                        </div>
+                    </div>
+                    <div class="address-right">
+                        <button type="button" class="btn btn-edit-address">แก้ไขที่อยู่</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 2. ส่วนสถานะการจัดส่งและประวัติการแลกเหรียญ -->
+        <section class="shipping-history-section">
+            <!-- ส่วนหัวของ Section -->
+            <div class="section-header-row">
+                <h2 class="section-title">การจัดส่งและประวัติการใช้เหรียญ</h2>
+                <a href="#" class="view-all-link">ดูประวัติทั้งหมด</a>
+            </div>
+
+            <!-- กล่องเนื้อหาแบ่ง 2 คอลัมน์ -->
+            <div class="shipping-history-grid">
+                
+                <!-- คอลัมน์ซ้าย: รายการของรางวัลที่สั่งและสถานะจัดส่ง -->
+                <div class="shipping-list">
+                    <!-- รายการที่ 1 -->
+                    <div class="shipping-card">
+                        <div class="shipping-card-content">
+                            <span class="status-badge status-shipping">กำลังจัดส่ง</span>
+                            <div class="shipping-info">
+                                <h3 class="shipping-item-name">กระเป๋าผ้าแคนวาสสีม่วง</h3>
+                                <p class="shipping-item-meta">ED-261009 · 1 ชิ้น · ใช้ 300 COIN</p>
+                            </div>
+                        </div>
+                        <div class="shipping-card-arrow">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- รายการที่ 2 -->
+                    <div class="shipping-card">
+                        <div class="shipping-card-content">
+                            <span class="status-badge status-delivered">ส่งแล้ว</span>
+                            <div class="shipping-info">
+                                <h3 class="shipping-item-name">ชุดสติกเกอร์นักสำรวจ</h3>
+                                <p class="shipping-item-meta">ED-261000 · 1 ชิ้น · ใช้ 100 COIN</p>
+                            </div>
+                        </div>
+                        <div class="shipping-card-arrow">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- รายการที่ 3 -->
+                    <div class="shipping-card">
+                        <div class="shipping-card-content">
+                            <span class="status-badge status-delivered">ส่งแล้ว</span>
+                            <div class="shipping-info">
+                                <h3 class="shipping-item-name">หมวกนักผจญภัยลายหมาป่า</h3>
+                                <p class="shipping-item-meta">ED-260089 · 1 ชิ้น · ใช้ 500 COIN</p>
+                            </div>
+                        </div>
+                        <div class="shipping-card-arrow">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- คอลัมน์ขวา: การ์ดประวัติการแลกเหรียญ -->
+                <div class="coin-history-card">
+                    <div class="coin-history-header">
+                        <h3 class="history-card-title">ประวัติการแลกเหรียญ</h3>
+                        <p class="history-total-sub">ยอดก่อนรายการทั้งหมด: 1,650 COIN</p>
+                    </div>
+
+                    <div class="history-items-list">
+                        <!-- รายการแลก 1 -->
+                        <div class="history-item">
+                            <div class="history-item-left">
+                                <h4 class="history-item-name">กระเป๋าผ้าแคนวาสสีม่วง</h4>
+                                <span class="history-item-date">9 ต.ค. 2569 · กำลังจัดส่ง · 1 ชิ้น</span>
+                            </div>
+                            <div class="history-item-coin">-300</div>
+                        </div>
+
+                        <!-- รายการแลก 2 -->
+                        <div class="history-item">
+                            <div class="history-item-left">
+                                <h4 class="history-item-name">ชุดสติกเกอร์นักสำรวจ</h4>
+                                <span class="history-item-date">5 ต.ค. 2569 · ได้รับแล้ว · 1 ชิ้น</span>
+                            </div>
+                            <div class="history-item-coin">-100</div>
+                        </div>
+
+                        <!-- รายการแลก 3 -->
+                        <div class="history-item">
+                            <div class="history-item-left">
+                                <h4 class="history-item-name">หมวกนักผจญภัยลายหมาป่า</h4>
+                                <span class="history-item-date">1 ต.ค. 2569 · ได้รับแล้ว · 1 ชิ้น</span>
+                            </div>
+                            <div class="history-item-coin">-500</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 3. ส่วนค้นหา ตัวกรอง และรายการของรางวัลที่แลกได้ -->
+        <section class="rewards-shop-section">
+            <div class="rewards-layout">
+
+                <!-- คอลัมน์ซ้าย: ตัวกรองรางวัล (Sidebar Filter) -->
+                <aside class="filter-sidebar">
+                    <h3 class="filter-main-title">ตัวกรองรางวัล</h3>
+
+                    <form class="filter-form" onsubmit="event.preventDefault();">
+                        <!-- 1. ค้นหา -->
+                        <div class="filter-group">
+                            <label for="filter-search" class="filter-label">ค้นหา</label>
+                            <div class="search-input-box">
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                <input type="text" id="filter-search" placeholder="ค้นหา" class="filter-input">
+                            </div>
+                        </div>
+
+                        <!-- 2. หมวดหมู่ -->
+                        <div class="filter-group">
+                            <label for="filter-category" class="filter-label">หมวดหมู่</label>
+                            <div class="select-box">
+                                <select id="filter-category" class="filter-select">
+                                    <option value="">ทุกหมวดหมู่</option>
+                                    <option value="equipment">อุปกรณ์การเรียน</option>
+                                    <option value="craft">ของทำมือ & งานศิลปะ</option>
+                                    <option value="toys">ของเล่นและโมเดลสะสม</option>
+                                    <option value="accessories">หมวกและเครื่องประดับ</option>
+                                    <option value="sports">อุปกรณ์กีฬา</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+
+                        <!-- 3. รีวิว -->
+                        <div class="filter-group">
+                            <label class="filter-label">รีวิว</label>
+                            <div class="review-options">
+                                <label class="radio-label">
+                                    <input type="radio" name="rating-filter">
+                                    <span class="stars-view">
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                    </span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="rating-filter">
+                                    <span class="stars-view">
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                    </span>
+                                    <span class="rating-text">ขึ้นไป</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="rating-filter">
+                                    <span class="stars-view">
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                    </span>
+                                    <span class="rating-text">ขึ้นไป</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="rating-filter">
+                                    <span class="stars-view">
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                    </span>
+                                    <span class="rating-text">ขึ้นไป</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="rating-filter">
+                                    <span class="stars-view">
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                    </span>
+                                    <span class="rating-text">ขึ้นไป</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 4. ราคาเหรียญ -->
+                        <div class="filter-group">
+                            <label class="filter-label">ราคา</label>
+                            <div class="price-range-inputs">
+                                <input type="number" value="150" class="price-input" aria-label="ราคาต่ำสุด">
+                                <span class="price-separator">ถึง</span>
+                                <input type="number" value="500" class="price-input" aria-label="ราคาสูงสุด">
+                            </div>
+                        </div>
+
+                        <!-- 5. สภาพสินค้า -->
+                        <div class="filter-group">
+                            <label class="filter-label">สภาพสินค้า</label>
+                            <div class="checkbox-list">
+                                <div class="checkbox-item">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span>ใหม่</span>
+                                    </label>
+                                    <span class="item-count">24</span>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span>มือสอง</span>
+                                    </label>
+                                    <span class="item-count">15</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. สำหรับช่วงอายุ -->
+                        <div class="filter-group">
+                            <label class="filter-label">สำหรับช่วงอายุ</label>
+                            <div class="checkbox-list">
+                                <div class="checkbox-item">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox">
+                                        <span>15-20 ปี</span>
+                                    </label>
+                                    <span class="item-count">14</span>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked>
+                                        <span>7-15 ปีและครอบครัว</span>
+                                    </label>
+                                    <span class="item-count">15</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ปุ่มล้างตัวกรองและปุ่มใช้งาน -->
+                        <div class="filter-actions">
+                            <button type="reset" class="btn-clear-filter">ล้างตัวกรองทั้งหมด</button>
+                            <button type="submit" class="btn btn-apply-filter">ใช้ตัวกรอง</button>
+                        </div>
+                    </form>
+                </aside>
+
+                <!-- คอลัมน์ขวา: รายการของรางวัล (Rewards List) -->
+                <div class="rewards-content">
+                    
+                    <!-- ส่วนหัว: ชื่อหัวข้อและตัวเลือกการเรียงลำดับ -->
+                    <div class="rewards-header-row">
+                        <h2 class="section-title">แลกของรางวัล</h2>
+                        <div class="sort-dropdown-box">
+                            <label for="sort-select" class="sort-label">เรียงตาม:</label>
+                            <div class="sort-select-wrapper">
+                                <select id="sort-select" class="sort-select">
+                                    <option value="latest">ล่าสุด</option>
+                                    <option value="price-asc">เหรียญน้อยไปมาก</option>
+                                    <option value="price-desc">เหรียญมากไปน้อย</option>
+                                    <option value="popular">ยอดนิยม</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down sort-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- รายการการ์ดของรางวัล -->
+                    <div class="rewards-list">
+                        
+                        <!-- การ์ดสินค้า 1: ตุ๊กตากระต่ายถักไหมพรม -->
+                        <article class="reward-card">
+                            <div class="reward-img-container">
+                                <img src="https://images.unsplash.com/photo-1582845512747-e42001c95638?auto=format&fit=crop&w=600&q=80" alt="Floating Phone" class="reward-image">
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="reward-details">
+                                <h3 class="reward-name">Floating Phone</h3>
+                                <p class="reward-creator">โดย <strong>Gretchen</strong></p>
+                                <div class="reward-rating-row">
+                                    <div class="rating-stars">
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                    </div>
+                                    <span class="rating-count">10 รีวิว</span>
+                                </div>
+                                <p class="reward-redeemed">แลกแล้ว 15 ชิ้น</p>
+                            </div>
+                            <div class="reward-action-col">
+                                <div class="coin-price-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>250 COIN</span>
+                                </div>
+                                <a href="#" class="btn btn-reward-detail">ดูรายละเอียด</a>
+                            </div>
+                        </article>
+
+                        <!-- การ์ดสินค้า 2: ตัวต่อโมเดลผจญภัย -->
+                        <article class="reward-card">
+                            <div class="reward-img-container">
+                                <img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?auto=format&fit=crop&w=600&q=80" alt="Floating Phone" class="reward-image">
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="reward-details">
+                                <h3 class="reward-name">Floating Phone</h3>
+                                <p class="reward-creator">โดย <strong>นภพร</strong></p>
+                                <div class="reward-rating-row">
+                                    <div class="rating-stars">
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                    </div>
+                                    <span class="rating-count">10 รีวิว</span>
+                                </div>
+                                <p class="reward-redeemed">แลกแล้ว 15 ชิ้น</p>
+                            </div>
+                            <div class="reward-action-col">
+                                <div class="coin-price-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>500 COIN</span>
+                                </div>
+                                <a href="#" class="btn btn-reward-detail">ดูรายละเอียด</a>
+                            </div>
+                        </article>
+
+                        <!-- การ์ดสินค้า 3: กล่องลวดลาย TNT แฟนซี -->
+                        <article class="reward-card">
+                            <div class="reward-img-container">
+                                <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80" alt="Floating Phone" class="reward-image">
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="reward-details">
+                                <h3 class="reward-name">Floating Phone</h3>
+                                <p class="reward-creator">โดย <strong>Gretchen</strong></p>
+                                <div class="reward-rating-row">
+                                    <div class="rating-stars">
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-regular fa-star star-empty"></i>
+                                    </div>
+                                    <span class="rating-count">10 รีวิว</span>
+                                </div>
+                                <p class="reward-redeemed">แลกแล้ว 15 ชิ้น</p>
+                            </div>
+                            <div class="reward-action-col">
+                                <div class="coin-price-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>500 COIN</span>
+                                </div>
+                                <a href="#" class="btn btn-reward-detail">ดูรายละเอียด</a>
+                            </div>
+                        </article>
+
+                        <!-- การ์ดสินค้า 4: ลูกเทนนิสฝึกทักษะ -->
+                        <article class="reward-card">
+                            <div class="reward-img-container">
+                                <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=600&q=80" alt="Floating Phone" class="reward-image">
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="reward-details">
+                                <h3 class="reward-name">Floating Phone</h3>
+                                <p class="reward-creator">โดย <strong>Gretchen</strong></p>
+                                <div class="reward-rating-row">
+                                    <div class="rating-stars">
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                    </div>
+                                    <span class="rating-count">10 รีวิว</span>
+                                </div>
+                                <p class="reward-redeemed">แลกแล้ว 15 ชิ้น</p>
+                            </div>
+                            <div class="reward-action-col">
+                                <div class="coin-price-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>400 COIN</span>
+                                </div>
+                                <a href="#" class="btn btn-reward-detail">ดูรายละเอียด</a>
+                            </div>
+                        </article>
+
+                        <!-- การ์ดสินค้า 5: กล่องของขวัญผูกโบว์ -->
+                        <article class="reward-card">
+                            <div class="reward-img-container">
+                                <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=600&q=80" alt="Floating Phone" class="reward-image">
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="reward-details">
+                                <h3 class="reward-name">Floating Phone</h3>
+                                <p class="reward-creator">โดย <strong>Gretchen</strong></p>
+                                <div class="reward-rating-row">
+                                    <div class="rating-stars">
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                        <i class="fa-solid fa-star star-filled"></i>
+                                    </div>
+                                    <span class="rating-count">10 รีวิว</span>
+                                </div>
+                                <p class="reward-redeemed">แลกแล้ว 15 ชิ้น</p>
+                            </div>
+                            <div class="reward-action-col">
+                                <div class="coin-price-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>250 COIN</span>
+                                </div>
+                                <a href="#" class="btn btn-reward-detail">ดูรายละเอียด</a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- แถบเลขหน้า (Pagination) -->
+                    <div class="pagination-container">
+                        <span class="pagination-info">แสดง 15 รายการรางวัลทั้งหมด</span>
+                        <nav class="pagination-nav" aria-label="หน้ารายการของรางวัล">
+                            <a href="#" class="page-btn page-prev">ก่อนหน้า</a>
+                            <a href="#" class="page-number is-active">1</a>
+                            <a href="#" class="page-number">2</a>
+                            <a href="#" class="page-number">3</a>
+                            <a href="#" class="page-btn page-next">ถัดไป</a>
+                        </nav>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 4. ส่วนเชิญชวนสร้างของรางวัล (CTA Banner สีเหลือง) -->
+        <section class="cta-banner-section">
+            <div class="cta-banner-content">
+                <div class="cta-banner-text">
+                    <h2 class="cta-banner-title">อยากแบ่งปันสินค้าหรือของที่คุณมีไหม?</h2>
+                    <p class="cta-banner-subtitle">มาเข้าร่วมกับเราแล้วร่วมกันสร้างรางวัลจูงใจให้กับทุกคนกัน!</p>
+                </div>
+                <div class="cta-banner-action">
+                    <a href="#" class="btn btn-create-reward">
+                        <span>สร้างของรางวัลของคุณ</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
     </main>
 

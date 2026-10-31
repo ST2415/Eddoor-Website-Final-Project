@@ -18,10 +18,12 @@ html {
     --color-yellow: #ffdc00;
     --color-light: #fff;
     --color-dark: #000;
+    --color-grey: #737373;
     --content-width: 1256px;
     
     /* FONT */
     --ff: "Mitr", "Prompt", sans-serif;
+    --ff-text: "Prompt", sans-serif;
     --fs-h1: 64px;
     --fs-h2: 48px;
     --fs-h3: 32px;
@@ -37,6 +39,9 @@ html {
     /* GENERALS */
     --border-coin-balance: 2px solid var(--color-yellow);
     --border-social-link: 1px solid var(--color-light);
+    --border-general: 2px solid var(--color-primary);
+    --border-green: 2px solid var(--color-green);
+    
 }
 
 body {
