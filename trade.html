@@ -57,15 +57,17 @@
     </header>
 
 
+    
     <!-- BODY -->
     <main class="trade-page">
-        <!-- กล่องแสดงข้อมูลเหรียญและที่อยู่จัดส่งของผู้ใช้ -->
+
+        <!-- SECTION : กล่องแสดงข้อมูลเหรียญและที่อยู่จัดส่งของผู้ใช้ -->
         <section class="trade-hero-section">
             <div class="trade-hero-card">
                 
                 <!-- หัวข้อเปลี่ยน COIN เป็นความสุข -->
                 <div class="hero-top-row">
-                    <!-- ฝั่งซ้าย: หัวข้อและปุ่มจัดการเหรียญ -->
+                    <!-- หัวข้อและปุ่มจัดการเหรียญ -->
                     <div class="hero-info-col">
                         <span class="hero-tag">รางวัลของคนออกไปลอง</span>
                         <h1 class="hero-title">เปลี่ยน COIN เป็นความสุข</h1>
@@ -111,7 +113,7 @@
         </section>
 
 
-        <!-- 2. ส่วนสถานะการจัดส่งและประวัติการแลกเหรียญ -->
+        <!-- SECTION : ส่วนสถานะการจัดส่งและประวัติการแลกเหรียญ -->
         <section class="shipping-history-section">
             <!-- ส่วนหัวของ Section -->
             <div class="section-header-row">
@@ -119,12 +121,12 @@
                 <a href="#" class="view-all-link">ดูประวัติทั้งหมด</a>
             </div>
 
-            <!-- กล่องเนื้อหาแบ่ง 2 คอลัมน์ -->
+            <!-- ส่วนที่เป็นกล่องแสดงการจัดส่งและประวัติการแลกเหรียญ -->
             <div class="shipping-history-grid">
                 
-                <!-- คอลัมน์ซ้าย: รายการของรางวัลที่สั่งและสถานะจัดส่ง -->
+                <!-- รายการของรางวัลที่สั่งและสถานะจัดส่ง -->
                 <div class="shipping-list">
-                    <!-- รายการที่ 1 -->
+
                     <div class="shipping-card">
                         <div class="shipping-card-content">
                             <span class="status-badge status-shipping">กำลังจัดส่ง</span>
@@ -138,7 +140,6 @@
                         </div>
                     </div>
 
-                    <!-- รายการที่ 2 -->
                     <div class="shipping-card">
                         <div class="shipping-card-content">
                             <span class="status-badge status-delivered">ส่งแล้ว</span>
@@ -152,7 +153,6 @@
                         </div>
                     </div>
 
-                    <!-- รายการที่ 3 -->
                     <div class="shipping-card">
                         <div class="shipping-card-content">
                             <span class="status-badge status-delivered">ส่งแล้ว</span>
@@ -167,7 +167,7 @@
                     </div>
                 </div>
 
-                <!-- คอลัมน์ขวา: การ์ดประวัติการแลกเหรียญ -->
+                <!-- กล่องประวัติการแลกเหรียญ -->
                 <div class="coin-history-card">
                     <div class="coin-history-header">
                         <h3 class="history-card-title">ประวัติการแลกเหรียญ</h3>
@@ -175,7 +175,7 @@
                     </div>
 
                     <div class="history-items-list">
-                        <!-- รายการแลก 1 -->
+
                         <div class="history-item">
                             <div class="history-item-left">
                                 <h4 class="history-item-name">กระเป๋าผ้าแคนวาสสีม่วง</h4>
@@ -184,7 +184,6 @@
                             <div class="history-item-coin">-300</div>
                         </div>
 
-                        <!-- รายการแลก 2 -->
                         <div class="history-item">
                             <div class="history-item-left">
                                 <h4 class="history-item-name">ชุดสติกเกอร์นักสำรวจ</h4>
@@ -193,7 +192,6 @@
                             <div class="history-item-coin">-100</div>
                         </div>
 
-                        <!-- รายการแลก 3 -->
                         <div class="history-item">
                             <div class="history-item-left">
                                 <h4 class="history-item-name">หมวกนักผจญภัยลายหมาป่า</h4>
@@ -208,16 +206,17 @@
         </section>
 
 
-        <!-- 3. ส่วนค้นหา ตัวกรอง และรายการของรางวัลที่แลกได้ -->
+
+        <!-- SECTION : ส่วนค้นหา ตัวกรอง และรายการของรางวัลที่แลกได้ -->
         <section class="rewards-shop-section">
             <div class="rewards-layout">
 
-                <!-- คอลัมน์ซ้าย: ตัวกรองรางวัล (Sidebar Filter) -->
+                <!-- กล่องตัวกรองรางวัล (Sidebar Filter) -->
                 <aside class="filter-sidebar">
                     <h3 class="filter-main-title">ตัวกรองรางวัล</h3>
 
                     <form class="filter-form" onsubmit="event.preventDefault();">
-                        <!-- 1. ค้นหา -->
+                        <!-- ค้นหา -->
                         <div class="filter-group">
                             <label for="filter-search" class="filter-label">ค้นหา</label>
                             <div class="search-input-box">
@@ -226,7 +225,7 @@
                             </div>
                         </div>
 
-                        <!-- 2. หมวดหมู่ -->
+                        <!-- เลือกหมวดหมู่ -->
                         <div class="filter-group">
                             <label for="filter-category" class="filter-label">หมวดหมู่</label>
                             <div class="select-box">
@@ -242,7 +241,7 @@
                             </div>
                         </div>
 
-                        <!-- 3. รีวิว -->
+                        <!-- เลือกรีวิว -->
                         <div class="filter-group">
                             <label class="filter-label">รีวิว</label>
                             <div class="review-options">
@@ -303,7 +302,7 @@
                             </div>
                         </div>
 
-                        <!-- 4. ราคาเหรียญ -->
+                        <!-- เลือกราคาเหรียญ -->
                         <div class="filter-group">
                             <label class="filter-label">ราคา</label>
                             <div class="price-range-inputs">
@@ -313,7 +312,7 @@
                             </div>
                         </div>
 
-                        <!-- 5. สภาพสินค้า -->
+                        <!-- เลือกสภาพสินค้า -->
                         <div class="filter-group">
                             <label class="filter-label">สภาพสินค้า</label>
                             <div class="checkbox-list">
@@ -334,7 +333,7 @@
                             </div>
                         </div>
 
-                        <!-- 6. สำหรับช่วงอายุ -->
+                        <!-- เลือกช่วงอายุ -->
                         <div class="filter-group">
                             <label class="filter-label">สำหรับช่วงอายุ</label>
                             <div class="checkbox-list">
@@ -363,10 +362,12 @@
                     </form>
                 </aside>
 
-                <!-- คอลัมน์ขวา: รายการของรางวัล (Rewards List) -->
+
+
+                <!-- รายการของรางวัล  -->
                 <div class="rewards-content">
                     
-                    <!-- ส่วนหัว: ชื่อหัวข้อและตัวเลือกการเรียงลำดับ -->
+                    <!-- ชื่อหัวข้อและตัวเลือกการเรียงลำดับ -->
                     <div class="rewards-header-row">
                         <h2 class="section-title">แลกของรางวัล</h2>
                         <div class="sort-dropdown-box">
@@ -566,7 +567,7 @@
         </section>
 
 
-        <!-- 4. ส่วนเชิญชวนสร้างของรางวัล (CTA Banner สีเหลือง) -->
+        <!-- SECTION : ส่วนเชิญชวนสร้างของรางวัล (Banner ข้างล่าง) -->
         <section class="cta-banner-section">
             <div class="cta-banner-content">
                 <div class="cta-banner-text">
