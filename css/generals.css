@@ -14,6 +14,7 @@ html {
     /* COLOR */
     color-scheme: light;
     --color-primary: #3e2b67;
+    --color-primary-fade: #3e2b6710;
     --color-green: #00dfa2;
     --color-yellow: #ffdc00;
     --color-light: #fff;

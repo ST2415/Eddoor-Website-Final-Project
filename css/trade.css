@@ -1,9 +1,6 @@
-/* --------------------------------------------------------------------------
-   0. โครงสร้างพื้นฐานของหน้า Trade
-   -------------------------------------------------------------------------- */
 .trade-page {
     width: 100%;
-    background-color: #fcfbfe;
+    background-color: var(--color-light);
     overflow-x: hidden;
 }
 
@@ -12,6 +9,7 @@
 .trade-hero-section {
     width: 100%;
     padding: 32px 92px 24px;
+    background-color: var(--color-primary-fade);
 }
 
 .trade-hero-card {
@@ -22,7 +20,7 @@
     box-shadow: 0 12px 32px rgba(62, 43, 103, 0.16);
 }
 
-/* แถวบน: ข้อมูลแนะนำฝั่งซ้าย + การ์ดยอดเหรียญฝั่งขวา */
+/* ข้อมูลแนะนำฝั่งซ้าย + การ์ดยอดเหรียญฝั่งขวา */
 .hero-top-row {
     display: flex;
     justify-content: space-between;
@@ -210,10 +208,13 @@
 }
 
 
+
+
 /* SECTION : สถานะการจัดส่งและประวัติการแลกเหรียญ */
 .shipping-history-section {
     width: 100%;
     padding: 32px 92px;
+    background-color: var(--color-primary-fade);
 }
 
 .section-header-row {
@@ -232,12 +233,12 @@
 .view-all-link {
     font-size: 14px;
     font-weight: 500;
-    color: #3e2b67;
+    color: var(--color-primary);
     transition: color 0.2s ease;
 }
 
 .view-all-link:hover {
-    color: #00dfa2;
+    color: var(--color-green);
 }
 
 /* สถานะและประวัติของการจัดส่งและการใช้เหรียญ */
@@ -259,7 +260,7 @@
     background-color: var(--color-light);
     border: var(--border-general);
     border-radius: 16px;
-    padding: 18px 24px;
+    padding: 20px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -365,6 +366,7 @@
     font-family: var(--ff-text);
     font-size: 16px;
 }
+
 
 
 /* SECTION : ค้นหา ตัวกรอง และรายการของรางวัล */
@@ -853,6 +855,7 @@
     border-color: var(--color-primary);
     color: var(--color-light);
 }
+
 
 
 /* SECTION : ส่วนเชิญชวนสร้างของรางวัล */
