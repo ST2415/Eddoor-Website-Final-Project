@@ -204,6 +204,7 @@
 }
 
 .btn-edit-address:hover {
+    color: var(--color-light);
     background-color: var(--color-primary);
 }
 
@@ -213,7 +214,7 @@
 /* SECTION : สถานะการจัดส่งและประวัติการแลกเหรียญ */
 .shipping-history-section {
     width: 100%;
-    padding: 32px 92px;
+    padding: 24px 92px 48px;
     background-color: var(--color-primary-fade);
 }
 
@@ -276,7 +277,7 @@
 
 .shipping-card-content {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 18px;
 }
 
@@ -305,7 +306,7 @@
 
 .shipping-item-meta {
     font-size: 16px;
-    color: #64748b;
+    color: var(--color-grey);
 }
 
 .shipping-card-arrow {
@@ -372,7 +373,7 @@
 /* SECTION : ค้นหา ตัวกรอง และรายการของรางวัล */
 .rewards-shop-section {
     width: 100%;
-    padding: 24px 92px 64px;
+    padding: 64px 92px;
 }
 
 .rewards-layout {
@@ -577,7 +578,7 @@
     background: none;
     border: none;
     font-family: var(--ff-text);
-    font-size: var(--fs-p);
+    font-size: var(--fs-small);
     color: var(--color-primary);
     cursor: pointer;
     text-align: left;
@@ -648,6 +649,22 @@
     outline: none;
 }
 
+/* ปรับแต่งกล่องตัวเลือกด้านใน */
+.sort-select option {
+    background-color: var(--color-light);
+    color: var(--color-primary, #37235b);
+    font-family: var(--ff-text, "Mitr", sans-serif);
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* ปรับสีตอนนำเมาส์ไปชี้หรือเลือก (รองรับในบางเบราว์เซอร์) */
+.sort-select option:hover,
+.sort-select option:checked {
+    background-color: #f1f5f9;
+    color: var(--color-primary, #37235b);
+}
+
 .sort-arrow {
     position: absolute;
     right: 0;
@@ -665,22 +682,23 @@
 }
 
 .reward-card {
+    min-height: 262px;
     background-color: var(--color-light);
     border: var(--border-general);
     border-radius: 18px;
-    padding: 16px 24px;
+    padding: 30px 32px;
     display: grid;
-    grid-template-columns: 180px 1fr auto;
+    grid-template-columns: 278px 1fr auto;
     gap: 24px;
-    align-items: center;
+    align-items: start;
     transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 /* รูปภาพของรางวัล */
 .reward-img-container {
     position: relative;
-    width: 180px;
-    height: 125px;
+    width: 278px;
+    height: 202px;
     border-radius: 12px;
     overflow: hidden;
     background-color: var(--color-light);
@@ -698,16 +716,16 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: var(--color-light);
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-grey);
-    font-size: var(--fs-small);
+    color: var(--color-primary);
+    font-size: var(--fs-icon);
     cursor: pointer;
     transition: all 0.2s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -762,12 +780,10 @@
 
 /* คอลัมน์ปุ่มและการแสดงราคาเหรียญ */
 .reward-action-col {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: space-between;
-    height: 100%;
-    min-height: 110px;
     gap: 16px;
 }
 
@@ -825,7 +841,9 @@
 .pagination-nav {
     display: flex;
     align-items: center;
-    gap: 6px;
+    border: var(--border-grey);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .page-btn,
@@ -833,11 +851,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 38px;
-    min-width: 38px;
-    padding: 0 14px;
-    border: var(--border-general);
-    border-radius: 6px;
+    height: 50px;
+    min-width: 50px;
+    padding: 16px 16px;
+    border: var(--border-grey);
     font-size: var(--fs-p);
     text-decoration: none;
     background-color: var(--color-light);
@@ -897,9 +914,17 @@
 }
 
 
+
+
+
 /* RESPONSIVE DESIGN (หน้าจอมือถือ) */
 
-/* @media (max-width: 428px) {
+/* ซ่อนแถบค้นหา Mobile บนจอ Desktop */
+.mobile-search-filter-bar {
+    display: none;
+}
+
+/* @media (max-width: 768px) {
     .trade-hero-section,
     .shipping-history-section,
     .rewards-shop-section,
@@ -908,23 +933,117 @@
         padding-right: 20px;
     }
 
+    .hero-top-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .shipping-history-grid,
+    .rewards-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-sidebar {
+        display: none;
+    }
+
+    .mobile-search-filter-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .mobile-search-filter-bar .search-input-box {
+        flex: 1;
+    }
+
+    .mobile-search-filter-bar .filter-input {
+        padding-left: 16px;
+        border-radius: 12px;
+        height: 44px;
+        border: 1px solid #cbd5e1;
+    }
+
+    .btn-filter-icon {
+        width: 44px;
+        height: 44px;
+        border: 1px solid #cbd5e1;
+        border-radius: 12px;
+        background-color: #ffffff;
+        color: var(--color-primary, #37235b);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .view-all-row {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+} */
+
+@media (max-width: 428px) {
+    .trade-hero-section,
+    .shipping-history-section,
+    .rewards-shop-section,
+    .cta-banner-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-top-row,
+    .hero-info-col {
+        display: contents;
+    }
+    
+    /* ปรับระยะขอบการ์ด Hero */
     .trade-hero-card {
-        padding: 32px 24px;
-        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 28px 20px;
+        border-radius: 24px;
+    }
+
+    .hero-top-row {
+        order: 1;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
     }
 
     .hero-title {
-        font-size: 32px;
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    /* กล่องเหรียญสีเหลืองเต็มความกว้าง */
+    .my-coin-box {
+        min-width: 100%;
+        border-radius: 18px;
+        padding: 20px;
     }
 
     .my-coin-amount {
-        font-size: 44px;
+        font-size: 46px;
     }
 
+    /* การ์ดที่อยู่จัดส่ง */
     .hero-address-card {
+        order: 2;
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px;
+        padding: 18px 20px;
+        margin-top: 18px;
+        gap: 14px;
     }
 
     .hero-address-card .address-right {
@@ -936,67 +1055,135 @@
         text-align: center;
     }
 
-    .reward-card {
-        grid-template-columns: 1fr;
-        padding: 18px;
-        gap: 16px;
-    }
-
-    .reward-img-container {
-        width: 100%;
-        height: 180px;
-    }
-
-    .reward-action-col {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        min-height: auto;
-        width: 100%;
-        padding-top: 8px;
-        border-top: 1px solid #f1f5f9;
-    }
-
-    .pagination-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-} */
-
-/* หน้าจอมือถือขนาดเล็กมาก (480px ลงไป) */
-@media (max-width: 428px) {
-    .hero-title {
-        font-size: 26px;
-    }
-
+    /* ปุ่มแลกเหรียญกับเพื่อน & รับเหรียญเพิ่ม */
     .hero-btn-group {
-        flex-direction: column;
+        order: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 18px;
     }
 
     .btn-exchange-friend,
     .btn-get-coin {
         width: 100%;
+        padding: 12px 10px;
+        font-size: 13px;
         text-align: center;
+    }
+
+    /* การ์ดสินค้าแนวตั้งแบบเต็มความกว้าง (Full Stack) */
+    .reward-card {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 12px;
+        border-radius: 20px;
+    }
+
+    .reward-img-container {
+        width: 100%;
+        height: fit-content;
+        border-radius: 14px;
     }
 
     .reward-action-col {
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    /* ปุ่มเหรียญสีเหลืองยาวเต็มความกว้าง */
+    .coin-price-pill {
+        width: 100%;
+        padding: 12px;
+        border-radius: 50px;
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    /* แถบเปลี่ยนหน้า (Pagination) จัดกึ่งกลาง */
+    .pagination-container {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        text-align: center;
         gap: 12px;
     }
 
-    .btn-reward-detail {
-        width: 100%;
+    /* Banner ล่างสุด */
+    .cta-banner-section {
+        padding: 36px 20px;
         text-align: center;
     }
 
-    .coin-price-pill {
+    .cta-banner-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn-create-reward {
+        width: 100%;
         justify-content: center;
     }
 
-    .pagination-nav {
-        flex-wrap: wrap;
-        justify-content: center;
+    .btn-reward-detail {
+        display: none;
+    }
+
+    .shipping-history-section h2 {
+        font-size: var(--fs-h4);
+        text-align: center;
+    }
+
+    .shipping-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .shipping-card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
+    }
+
+    .shipping-item-name {
+        font-size: var(--fs-p);
+    }
+
+    .shipping-item-meta {
+        font-size: var(--fs-small);
+    }
+
+    .shipping-history-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* สลายตัวครอบ เพื่อให้ h2 และ a ทำตัวเป็น flex-item โดยตรงของ section */
+    .section-header-row {
+        display: contents;
+    }
+
+    /* ล็อคให้หัวข้ออยู่อันดับแรก (บนสุด) */
+    .section-title {
+        order: 1;
+        margin-bottom: 16px;
+        text-align: left;
+    }
+
+    /* กริตรายการการ์ดอยู่อันดับที่ 2 (ตรงกลาง) */
+    .shipping-history-grid {
+        order: 2;
+        grid-template-columns: 1fr; /* กริตเรียงแนวตั้งเดี่ยว */
+    }
+
+    /* ดันลิงก์ "ดูประวัติทั้งหมด" ให้อยู่ลำดับสุดท้าย (ล่างสุด) และจัดกึ่งกลาง */
+    .view-all-link {
+        order: 3;
+        display: block;
+        text-align: center;
+        margin-top: 24px;
+        font-weight: var(--fw-bold);
     }
 }
