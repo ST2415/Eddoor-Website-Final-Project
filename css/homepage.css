@@ -1,0 +1,1270 @@
+/* ==========================================
+   1. Reset & Global Styles
+   ========================================== */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-purple: #3A235F;
+  --accent-green: #00E599;
+  --accent-yellow: #FFD200;
+  --bg-light: #F8F9FA;
+  --text-dark: #222222;
+  --text-muted: #666666;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Prompt', 'IBM Plex Sans Thai', sans-serif;
+  color: var(--text-dark);
+  background-color: #ffffff;
+}
+
+/* คลาสจัดกลางหลักสำหรับเนื้อหา */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.btn-primary { background-color: var(--accent-green); color: var(--primary-purple); }
+.btn-outline { border: 1px solid #00E599; color: #00E599; background: transparent; }
+.btn-purple { background-color: var(--primary-purple); color: #fff; }
+.btn-purple-lg { background-color: var(--primary-purple); color: #fff; padding: 14px 36px; border-radius: 30px; font-size: 1.05rem; }
+.btn-green { background-color: var(--accent-green); color: var(--primary-purple); }
+.btn-outline-light { border: 1px solid #00E599; color: #00E599; background: transparent; }
+
+/* ==========================================
+   2. Hero Section
+   ========================================== */
+.hero-section {
+  width: 100%;
+  background-color: var(--primary-purple);
+  color: #fff;
+  padding: 60px 0 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0 0 5px 0;
+}
+
+.subtitle {
+  color: var(--accent-yellow);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.description {
+  max-width: 480px;
+  margin: 20px 0 30px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-image-wrapper {
+  position: relative;
+}
+
+.hero-img {
+  width: 420px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.badge-float {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: var(--accent-yellow);
+  color: var(--primary-purple);
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  transform: rotate(5deg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.badge-float span {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.badge-float small {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+
+/* ==========================================
+   3. Filter Section
+   ========================================== */
+.filter-section {
+  width: 100%;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.filter-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.filter-inputs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.filter-select, .search-bar input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-search {
+  background: var(--primary-purple);
+  color: #fff;
+  border: none;
+  padding: 0 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   4. Activities Section
+   ========================================== */
+.activities-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.category-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+}
+
+.tag {
+  background: #EFEFEF;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.tag.active {
+  background: var(--primary-purple);
+  color: #fff;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.activity-card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.card-img-wrapper {
+  position: relative;
+  height: 200px;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coin-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--accent-yellow);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: var(--primary-purple);
+}
+
+.fav-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h4 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.card-content .info {
+  margin: 4px 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   5. How It Works Section
+   ========================================== */
+.how-it-works {
+  width: 100%;
+  background: var(--accent-green);
+  padding: 60px 0;
+}
+
+.how-title {
+  color: var(--primary-purple);
+  margin-bottom: 40px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.step-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.step-num {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-purple);
+  display: block;
+}
+
+/* ==========================================
+   6. Invite Banner Section
+   ========================================== */
+.invite-banner {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.invite-box {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.invite-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.invite-text h3 {
+  margin: 0 0 5px 0;
+}
+
+.invite-text p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* ==========================================
+   7. Coin Section
+   ========================================== */
+.coin-section {
+  width: 100%;
+  background: var(--primary-purple);
+  color: #fff;
+  padding: 60px 0;
+}
+
+.coin-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coin-text .badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.coin-text h2 {
+  font-size: 2.2rem;
+  margin: 15px 0 25px;
+}
+
+.coin-btns {
+  display: flex;
+  gap: 15px;
+}
+
+.coin-display-card {
+  background: var(--accent-yellow);
+  color: var(--primary-purple);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  min-width: 250px;
+}
+
+.coin-display-card h3 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.coin-display-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   8. FAQ Section
+   ========================================== */
+.faq-section {
+  padding: 60px 0;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+.faq-header h3 {
+  font-size: 1.8rem;
+  margin: 0 0 10px 0;
+}
+
+.faq-header p {
+  color: var(--text-muted);
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.faq-item h4 {
+  margin: 0 0 8px 0;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* ==========================================
+   9. Bottom Callout Section
+   ========================================== */
+.bottom-cta {
+  width: 100%;
+  background: var(--accent-yellow);
+  padding: 50px 0;
+}
+
+.bottom-cta h2 {
+  color: var(--primary-purple);
+  margin-bottom: 20px;
+}
+
+/* ==========================================
+   FORCE CENTER OVERRIDE (บังคับจัดกลาง)
+   ========================================== */
+
+/* 1. บังคับ Body และ Main ให้เต็มความกว้าง */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
+main.eddoor-home {
+  width: 100% !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/* 2. บังคับ Container ทุกตัวให้อยู่ตรงกลางจอแน่ๆ */
+.eddoor-home .container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. บังคับแถบสี (Background Sections) ให้ขยายเต็มความกว้างจอ */
+.eddoor-home .hero-section,
+.eddoor-home .how-it-works,
+.eddoor-home .coin-section,
+.eddoor-home .bottom-cta {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  box-sizing: border-box !important;
+}
+
+.eddoor-home .filter-section {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* ป้ายลอย +150 COIN มุมซ้ายล่าง */
+.badge-coin-float {
+  position: absolute;
+  bottom: -15px;
+  left: -20px;
+  background-color: #ffffff;
+  color: var(--primary-purple);
+  padding: 8px 18px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+
+.badge-coin-float .coin-icon {
+  background-color: var(--accent-yellow);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.badge-coin-float .coin-text-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.badge-coin-float .coin-text-group strong {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-purple);
+}
+
+.badge-coin-float .coin-text-group span {
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+/* กำหนดขนาดรูปสติ๊กเกอร์ให้พอดีกับป้าย */
+.coin-sticker-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* ปรับให้ภาพกับข้อความใน Badge จัดวางแนวนอนสวยงาม */
+.coin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge-icon-img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* ปรับแต่งป้ายสีเหลือง */
+.coin-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: var(--accent-yellow);
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* เว้นระยะห่างระหว่างเหรียญกับตัวหนังสือ */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+/* ควบคุมขนาดรูปไอคอนเหรียญไม่ให้ขยายใหญ่เกินไป */
+.badge-icon-img {
+  width: 20px; /* ปรับขนาดความกว้างเหรียญ */
+  height: 20px; /* ปรับขนาดความสูงเหรียญ */
+  object-fit: contain;
+  display: block;
+}
+
+/* จัดข้อความให้อยู่ในบรรทัดเดียวกัน */
+.coin-text {
+  color: var(--primary-purple);
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap; /* บังคับไม่ให้ข้อความตกบรรทัด */
+  line-height: 1;
+}
+
+/* ==========================================
+   Category Tags - Hover & Active State
+   ========================================== */
+
+/* สไตล์พื้นฐานของแท็ก */
+.tag {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  border: none;
+  outline: none;
+}
+
+/* 1. เมื่อเอาเมาส์ไปวาง (Hover) */
+.tag:hover {
+  background-color: var(--primary-purple) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px); /* ลอยขึ้นเล็กน้อย */
+  box-shadow: 0 4px 10px rgba(58, 35, 95, 0.2);
+}
+
+/* 2. เมื่อกดปุ่มลงไป (Active / Click) */
+.tag:active {
+  transform: translateY(0) scale(0.95); /* ยุบลงเล็กน้อยเวลาคลิก */
+  box-shadow: none;
+}
+
+/* ==========================================
+   Invite Banner Section
+   ========================================== */
+.invite-banner {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.invite-box {
+  border: none !important; /* ถอนเส้นกรอบออก */
+  box-shadow: none !important; /* ถอนเงาออก */
+  border-radius: 20px;
+  padding: 32px 0; /* ปรับระยะขอบบน-ล่าง */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent; /* เปลี่ยนเป็นพื้นหลังโปร่งใส หรือใช้ #ffffff ก็ได้ครับ */
+  gap: 30px;
+}
+
+.invite-left-content {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* ควบคุมขนาดรูปภาพโลโก้ทางซ้าย */
+/* ปรับขยายขนาดรูปภาพโลโก้ทางซ้าย */
+.invite-logo-img {
+  width: 300px !important;  /* ปรับขยายความกว้าง (จากเดิม 120px) */
+  height: 300px !important; /* ปรับขยายความสูง (จากเดิม 120px) */
+  object-fit: contain !important;
+  flex-shrink: 0;
+}
+
+.invite-text-group h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-purple);
+  line-height: 1.3;
+}
+
+.invite-text-group p {
+  margin: 0;
+  color: #6B7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 620px;
+}
+
+/* ปุ่มสร้างกิจกรรมทรงแคปซูลสีม่วง */
+.btn-create-activity {
+  background-color: var(--primary-purple);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(58, 35, 95, 0.2);
+}
+
+.btn-create-activity .arrow-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+/* เอฟเฟกต์ Hover และ Click */
+.btn-create-activity:hover {
+  background-color: #2D1A4B;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(58, 35, 95, 0.3);
+}
+
+.btn-create-activity:hover .arrow-icon {
+  transform: translateX(3px); /* ลูกศรขยับไปทางขวาเล็กน้อย */
+}
+
+.btn-create-activity:active {
+  transform: translateY(0) scale(0.96);
+  box-shadow: none;
+}
+
+/* ==========================================
+   Coin Banner Section (เปลี่ยน COIN เป็นความสุข)
+   ========================================== */
+.coin-section {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  background-color: var(--primary-purple);
+  padding: 60px 0;
+  box-sizing: border-box !important;
+}
+
+.coin-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ฝั่งซ้าย */
+.coin-text {
+  max-width: 600px;
+}
+
+.coin-tagline {
+  color: var(--accent-green);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.coin-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.coin-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin: 0 0 28px 0;
+}
+
+.coin-btns {
+  display: flex;
+  gap: 12px;
+}
+
+/* ปุ่มกดฝั่งซ้าย */
+.btn-exchange {
+  background-color: var(--accent-green);
+  color: #3A235F;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.btn-exchange:hover {
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+}
+
+.btn-get-more {
+  background-color: transparent;
+  color: #00E599;
+  border: 1.5px solid #00E599 !important; /* เส้นกรอบขอบสีขาว */
+  border-radius: 25px;                   /* ปรับความโค้งมนทรงแคปซูล */
+  font-weight: 500;
+  padding: 10px 24px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ไปชี้ (Hover) */
+.btn-get-more:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* เพิ่มพื้นหลังสว่างใสขึ้นเมื่อชี้ */
+  transform: translateY(-2px);
+}
+
+/* เอฟเฟกต์ตอนกดคลิก (Active) */
+.btn-get-more:active {
+  transform: translateY(0) scale(0.96);
+}
+
+
+/* ฝั่งขวา: การ์ดสีเหลือง */
+.coin-display-card {
+  background-color: var(--accent-yellow);
+  color: var(--primary-purple);
+  padding: 28px 36px;
+  border-radius: 24px;
+  min-width: 320px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.coin-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.coin-card-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.coin-amount {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  line-height: 1;
+  color: var(--primary-purple);
+}
+
+.coin-note {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+
+/* ==========================================
+   Responsive Mobile Layout (ถอดแบบจาก UI Mobile)
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    
+
+  /* 1. Reset Base & Margins */
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* 2. Hero Section */
+  .hero-section {
+    padding: 30px 0 50px !important;
+    text-align: center;
+  }
+
+  .hero-container {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .description {
+    font-size: 0.9rem !important;
+    margin: 15px auto 25px !important;
+  }
+
+  /* ปุ่มกดทรงยาวเต็มความกว้าง */
+  .hero-btns {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100%;
+  }
+
+  .hero-btns .btn {
+    width: 100% !important;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* การจัดวางรูปภาพ Hero & ป้ายลอย */
+  .hero-image-wrapper {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .hero-img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  /* ป้ายมุมขวาบน */
+  .badge-float {
+    top: -12px !important;
+    right: -10px !important;
+    font-size: 0.75rem !important;
+    padding: 6px 12px !important;
+  }
+
+  /* ป้ายลอยสีเหลืองอันล่าง */
+  .badge-coin-float {
+    position: relative !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+    background-color: var(--accent-yellow) !important;
+    color: var(--primary-purple) !important;
+    transform: none !important;
+    box-shadow: none !important;
+    justify-content: center !important;
+  }
+
+  /* 3. Filter Section */
+  .filter-section {
+    margin-top: 20px !important;
+  }
+
+  .filter-card {
+    padding: 20px !important;
+  }
+
+  .filter-title {
+    font-size: 1.4rem !important;
+    text-align: left;
+  }
+
+  /* ปรับช่องเลือกเป็น 2 ช่องต่อบรรทัด */
+  .filter-inputs {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .search-bar {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .btn-search {
+    width: 100% !important;
+    padding: 12px !important;
+  }
+
+  /* 4. Activities Section */
+  .section-title {
+    font-size: 1.5rem !important;
+    text-align: left;
+  }
+
+  /* แท็กหมวดหมู่เลื่อนซ้าย-ขวา */
+  .category-tags {
+    display: flex !important;
+    overflow-x: auto !important;
+    padding-bottom: 8px;
+    gap: 8px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tag {
+    font-size: 0.85rem !important;
+    padding: 6px 14px !important;
+    flex-shrink: 0;
+  }
+
+  /* การ์ดกิจกรรมแสดงคอลัมน์เดียว */
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* ปุ่มดูเพิ่มเติมทรงแคปซูลม่วง */
+  .btn-more-activities {
+    display: block !important;
+    width: 100% !important;
+    max-width: 200px;
+    margin: 25px auto 0 !important;
+    background-color: var(--primary-purple) !important;
+    color: #fff !important;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+  }
+
+  /* 5. How It Works */
+  .how-it-works {
+    padding: 40px 0 !important;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  /* 6. Invite Banner */
+  .invite-box {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 20px 0 !important;
+    gap: 20px !important;
+  }
+
+  .invite-left-content {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .invite-logo-img {
+    width: 130px !important;
+    height: 130px !important;
+  }
+
+  .invite-text-group h3 {
+    font-size: 1.3rem !important;
+  }
+
+  .btn-create-activity {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* 7. Coin Section */
+  .coin-section {
+    padding: 40px 0 !important;
+  }
+
+  .coin-container {
+    flex-direction: column !important;
+    gap: 25px !important;
+    text-align: center;
+  }
+
+  .coin-text h2 {
+    font-size: 1.8rem !important;
+  }
+
+  /* ปรับการ์ดสีเหลืองให้อยู่ด้านบน */
+  .coin-display-card {
+    width: 100% !important;
+    min-width: unset !important;
+    padding: 24px 20px !important;
+  }
+
+  /* ปุ่มกด 2 ปุ่มแนวนอนด้านล่าง */
+  .coin-btns {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    width: 100%;
+  }
+
+  .btn-exchange, .btn-get-more {
+    flex: 1 !important;
+    text-align: center !important;
+    padding: 10px 12px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* 8. FAQ & Bottom CTA */
+  .faq-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .bottom-cta {
+    padding: 40px 0 !important;
+  }
+  
+  .bottom-cta h2 {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* ==========================================
+   Mobile Category Tags (เรียงซ้อนหลายบรรทัดตามรูป)
+   ========================================== */
+@media (max-width: 768px) {
+  
+  /* ให้ปุ่มตัดขึ้นบรรทัดใหม่ได้แบบ Wrap */
+  .category-tags {
+    display: flex !important;
+    flex-wrap: wrap !important; /* เปิดให้ตกลงมาบรรทัดใหม่ */
+    gap: 10px 8px !important;    /* ระยะห่างระหว่างปุ่ม (แถว/คอลัมน์) */
+    overflow-x: visible !important;
+    width: 100% !important;
+  }
+
+  /* สไตล์ปุ่มขอบเส้นสีม่วงทรงมน */
+  .category-tags .tag {
+    font-size: 0.85rem !important;
+    padding: 8px 16px !important;
+    border-radius: 25px !important;
+    border: 1.5px solid var(--primary-purple) !important; /* เส้นกรอบขอบสีม่วง */
+    background-color: #ffffff !important;                /* พื้นหลังสีขาว */
+    color: var(--primary-purple) !important;            /* ตัวหนังสือสีม่วง */
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ปุ่มที่กำลังเลือกอยู่ (Active State) ให้เป็นสีม่วงเข้มทึบ */
+  .category-tags .tag.active {
+    background-color: var(--primary-purple) !important;
+    color: #ffffff !important;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  /* บังคับ Hero Section ให้จัดชิดซ้าย */
+  .hero-section {
+    padding: 30px 0 50px !important;
+    text-align: left !important; /* จัดข้อความชิดซ้ายตามภาพแรก */
+  }
+
+  .hero-container {
+    flex-direction: column !important;
+    align-items: flex-start !important; /* จัดชิดซ้ายขอบกล่อง */
+    gap: 24px !important;
+  }
+
+  .hero-text {
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+  }
+
+  /* ปรับสีคำว่า More than classroom เป็นสีเหลืองตามภาพแรก */
+  .hero-text .subtitle {
+    color: var(--accent-yellow) !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    margin: 8px 0 16px 0 !important;
+    text-align: left !important;
+  }
+
+  /* ปรับข้อความอธิบายให้อ่านง่าย ชิดซ้าย */
+  .hero-text .description {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    margin: 0 0 24px 0 !important;
+    text-align: left !important;
+    opacity: 0.95;
+  }
+
+  .hero-btns {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100%;
+  }
+
+  .hero-btns .btn {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+/* ==========================================
+   Fix Hover for <a class="activity-card-link">
+   ========================================== */
+
+/* 1. ปรับแท็ก <a> ให้เป็น Block เพื่อรับการทำงานของ Hover ได้สมบูรณ์ */
+a.activity-card-link {
+  display: block !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* 2. บังคับตั้งค่าพื้นฐานของการ์ด */
+a.activity-card-link .activity-card {
+  position: relative !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background-color: #ffffff !important;
+  border: 1px solid #E5E7EB !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease !important;
+  will-change: transform;
+}
+
+a.activity-card-link .card-img-wrapper {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+a.activity-card-link .card-img-wrapper img {
+  display: block !important;
+  width: 100% !important;
+  transition: transform 0.4s ease !important;
+}
+
+/* 3. เอฟเฟกต์ HOVER - การ์ดลอยขึ้น + มีเงาสีม่วง */
+a.activity-card-link:hover .activity-card {
+  transform: translateY(-10px) !important; /* ลอยขึ้น 10px */
+  box-shadow: 0 16px 32px rgba(58, 35, 95, 0.18) !important; /* เงาสีม่วงสวยงาม */
+  border-color: var(--primary-purple) !important;
+}
+
+/* รูปภาพขยายเล็กน้อยเวลา Hover */
+a.activity-card-link:hover .card-img-wrapper img {
+  transform: scale(1.06) !important;
+}
+
+/* 4. เอฟเฟกต์ ACTIVE - ตอนคลิกจังหวะกดลงไป */
+a.activity-card-link:active .activity-card {
+  transform: translateY(-2px) scale(0.98) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ==========================================
+   Mobile Category Tags - Hover & Active Effect
+   ========================================== */
+@media (max-width: 768px) {
+  
+  /* เพิ่มเอฟเฟกต์เวลาเมาส์ชี้ (Hover) บนจอมือถือ/จอเล็ก */
+  .category-tags .tag:hover:not(.active) {
+    background-color: var(--primary-purple) !important; /* เปลี่ยนพื้นหลังเป็นสีม่วง */
+    color: #ffffff !important;                          /* เปลี่ยนตัวหนังสือเป็นสีขาว */
+    border-color: var(--primary-purple) !important;      /* เปลี่ยนขอบเป็นสีม่วง */
+    transform: translateY(-2px) !important;
+  }
+
+  /* เอฟเฟกต์ตอนกดคลิก/แตะนิ้ว (Active) */
+  .category-tags .tag:active {
+    transform: translateY(0) scale(0.95) !important;
+  }
+}
