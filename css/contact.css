@@ -1,0 +1,396 @@
+/* ==========================================
+   Eddoor - Contact Page Clean & Responsive CSS
+   ========================================== */
+
+/* 1. Global Reset & Layout Control */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* คุมความกว้างเนื้อหาตรงกลาง 1200px ให้ตรงกันทุกส่วน */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* 2. Contact Hero Banner (สีม่วงเต็มขอบจอ 100%) */
+.contact-hero {
+  width: 100%;
+  background-color: var(--primary-purple, #3A235F);
+  color: #ffffff;
+  padding: 40px 0 50px;
+}
+
+.contact-hero .breadcrumb {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+}
+
+.contact-hero .breadcrumb span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.contact-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.contact-hero .sub-hero {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* 3. Main Contact Area */
+.contact-main {
+  width: 100%;
+  padding: 50px 0 80px;
+  background-color: #ffffff;
+}
+
+/* 3.1 Survey Section (การ์ดแบบประเมินสีเขียว) */
+.survey-section {
+  margin-bottom: 60px;
+}
+
+.survey-card {
+  background-color: var(--accent-green, #00E599);
+  border-radius: 20px;
+  padding: 40px 50px;
+  color: var(--primary-purple, #3A235F);
+  text-align: center;
+}
+
+.survey-card h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.survey-desc {
+  font-size: 0.9rem;
+  max-width: 750px;
+  margin: 0 auto 30px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.step-indicator {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
+.quiz-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 16px;
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+.option-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.option-card:hover {
+  border-color: var(--primary-purple, #3A235F);
+  transform: translateY(-2px);
+}
+
+.option-card input[type="radio"] {
+  accent-color: var(--primary-purple, #3A235F);
+  width: 18px;
+  height: 18px;
+}
+
+.option-card span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-purple, #3A235F);
+}
+
+.survey-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-next {
+  background-color: var(--primary-purple, #3A235F);
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 40px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-next:hover {
+  background-color: #2D1A4B;
+  transform: translateY(-2px);
+}
+
+/* 3.2 Contact Cards Section (4 กล่องติดต่อ) */
+.contact-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-purple, #3A235F);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+/* สถานะปกติของกล่องติดต่อ */
+.info-card {
+  border: 2px solid var(--color-primary, #3e2b67);
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background-color: #ffffff;
+  /* เพิ่ม transition ให้การเคลื่อนไหวนุ่มนวล */
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.25s ease;
+}
+
+/* เอฟเฟกต์เมื่อ Hover (เอาเมาส์ไปชี้) */
+.info-card:hover {
+  /* ลอยขึ้นด้านบน 6px */
+  transform: translateY(-6px);
+  /* เปลี่ยนขอบเป็นสีเขียวสดใส */
+  border-color: var(--color-green, #00dfa2);
+  /* เพิ่มเงาด้านล่างนุ่มๆ ให้ดูมีมิติ */
+  box-shadow: 0 12px 24px rgba(62, 43, 103, 0.12);
+}
+
+.info-card .info-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.info-details h4 {
+  font-size: 0.95rem;
+  color: var(--primary-purple, #3A235F);
+  margin-bottom: 6px;
+}
+
+.info-details p {
+  font-size: 0.85rem;
+  color: #6B7280;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.social-icons a {
+  color: var(--primary-purple, #3A235F);
+  font-size: 1.2rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent-green, #00E599);
+  transform: translateY(-2px);
+}
+
+/* 3.3 Contact Form Section */
+.contact-form-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-purple, #3A235F);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-purple, #3A235F);
+}
+
+.btn-submit {
+  background-color: var(--primary-purple, #3A235F);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background-color: #2D1A4B;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   📱 Responsive Mobile Layout (<= 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 30px 0 40px;
+  }
+
+  .contact-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .survey-card {
+    padding: 24px 16px;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   UNLOCK BODY MAX-WIDTH (แก้ไขปัญหากางไม่เต็มจอ)
+   ========================================== */
+body {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* แถบม่วง Hero กางเต็มขอบ 100% */
+.contact-hero {
+    width: 100% !important;
+    background-color: var(--color-primary, #3e2b67) !important;
+    padding: 40px 0 50px !important;
+}
+
+/* คุมเนื้อหาการ์ดตรงกลางให้อยู่กึ่งกลาง 1256px ตามตัวแปรของ generals.css */
+.contact-hero .container,
+.contact-main .container {
+    max-width: var(--content-width, 1256px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+}
+
+/* สไตล์หน้าการ์ดขอบคุณหลังทำแบบประเมินเสร็จ (+20 COIN) */
+.survey-success-box {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--color-primary, #3e2b67);
+}
+
+.survey-success-box .success-icon {
+  font-size: 3.8rem;
+  color: var(--color-primary, #3e2b67);
+  margin-bottom: 16px;
+}
+
+.survey-success-box h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.survey-success-box p {
+  font-size: 1rem;
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* สไตล์เมื่อปุ่มถัดไปถูกปิดการใช้งาน (disabled) */
+.btn-next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
