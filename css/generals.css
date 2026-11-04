@@ -20,7 +20,9 @@ html {
     --color-light: #fff;
     --color-dark: #000;
     --color-grey: #737373;
-    --content-width: 1256px;
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.12);
     
     /* FONT */
     --ff: "Mitr", "Prompt", sans-serif;
@@ -38,11 +40,16 @@ html {
     --fw-bold: bold;
 
     /* GENERALS */
+    --content-width: 1256px;
     --border-coin-balance: 2px solid var(--color-yellow);
     --border-social-link: 1px solid var(--color-light);
     --border-general: 2px solid var(--color-primary);
     --border-green: 2px solid var(--color-green);
     --border-grey: 1px solid var(--color-grey);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-pill: 50px;
     
 }
 
@@ -71,6 +78,94 @@ a {
     font-weight: 400;
     color: inherit;
     text-decoration: none;
+}
+
+
+
+/* || BUTTON */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--ff-text);
+    font-size: var(--fs-p);
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 12px 24px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+/* ปุ่มสีเขียวเด่น (Primary Green) เช่น ปุ่ม Login, ปุ่มแลกเหรียญ */
+.btn-green {
+    background-color: var(--color-green);
+    color: var(--color-primary);
+}
+.btn-green:hover {
+    filter: brightness(85%);
+}
+
+/* ปุ่มสีกรมท่า/ม่วงเข้ม (Primary Dark) เช่น ใช้ตัวกรอง, ดูรายละเอียด */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+.btn-primary:hover {
+    filter: brightness(85%);
+}
+
+/* ปุ่มเส้นขอบโปร่ง (Outlined) */
+.btn-outline-green {
+    background-color: transparent;
+    color: var(--color-green);
+    border: var(--border-green);
+}
+.btn-outline-green:hover {
+    background-color: var(--color-green);
+    color: var(--color-primary);
+}
+
+.btn-outline-general {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    border: var(--border-general);
+}
+.btn-outline-general:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+/* แคปซูลแสดงเหรียญสีเหลือง (Coin Pill) */
+.coin-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--color-yellow);
+    color: var(--color-primary);
+    border-radius: 50px;
+    font-family: var(--ff);
+    white-space: nowrap;
+}
+
+/* ป้ายสถานะ (Status Badges) */
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.status-badge--shipping {
+    background-color: var(--color-yellow);
+    color: var(--color-primary);
+}
+.status-badge--delivered {
+    background-color: var(--color-green);
+    color: var(--color-primary);
 }
 
 

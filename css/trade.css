@@ -1,3 +1,7 @@
+/* ==========================================================================
+   TRADE PAGE STYLES (Eddoor)
+   ========================================================================== */
+
 .trade-page {
     width: 100%;
     background-color: var(--color-light);
@@ -9,8 +13,9 @@ input {
     color: var(--color-primary);
 }
 
-
-/* SECTION : การ์ดข้อมูลเหรียญและที่อยู่จัดส่ง */
+/* --------------------------------------------------------------------------
+   SECTION 1 : ข้อมูลเหรียญและที่อยู่จัดส่ง (Hero Section)
+   -------------------------------------------------------------------------- */
 .trade-hero-section {
     width: 100%;
     padding: 32px 92px 24px;
@@ -18,14 +23,13 @@ input {
 }
 
 .trade-hero-card {
-    background: linear-gradient(135deg, #37235b 0%, #4a3479 100%);
     border-radius: 28px;
     padding: 44px 48px 36px;
     color: var(--color-light);
-    box-shadow: 0 12px 32px rgba(62, 43, 103, 0.16);
+    box-shadow: var(----shadow-lg);
+    background-color: var(--color-primary);
 }
 
-/* ข้อมูลแนะนำฝั่งซ้าย + การ์ดยอดเหรียญฝั่งขวา */
 .hero-top-row {
     display: flex;
     justify-content: space-between;
@@ -41,13 +45,13 @@ input {
     display: inline-block;
     color: var(--color-green);
     font-size: 15px;
-    font-weight: 500;
+    font-weight: var(--fw-normal);
     margin-bottom: 12px;
     letter-spacing: 0.5px;
 }
 
 .hero-title {
-    font-family: "Mitr", sans-serif;
+    font-family: var(--ff);
     font-size: 44px;
     font-weight: 600;
     line-height: 1.25;
@@ -56,7 +60,7 @@ input {
 }
 
 .hero-subtitle {
-    font-size: 16px;
+    font-size: var(--fs-p);
     color: var(--color-light);
     margin-bottom: 26px;
 }
@@ -85,8 +89,7 @@ input {
 }
 
 .btn-exchange-friend:hover {
-    filter: brightness(75%);
-    transition: filter 0.2s ease-in-out;
+    filter: brightness(85%);
 }
 
 /* ปุ่มรับเหรียญเพิ่ม */
@@ -96,34 +99,34 @@ input {
     justify-content: center;
     background-color: transparent;
     color: var(--color-green);
-    font-weight: 500;
+    font-weight: var(--fw-normal);
     font-size: 15px;
     padding: 12px 26px;
     border-radius: 12px;
     text-decoration: none;
     border: var(--border-green);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, filter 0.2s ease;
 }
 
 .btn-get-coin:hover {
     background-color: var(--color-green);
     color: var(--color-primary);
-    filter: brightness(75%);
+    filter: brightness(85%);
 }
 
-/* การ์ดสีเหลืองแสดงยอดเหรียญสะสม */
+/* การ์ดยอดเหรียญสะสมสีเหลือง */
 .hero-coin-col {
     flex-shrink: 0;
 }
 
 .my-coin-box {
-    background-color: #ffdc00;
+    background-color: var(--color-yellow);
     color: var(--color-primary);
     border-radius: 20px;
     padding: 24px 28px;
     min-width: 290px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: var(----shadow-lg);
 }
 
 .my-coin-header {
@@ -140,7 +143,7 @@ input {
 }
 
 .my-coin-amount {
-    font-family: "Mitr", sans-serif;
+    font-family: var(--ff);
     font-size: 56px;
     font-weight: 700;
     line-height: 1.1;
@@ -152,7 +155,7 @@ input {
     font-size: var(--fs-small);
 }
 
-/* ข้อมูลที่อยู่จัดส่งสินค้า */
+/* ข้อมูลที่อยู่จัดส่ง */
 .hero-address-card {
     background-color: var(--color-light);
     border-radius: 18px;
@@ -203,10 +206,10 @@ input {
     border-radius: 10px;
     padding: 10px 22px;
     font-family: var(--ff-text);
-    font-size: 14px;
+    font-size: var(--fs-small);
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
     white-space: nowrap;
 }
 
@@ -215,10 +218,9 @@ input {
     background-color: var(--color-primary);
 }
 
-
-
-
-/* SECTION : สถานะการจัดส่งและประวัติการแลกเหรียญ */
+/* --------------------------------------------------------------------------
+   SECTION 2 : สถานะการจัดส่งและประวัติการแลกเหรียญ
+   -------------------------------------------------------------------------- */
 .shipping-history-section {
     width: 100%;
     padding: 24px 92px 48px;
@@ -233,14 +235,14 @@ input {
 }
 
 .section-title {
-    font-family: "Mitr", sans-serif;
+    font-family: var(--ff);
     font-size: 26px;
     font-weight: 600;
 }
 
 .view-all-link {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-normal);
     color: var(--color-primary);
     transition: color 0.2s ease;
 }
@@ -249,7 +251,6 @@ input {
     color: var(--color-green);
 }
 
-/* สถานะและประวัติของการจัดส่งและการใช้เหรียญ */
 .shipping-history-grid {
     display: grid;
     grid-template-columns: 1.35fr 1fr;
@@ -257,7 +258,6 @@ input {
     align-items: start;
 }
 
-/* รายการการจัดส่ง */
 .shipping-list {
     display: flex;
     flex-direction: column;
@@ -273,22 +273,21 @@ input {
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
     cursor: pointer;
 }
 
 .shipping-card:hover {
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-md);
     transform: translateY(-1px);
 }
 
 .shipping-card-content {
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 18px;
 }
 
-/* ป้ายแสดงสถานะ */
 .status-badge {
     display: inline-block;
     padding: 6px 14px;
@@ -296,6 +295,7 @@ input {
     font-size: 13px;
     font-weight: 600;
     white-space: nowrap;
+    color: var(--color-primary);
 }
 
 .status-shipping {
@@ -312,13 +312,13 @@ input {
 }
 
 .shipping-item-meta {
-    font-size: 16px;
+    font-size: var(--fs-p);
     color: var(--color-grey);
 }
 
 .shipping-card-arrow {
     color: var(--color-primary);
-    font-size: 16px;
+    font-size: var(--fs-p);
 }
 
 /* การ์ดประวัติการแลกเหรียญ */
@@ -330,7 +330,7 @@ input {
 }
 
 .history-card-title {
-    font-family: "Mitr", sans-serif;
+    font-family: var(--ff);
     font-size: var(--fs-h4);
     margin-bottom: 4px;
 }
@@ -352,7 +352,7 @@ input {
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
-    border-bottom: 1px var(--border-general);
+    border-bottom: 1px solid rgba(62, 43, 103, 0.2);
 }
 
 .history-item:last-child {
@@ -368,16 +368,18 @@ input {
 .history-item-date {
     font-size: var(--fs-small);
     font-weight: 400;
+    color: var(--color-grey);
 }
 
 .history-item-coin {
     font-family: var(--ff-text);
-    font-size: 16px;
+    font-size: var(--fs-p);
+    font-weight: 600;
 }
 
-
-
-/* SECTION : ค้นหา ตัวกรอง และรายการของรางวัล */
+/* --------------------------------------------------------------------------
+   SECTION 3 : ค้นหา ตัวกรอง และรายการของรางวัล
+   -------------------------------------------------------------------------- */
 .rewards-shop-section {
     width: 100%;
     padding: 64px 92px;
@@ -390,7 +392,7 @@ input {
     align-items: start;
 }
 
-/* Sidebar ตัวกรองรางวัล */
+/* Sidebar Desktop Filter */
 .filter-sidebar {
     background-color: var(--color-light);
     border: var(--border-general);
@@ -416,7 +418,6 @@ input {
     margin-bottom: 8px;
 }
 
-/* ช่องค้นหา */
 .search-input-box {
     position: relative;
     width: 100%;
@@ -427,7 +428,7 @@ input {
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    color: #94a3b8;
+    color: var(--color-grey);
     font-size: var(--fs-p);
 }
 
@@ -456,7 +457,7 @@ input {
     border: var(--border-general);
     border-radius: 8px;
     font-family: var(--ff-text);
-    font-size: 14px;
+    font-size: var(--fs-small);
     outline: none;
     appearance: none;
     background-color: var(--color-light);
@@ -471,18 +472,12 @@ input {
     transform: translateY(-50%);
     pointer-events: none;
     font-size: 12px;
-}
-
-.select-arrow,
-.sort-arrow {
-    transform: rotate(0deg);
-    transition: transform 0.25s ease-in-out, rotate 0.25s ease;
+    transition: transform 0.25s ease-in-out;
 }
 
 .filter-select:focus ~ .select-arrow,
 .sort-select:focus ~ .sort-arrow {
-    transform: rotate(180deg);
-    transition: transform 0.25s ease-in-out;
+    transform: translateY(-50%) rotate(180deg);
 }
 
 /* ตัวเลือกรีวิวดาว */
@@ -519,7 +514,7 @@ input[type="radio"] {
 }
 
 .star-empty {
-    color: var(--color-light);
+    color: rgba(115, 115, 115, 0.4);
     font-size: var(--fs-p);
 }
 
@@ -528,7 +523,7 @@ input[type="radio"] {
     color: var(--color-grey);
 }
 
-/* ช่องกรอกช่วงราคา */
+/* ช่วงราคา */
 .price-range-inputs {
     display: flex;
     align-items: center;
@@ -554,7 +549,7 @@ input[type="radio"] {
     flex-shrink: 0;
 }
 
-/* ตัวเลือก Checkbox (สภาพสินค้า, ช่วงอายุ) */
+/* Checkbox */
 .checkbox-list {
     display: flex;
     flex-direction: column;
@@ -578,8 +573,8 @@ input[type="radio"] {
 
 .checkbox-label input[type="checkbox"] {
     accent-color: var(--color-primary);
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
 
@@ -588,7 +583,7 @@ input[type="radio"] {
     font-size: var(--fs-small);
 }
 
-/* ปุ่มล้างตัวกรองและปุ่มยืนยันการกรอง */
+/* ปุ่มตัวกรอง */
 .filter-actions {
     display: flex;
     flex-direction: column;
@@ -605,12 +600,11 @@ input[type="radio"] {
     cursor: pointer;
     text-align: left;
     padding: 0;
-    transition: text-decoration 0.2 ease-in-out;
+    transition: text-decoration 0.2s ease-in-out;
 }
 
 .btn-clear-filter:hover {
     text-decoration: underline;
-    transition: text-decoration 0.2 ease-in-out;
 }
 
 .btn-apply-filter {
@@ -626,7 +620,7 @@ input[type="radio"] {
 }
 
 .btn-apply-filter:hover {
-    filter: brightness(75%);
+    filter: brightness(85%);
 }
 
 /* รายการของรางวัล */
@@ -644,7 +638,8 @@ input[type="radio"] {
 
 .sort-dropdown-box {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 4px;
 }
 
 .sort-label {
@@ -655,9 +650,8 @@ input[type="radio"] {
 .sort-select-wrapper {
     position: relative;
     display: inline-flex;
-    flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
 }
 
 .sort-select {
@@ -672,20 +666,12 @@ input[type="radio"] {
     outline: none;
 }
 
-/* ปรับแต่งกล่องตัวเลือกด้านใน */
 .sort-select option {
     background-color: var(--color-light);
-    color: var(--color-primary, #37235b);
-    font-family: var(--ff-text, "Mitr", sans-serif);
-    font-size: 14px;
+    color: var(--color-primary);
+    font-family: var(--ff-text);
+    font-size: var(--fs-small);
     padding: 10px;
-}
-
-/* ปรับสีตอนนำเมาส์ไปชี้หรือเลือก (รองรับในบางเบราว์เซอร์) */
-.sort-select option:hover,
-.sort-select option:checked {
-    background-color: var(--color-light);
-    color: var(--color-primary, #37235b);
 }
 
 .sort-arrow {
@@ -694,6 +680,7 @@ input[type="radio"] {
     pointer-events: none;
     font-size: var(--fs-small);
     color: var(--color-primary);
+    transition: transform 0.25s ease-in-out;
 }
 
 /* รายการการ์ดของรางวัล */
@@ -714,10 +701,13 @@ input[type="radio"] {
     grid-template-columns: 278px 1fr auto;
     gap: 24px;
     align-items: start;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-/* รูปภาพของรางวัล */
+.reward-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
 .reward-img-container {
     position: relative;
     width: 278px;
@@ -734,7 +724,7 @@ input[type="radio"] {
     display: block;
 }
 
-/* ปุ่มบันทึกรายการที่ชอบ */
+/* ปุ่ม Favorite */
 .btn-favorite {
     position: absolute;
     top: 8px;
@@ -750,17 +740,27 @@ input[type="radio"] {
     color: var(--color-primary);
     font-size: var(--fs-icon);
     cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, color 0.2s ease;
 }
 
 .btn-favorite:hover {
-    color: var(--color-primary);
-    background-color: var(--color-light);
     transform: scale(1.1);
 }
 
-/* ข้อมูลรายละเอียดของรางวัล */
+.btn-favorite:active {
+    transform: scale(1.2);
+}
+
+.btn-favorite.is-active {
+    color: var(--color-primary);
+}
+
+.btn-favorite.is-active .fa-heart {
+    font-weight: 900;
+}
+
+/* รายละเอียดสินค้า */
 .reward-details {
     display: flex;
     flex-direction: column;
@@ -770,7 +770,7 @@ input[type="radio"] {
     font-family: var(--ff);
     font-size: var(--fs-h3);
     margin-bottom: 4px;
-    transition: color .2s ease-in-out;
+    transition: color 0.2s ease-in-out;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -787,7 +787,7 @@ input[type="radio"] {
 .reward-creator strong {
     color: var(--color-primary);
     font-weight: var(--fw-normal);
-    transition: color .2s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
 .reward-name:hover,
@@ -814,7 +814,7 @@ input[type="radio"] {
     font-size: var(--fs-p);
 }
 
-/* คอลัมน์ปุ่มและการแสดงราคาเหรียญ */
+/* คอลัมน์ปุ่มแลกเหรียญ */
 .reward-action-col {
     height: 100%;
     display: flex;
@@ -827,13 +827,13 @@ input[type="radio"] {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: #ffdc00;
+    background-color: var(--color-yellow);
     padding: 12px 16px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: var(--fs-small);
     font-family: var(--ff);
     white-space: nowrap;
-    transition: filter .2s ease-in-out;
+    transition: filter 0.2s ease-in-out;
 }
 
 .coin-small-icon {
@@ -857,10 +857,10 @@ input[type="radio"] {
 }
 
 .btn-reward-detail:hover {
-    filter: brightness(75%);
+    filter: brightness(85%);
 }
 
-/* แถบเปลี่ยนหน้ารายการสินค้าที่แสดง (Pagination) */
+/* Pagination */
 .pagination-container {
     display: flex;
     justify-content: space-between;
@@ -876,8 +876,8 @@ input[type="radio"] {
 }
 
 .pagination-nav {
-    display: flex;
-    align-items: center;
+    display: inline-flex;
+    align-items: stretch;
     border: var(--border-grey);
     border-radius: 10px;
     overflow: hidden;
@@ -888,14 +888,20 @@ input[type="radio"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    min-width: 50px;
-    padding: 16px 16px;
-    border: var(--border-grey);
+    height: 48px;
+    min-width: 48px;
+    padding: 0 16px;
+    border: none;
+    border-right: var(--border-grey);
     font-size: var(--fs-p);
     text-decoration: none;
     background-color: var(--color-light);
-    transition: all 0.2s ease;
+    color: var(--color-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pagination-nav > *:last-child {
+    border-right: none;
 }
 
 .page-btn:hover,
@@ -906,13 +912,12 @@ input[type="radio"] {
 
 .page-number.is-active {
     background-color: var(--color-primary);
-    border-color: var(--color-primary);
     color: var(--color-light);
 }
 
-
-
-/* SECTION : ส่วนเชิญชวนสร้างของรางวัล */
+/* --------------------------------------------------------------------------
+   SECTION 4 : CTA Banner
+   -------------------------------------------------------------------------- */
 .cta-banner-section {
     width: 100%;
     background-color: var(--color-yellow);
@@ -942,126 +947,30 @@ input[type="radio"] {
     padding: 14px 30px;
     border-radius: 50px;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: filter 0.2s ease;
     white-space: nowrap;
 }
 
 .btn-create-reward:hover {
-    filter: brightness(75%);
+    filter: brightness(85%);
 }
 
-
-
-/* สถานะเมื่อปุ่มหัวใจถูกกดชอบ (.is-active) */
-.btn-favorite.is-active {
-    color: var(--color-primary); /* เปลี่ยนไอคอนเป็นสีแดงสด */
-}
-
-/* สลับจากไอคอนเส้นโปร่ง (regular) เป็นไอคอนทึบ (solid) */
-.btn-favorite.is-active .fa-heart {
-    font-weight: 900; /* Font Awesome จะเรนเดอร์เป็น solid อัตโนมัติเมื่อกำหนด font-weight: 900 */
-}
-
-/* แอนิเมชันเด้งเบาๆ ตอนกดถูกใจ */
-.btn-favorite {
-    transition: transform 0.15s ease, color 0.2s ease;
-    cursor: pointer;
-}
-
-.btn-favorite:active {
-    transform: scale(1.2); /* ขยายใหญ่ขึ้นเล็กน้อยตอนกด */
-}
-
-
-
-
-
-/* RESPONSIVE DESIGN (หน้าจอมือถือ) */
-
-.mobile-filter-trigger {
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-/* ซ่อนตัวควบคุมมือถือทั้งหมดบนหน้าจอคอม */
+/* --------------------------------------------------------------------------
+   DESKTOP TOGGLE RESETS (ซ่อนตัวควบคุมมือถือบนจอใหญ่)
+   -------------------------------------------------------------------------- */
 .filter-toggle-input,
 .mobile-filter-trigger,
 .modal-header-mobile {
     display: none;
 }
 
-.mobile-filter-trigger:hover {
-    background-color: var(--color-primary);
-    color: var(--color-light);
-}
-
-/* สลายตัวครอบ mobile-filter-panel ออกบนจอคอมเพื่อให้ Sidebar เข้าไปอยู่ในกริตปกติ */
 .mobile-filter-panel {
     display: contents;
 }
 
-/* @media (max-width: 768px) {
-    .trade-hero-section,
-    .shipping-history-section,
-    .rewards-shop-section,
-    .cta-banner-section {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .hero-top-row {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 20px;
-    }
-
-    .shipping-history-grid,
-    .rewards-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .filter-sidebar {
-        display: none;
-    }
-
-    .mobile-search-filter-bar {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 24px;
-    }
-
-    .mobile-search-filter-bar .search-input-box {
-        flex: 1;
-    }
-
-    .mobile-search-filter-bar .filter-input {
-        padding-left: 16px;
-        border-radius: 12px;
-        height: 44px;
-        border: 1px solid #cbd5e1;
-    }
-
-    .btn-filter-icon {
-        width: 44px;
-        height: 44px;
-        border: 1px solid #cbd5e1;
-        border-radius: 12px;
-        background-color: #ffffff;
-        color: var(--color-primary, #37235b);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    .view-all-row {
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-} */
-
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN (สำหรับหน้าจอมือถือ <= 428px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 428px) {
     .trade-hero-section,
     .shipping-history-section,
@@ -1076,7 +985,6 @@ input[type="radio"] {
         display: contents;
     }
     
-    /* ปรับระยะขอบการ์ด Hero */
     .trade-hero-card {
         display: flex;
         flex-direction: column;
@@ -1096,11 +1004,10 @@ input[type="radio"] {
     }
 
     .hero-subtitle {
-        font-size: 14px;
+        font-size: var(--fs-small);
         margin-bottom: 16px;
     }
 
-    /* กล่องเหรียญสีเหลืองเต็มความกว้าง */
     .my-coin-box {
         min-width: 100%;
         border-radius: 18px;
@@ -1111,7 +1018,6 @@ input[type="radio"] {
         font-size: 46px;
     }
 
-    /* การ์ดที่อยู่จัดส่ง */
     .hero-address-card {
         order: 2;
         flex-direction: column;
@@ -1130,7 +1036,6 @@ input[type="radio"] {
         text-align: center;
     }
 
-    /* ปุ่มแลกเหรียญกับเพื่อน & รับเหรียญเพิ่ม */
     .hero-btn-group {
         order: 3;
         display: grid;
@@ -1147,7 +1052,6 @@ input[type="radio"] {
         text-align: center;
     }
 
-    /* การ์ดสินค้าแนวตั้งแบบเต็มความกว้าง (Full Stack) */
     .reward-card {
         grid-template-columns: 1fr;
         padding: 16px;
@@ -1166,16 +1070,22 @@ input[type="radio"] {
         margin-top: 6px;
     }
 
-    /* ปุ่มเหรียญสีเหลืองยาวเต็มความกว้าง */
     .coin-price-pill {
         width: 100%;
         padding: 12px;
         border-radius: 50px;
-        font-size: 16px;
+        font-size: var(--fs-p);
         justify-content: center;
     }
 
-    /* แถบเปลี่ยนหน้า (Pagination) จัดกึ่งกลาง */
+    .coin-price-pill:hover {
+        filter: brightness(85%);
+    }
+
+    .btn-reward-detail {
+        display: none;
+    }
+
     .pagination-container {
         flex-direction: column;
         align-items: center;
@@ -1183,7 +1093,6 @@ input[type="radio"] {
         gap: 12px;
     }
 
-    /* Banner ล่างสุด */
     .cta-banner-section {
         padding: 36px 20px;
         text-align: center;
@@ -1199,17 +1108,24 @@ input[type="radio"] {
         justify-content: center;
     }
 
-    .btn-reward-detail {
-        display: none;
-    }
-
-    .coin-price-pill:hover {
-        filter: brightness(75%);
+    .shipping-history-section {
+        display: flex;
+        flex-direction: column;
     }
 
     .shipping-history-section h2 {
         font-size: var(--fs-h4);
         text-align: center;
+    }
+
+    .section-header-row {
+        display: contents;
+    }
+
+    .section-title {
+        order: 0;
+        text-align: left;
+        font-size: var(--fs-h4);
     }
 
     .shipping-card {
@@ -1234,39 +1150,20 @@ input[type="radio"] {
         font-size: var(--fs-small);
     }
 
-    .shipping-history-section {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* สลายตัวครอบ เพื่อให้ h2 และ a ทำตัวเป็น flex-item โดยตรงของ section */
-    .section-header-row {
-        display: contents;
-    }
-
-    /* ล็อคให้หัวข้ออยู่อันดับแรก (บนสุด) */
-    .section-title {
-        order: 0;
-        text-align: left;
-        font-size: var(--fs-h4);
-    }
-
     .sort-dropdown-box label,
     .sort-dropdown-box select,
     .sort-dropdown-box i,
     .sort-label,
     .sort-select,
     .sort-select option {
-        font-size: var(--fs-small); 
+        font-size: var(--fs-small);
     }
 
-    /* กริตรายการการ์ดอยู่อันดับที่ 2 (ตรงกลาง) */
     .shipping-history-grid {
         order: 2;
-        grid-template-columns: 1fr; /* กริตเรียงแนวตั้งเดี่ยว */
+        grid-template-columns: 1fr;
     }
 
-    /* ดันลิงก์ "ดูประวัติทั้งหมด" ให้อยู่ลำดับสุดท้าย (ล่างสุด) และจัดกึ่งกลาง */
     .view-all-link {
         order: 3;
         display: block;
@@ -1282,15 +1179,11 @@ input[type="radio"] {
         align-items: start;
     }
 
-
-
-    /* FILTER OVERLAY */
-    /* 1. ซ่อน Checkbox จริงไว้ */
+    /* Mobile Filter Modal */
     .filter-toggle-input {
         display: none;
     }
 
-    /* 2. สไตล์แถบปุ่มกดตัวกรองสีขาวขอบม่วง */
     .mobile-filter-trigger {
         display: flex;
         justify-content: space-between;
@@ -1298,59 +1191,62 @@ input[type="radio"] {
         width: 100%;
         height: 52px;
         padding: 0 20px;
-        background-color: #ffffff;
-        border: 2px solid var(--color-primary, #37235b);
+        background-color: var(--color-light);
+        border: var(--border-general);
         border-radius: 14px;
-        color: var(--color-primary, #37235b);
-        font-size: 16px;
+        color: var(--color-primary);
+        font-size: var(--fs-p);
         font-weight: 600;
         cursor: pointer;
         box-sizing: border-box;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+
+    .mobile-filter-trigger:hover {
+        background-color: var(--color-primary);
+        color: var(--color-light);
     }
 
     .mobile-filter-trigger .filter-open-icon {
         font-size: 18px;
     }
 
-    /* 3. กล่อง Popup เต็มจอ: ค่าเริ่มต้นซ่อนไว้ */
     .mobile-filter-panel {
         display: none;
     }
 
-    /* 4. เมื่อ Checkbox ถูกติ๊ก (:checked) ให้แสดง Popup ขึ้นมาเต็มหน้าจอ */
     .filter-toggle-input:checked ~ .mobile-filter-panel {
         display: flex;
         flex-direction: column;
         position: fixed;
-        inset: 0;                   /* คลุมทั้ง 4 ด้านเต็มหน้าจอ */
-        background-color: #ffffff;  /* พื้นหลังสีขาว */
+        inset: 0;
+        background-color: var(--color-light);
         z-index: 9999;
         padding: 24px 20px 40px;
-        overflow-y: auto;          /* เลื่อน scroll ดูเฉพาะเนื้อหาข้างใน */
+        overflow-y: auto;
     }
 
-    /* 5. ส่วนหัวของ Popup พร้อมปุ่มกากบาทปิด */
     .modal-header-mobile {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 16px;
         padding-bottom: 12px;
-        border-bottom: 1px solid #f1f5f9;
+        border-bottom: 1px solid rgba(62, 43, 103, 0.1);
         width: 100%;
     }
 
     .modal-header-mobile .filter-main-title {
         font-size: 18px;
         margin-bottom: 0;
-        color: var(--color-primary, #37235b);
+        color: var(--color-primary);
     }
 
     .btn-close-filter {
         background: transparent;
         border: none;
         font-size: 22px;
-        color: var(--color-primary, #37235b);
+        color: var(--color-primary);
         cursor: pointer;
         padding: 4px;
         display: flex;
@@ -1358,22 +1254,20 @@ input[type="radio"] {
         justify-content: center;
     }
 
-    /* 6. ปุ่ม 'ใช้ตัวกรอง' ที่ทำหน้าที่ปิด Popup ไปในตัว */
     .btn-apply-filter-label {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--color-primary, #37235b);
-        color: #ffffff;
+        background-color: var(--color-primary);
+        color: var(--color-light);
         border-radius: 8px;
         height: 44px;
-        font-size: 16px;
+        font-size: var(--fs-p);
         font-weight: 600;
         cursor: pointer;
         text-align: center;
     }
 
-    /* 7. ปรับแต่งเนื้อหา Sidebar ให้เต็มความกว้าง */
     .mobile-filter-panel .filter-sidebar {
         border: none;
         padding: 0;
