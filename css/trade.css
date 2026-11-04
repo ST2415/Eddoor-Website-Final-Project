@@ -1,7 +1,3 @@
-/* ==========================================================================
-   TRADE PAGE STYLES (Eddoor)
-   ========================================================================== */
-
 .trade-page {
     width: 100%;
     background-color: var(--color-light);
@@ -352,7 +348,7 @@ input {
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
-    border-bottom: 1px solid rgba(62, 43, 103, 0.2);
+    border-bottom: var(--border-general);
 }
 
 .history-item:last-child {
@@ -368,7 +364,7 @@ input {
 .history-item-date {
     font-size: var(--fs-small);
     font-weight: 400;
-    color: var(--color-grey);
+    color: var(--color-primary);
 }
 
 .history-item-coin {
@@ -954,6 +950,10 @@ input[type="radio"] {
 .btn-create-reward:hover {
     filter: brightness(85%);
 }
+
+
+
+
 
 /* --------------------------------------------------------------------------
    DESKTOP TOGGLE RESETS (ซ่อนตัวควบคุมมือถือบนจอใหญ่)
