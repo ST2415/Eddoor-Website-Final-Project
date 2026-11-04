@@ -4,6 +4,11 @@
     overflow-x: hidden;
 }
 
+select,
+input {
+    color: var(--color-primary);
+}
+
 
 /* SECTION : การ์ดข้อมูลเหรียญและที่อยู่จัดส่ง */
 .trade-hero-section {
@@ -611,19 +616,18 @@
 .rewards-content {
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
 .rewards-header-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .sort-dropdown-box {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .sort-label {
@@ -635,6 +639,7 @@
     position: relative;
     display: inline-flex;
     align-items: center;
+    gap: 8px;
 }
 
 .sort-select {
@@ -661,7 +666,7 @@
 /* ปรับสีตอนนำเมาส์ไปชี้หรือเลือก (รองรับในบางเบราว์เซอร์) */
 .sort-select option:hover,
 .sort-select option:checked {
-    background-color: #f1f5f9;
+    background-color: var(--color-light);
     color: var(--color-primary, #37235b);
 }
 
@@ -747,6 +752,7 @@
     font-family: var(--ff);
     font-size: var(--fs-h3);
     margin-bottom: 4px;
+    transition: color .2s ease-in-out;
 }
 
 .reward-creator {
@@ -757,7 +763,14 @@
 
 .reward-creator strong {
     color: var(--color-primary);
-    font-weight: 600;
+    font-weight: var(--fw-normal);
+    transition: color .2s ease-in-out;
+}
+
+.reward-name:hover,
+.reward-creator strong:hover {
+    color: var(--color-green);
+    cursor: pointer;
 }
 
 .reward-rating-row {
@@ -920,8 +933,20 @@
 /* RESPONSIVE DESIGN (หน้าจอมือถือ) */
 
 /* ซ่อนแถบค้นหา Mobile บนจอ Desktop */
-.mobile-search-filter-bar {
+/* .mobile-search-filter-bar {
     display: none;
+} */
+
+/* ซ่อนตัวควบคุมมือถือทั้งหมดบนหน้าจอคอม */
+.filter-toggle-input,
+.mobile-filter-trigger,
+.modal-header-mobile {
+    display: none;
+}
+
+/* สลายตัวครอบ mobile-filter-panel ออกบนจอคอมเพื่อให้ Sidebar เข้าไปอยู่ในกริตปกติ */
+.mobile-filter-panel {
+    display: contents;
 }
 
 /* @media (max-width: 768px) {
@@ -1167,9 +1192,18 @@
 
     /* ล็อคให้หัวข้ออยู่อันดับแรก (บนสุด) */
     .section-title {
-        order: 1;
-        margin-bottom: 16px;
+        order: 0;
         text-align: left;
+        font-size: var(--fs-h4);
+    }
+
+    .sort-dropdown-box label,
+    .sort-dropdown-box select
+    .sort-dropdown-box i,
+    .sort-label,
+    .sort-select,
+    .sort-select option {
+        font-size: var(--fs-small); 
     }
 
     /* กริตรายการการ์ดอยู่อันดับที่ 2 (ตรงกลาง) */
@@ -1185,5 +1219,110 @@
         text-align: center;
         margin-top: 24px;
         font-weight: var(--fw-bold);
+    }
+
+    .rewards-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: start;
+    }
+
+    /* 1. ซ่อน Checkbox จริงไว้ */
+    .filter-toggle-input {
+        display: none;
+    }
+
+    /* 2. สไตล์แถบปุ่มกดตัวกรองสีขาวขอบม่วง */
+    .mobile-filter-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 52px;
+        padding: 0 20px;
+        background-color: #ffffff;
+        border: 2px solid var(--color-primary, #37235b);
+        border-radius: 14px;
+        color: var(--color-primary, #37235b);
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    .mobile-filter-trigger .filter-open-icon {
+        font-size: 18px;
+    }
+
+    /* 3. กล่อง Popup เต็มจอ: ค่าเริ่มต้นซ่อนไว้ */
+    .mobile-filter-panel {
+        display: none;
+    }
+
+    /* 4. เมื่อ Checkbox ถูกติ๊ก (:checked) ให้แสดง Popup ขึ้นมาเต็มหน้าจอ */
+    .filter-toggle-input:checked ~ .mobile-filter-panel {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: 0;                   /* คลุมทั้ง 4 ด้านเต็มหน้าจอ */
+        background-color: #ffffff;  /* พื้นหลังสีขาว */
+        z-index: 9999;
+        padding: 24px 20px 40px;
+        overflow-y: auto;          /* เลื่อน scroll ดูเฉพาะเนื้อหาข้างใน */
+    }
+
+    /* 5. ส่วนหัวของ Popup พร้อมปุ่มกากบาทปิด */
+    .modal-header-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #f1f5f9;
+        width: 100%;
+    }
+
+    .modal-header-mobile .filter-main-title {
+        font-size: 18px;
+        margin-bottom: 0;
+        color: var(--color-primary, #37235b);
+    }
+
+    .btn-close-filter {
+        background: transparent;
+        border: none;
+        font-size: 22px;
+        color: var(--color-primary, #37235b);
+        cursor: pointer;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* 6. ปุ่ม 'ใช้ตัวกรอง' ที่ทำหน้าที่ปิด Popup ไปในตัว */
+    .btn-apply-filter-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-primary, #37235b);
+        color: #ffffff;
+        border-radius: 8px;
+        height: 44px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    /* 7. ปรับแต่งเนื้อหา Sidebar ให้เต็มความกว้าง */
+    .mobile-filter-panel .filter-sidebar {
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+        position: static;
+        width: 100%;
     }
 }

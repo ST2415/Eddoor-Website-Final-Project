@@ -24,7 +24,6 @@
                 <a class="navbar_link" href="index.html">หน้าหลัก</a>
                 <a class="navbar_link" href="activity.html">กิจกรรม</a>
                 <a class="navbar_link is-active" href="trade.html">แลกของรางวัล</a>
-                <a class="navbar_link" href="#">วิธีใช้งาน</a>
                 <a class="navbar_link" href="contact.html">ติดต่อเรา</a>
             </nav>
 
@@ -210,157 +209,175 @@
         <!-- SECTION : ส่วนค้นหา ตัวกรอง และรายการของรางวัลที่แลกได้ -->
         <section class="rewards-shop-section">
             <div class="rewards-layout">
+                    
+                    <!-- Checkbox สำหรับคุมสถานะเปิด/ปิด (ซ่อนไว้ ไม่ให้เห็นตัวกล่องติ๊ก) -->
+                    <input type="checkbox" id="filter-toggle" class="filter-toggle-input">
 
-                <!-- กล่องตัวกรองรางวัล (Sidebar Filter) -->
-                <aside class="filter-sidebar">
-                    <h3 class="filter-main-title">ตัวกรองรางวัล</h3>
+                    <!-- แถบปุ่มกดตัวกรองด้านบน (ใช้ label ผูกกับ id="filter-toggle") -->
+                    <label for="filter-toggle" class="mobile-filter-trigger">
+                        <span>ตัวกรองของรางวัล</span>
+                        <i class="fa-solid fa-filter filter-open-icon"></i>
+                    </label>
 
-                    <form class="filter-form" onsubmit="event.preventDefault();">
-                        <!-- ค้นหา -->
-                        <div class="filter-group">
-                            <label for="filter-search" class="filter-label">ค้นหา</label>
-                            <div class="search-input-box">
-                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                                <input type="text" id="filter-search" placeholder="ค้นหา" class="filter-input">
-                            </div>
-                        </div>
-
-                        <!-- เลือกหมวดหมู่ -->
-                        <div class="filter-group">
-                            <label for="filter-category" class="filter-label">หมวดหมู่</label>
-                            <div class="select-box">
-                                <select id="filter-category" class="filter-select">
-                                    <option value="">ทุกหมวดหมู่</option>
-                                    <option value="equipment">อุปกรณ์การเรียน</option>
-                                    <option value="craft">ของทำมือ & งานศิลปะ</option>
-                                    <option value="toys">ของเล่นและโมเดลสะสม</option>
-                                    <option value="accessories">หมวกและเครื่องประดับ</option>
-                                    <option value="sports">อุปกรณ์กีฬา</option>
-                                </select>
-                                <i class="fa-solid fa-chevron-down select-arrow"></i>
-                            </div>
-                        </div>
-
-                        <!-- เลือกรีวิว -->
-                        <div class="filter-group">
-                            <label class="filter-label">รีวิว</label>
-                            <div class="review-options">
-                                <label class="radio-label">
-                                    <input type="radio" name="rating-filter">
-                                    <span class="stars-view">
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                    </span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="rating-filter">
-                                    <span class="stars-view">
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-regular fa-star star-empty"></i>
-                                    </span>
-                                    <span class="rating-text">ขึ้นไป</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="rating-filter">
-                                    <span class="stars-view">
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-regular fa-star star-empty"></i>
-                                        <i class="fa-regular fa-star star-empty"></i>
-                                    </span>
-                                    <span class="rating-text">ขึ้นไป</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="rating-filter">
-                                    <span class="stars-view">
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-regular fa-star star-empty"></i>
-                                        <i class="fa-regular fa-star star-empty"></i>
-                                        <i class="fa-regular fa-star star-empty"></i>
-                                    </span>
-                                    <span class="rating-text">ขึ้นไป</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="rating-filter">
-                                    <span class="stars-view">
-                                        <i class="fa-solid fa-star star-filled"></i>
-                                        <i class="fa-regular fa-star star-empty"></i>
-                                        <i class="fa-regular fa-star star-empty"></i>
-                                        <i class="fa-regular fa-star star-empty"></i>
-                                        <i class="fa-regular fa-star star-empty"></i>
-                                    </span>
-                                    <span class="rating-text">ขึ้นไป</span>
+                    <!-- กล่อง Popup เต็มจอ -->
+                    <div class="mobile-filter-panel">
+                        <aside class="filter-sidebar" id="filterSidebar">
+                            
+                            <!-- ส่วนหัวของ Popup พร้อมปุ่มกากบาทปิด (ผูกกับ id="filter-toggle") -->
+                            <div class="modal-header-mobile">
+                                <h3 class="filter-main-title">ตัวกรองรางวัล</h3>
+                                <label for="filter-toggle" class="btn-close-filter" aria-label="ปิดตัวกรอง">
+                                    <i class="fa-solid fa-xmark"></i>
                                 </label>
                             </div>
-                        </div>
 
-                        <!-- เลือกราคาเหรียญ -->
-                        <div class="filter-group">
-                            <label class="filter-label">ราคา</label>
-                            <div class="price-range-inputs">
-                                <input type="number" value="150" class="price-input" aria-label="ราคาต่ำสุด">
-                                <span class="price-separator">ถึง</span>
-                                <input type="number" value="500" class="price-input" aria-label="ราคาสูงสุด">
-                            </div>
-                        </div>
-
-                        <!-- เลือกสภาพสินค้า -->
-                        <div class="filter-group">
-                            <label class="filter-label">สภาพสินค้า</label>
-                            <div class="checkbox-list">
-                                <div class="checkbox-item">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox">
-                                        <span>ใหม่</span>
-                                    </label>
-                                    <span class="item-count">24</span>
+                            <form class="filter-form" onsubmit="event.preventDefault();">
+                                <!-- ค้นหา -->
+                                <div class="filter-group">
+                                    <label for="filter-search" class="filter-label">ค้นหา</label>
+                                    <div class="search-input-box">
+                                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                        <input type="text" id="filter-search" placeholder="ค้นหา" class="filter-input">
+                                    </div>
                                 </div>
-                                <div class="checkbox-item">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" checked>
-                                        <span>มือสอง</span>
-                                    </label>
-                                    <span class="item-count">15</span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- เลือกช่วงอายุ -->
-                        <div class="filter-group">
-                            <label class="filter-label">สำหรับช่วงอายุ</label>
-                            <div class="checkbox-list">
-                                <div class="checkbox-item">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox">
-                                        <span>15-20 ปี</span>
-                                    </label>
-                                    <span class="item-count">14</span>
+                                <!-- เลือกหมวดหมู่ -->
+                                <div class="filter-group">
+                                    <label for="filter-category" class="filter-label">หมวดหมู่</label>
+                                    <div class="select-box">
+                                        <select id="filter-category" class="filter-select">
+                                            <option value="">ทุกหมวดหมู่</option>
+                                            <option value="equipment">อุปกรณ์การเรียน</option>
+                                            <option value="craft">ของทำมือ & งานศิลปะ</option>
+                                            <option value="toys">ของเล่นและโมเดลสะสม</option>
+                                            <option value="accessories">หมวกและเครื่องประดับ</option>
+                                            <option value="sports">อุปกรณ์กีฬา</option>
+                                        </select>
+                                        <i class="fa-solid fa-chevron-down select-arrow"></i>
+                                    </div>
                                 </div>
-                                <div class="checkbox-item">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" checked>
-                                        <span>7-15 ปีและครอบครัว</span>
-                                    </label>
-                                    <span class="item-count">15</span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- ปุ่มล้างตัวกรองและปุ่มใช้งาน -->
-                        <div class="filter-actions">
-                            <button type="reset" class="btn-clear-filter">ล้างตัวกรองทั้งหมด</button>
-                            <button type="submit" class="btn btn-apply-filter">ใช้ตัวกรอง</button>
-                        </div>
-                    </form>
-                </aside>
+                                <!-- เลือกรีวิว -->
+                                <div class="filter-group">
+                                    <label class="filter-label">รีวิว</label>
+                                    <div class="review-options">
+                                        <label class="radio-label">
+                                            <input type="radio" name="rating-filter">
+                                            <span class="stars-view">
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                            </span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="rating-filter">
+                                            <span class="stars-view">
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-regular fa-star star-empty"></i>
+                                            </span>
+                                            <span class="rating-text">ขึ้นไป</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="rating-filter">
+                                            <span class="stars-view">
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-regular fa-star star-empty"></i>
+                                                <i class="fa-regular fa-star star-empty"></i>
+                                            </span>
+                                            <span class="rating-text">ขึ้นไป</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="rating-filter">
+                                            <span class="stars-view">
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-regular fa-star star-empty"></i>
+                                                <i class="fa-regular fa-star star-empty"></i>
+                                                <i class="fa-regular fa-star star-empty"></i>
+                                            </span>
+                                            <span class="rating-text">ขึ้นไป</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="rating-filter">
+                                            <span class="stars-view">
+                                                <i class="fa-solid fa-star star-filled"></i>
+                                                <i class="fa-regular fa-star star-empty"></i>
+                                                <i class="fa-regular fa-star star-empty"></i>
+                                                <i class="fa-regular fa-star star-empty"></i>
+                                                <i class="fa-regular fa-star star-empty"></i>
+                                            </span>
+                                            <span class="rating-text">ขึ้นไป</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- เลือกราคาเหรียญ -->
+                                <div class="filter-group">
+                                    <label class="filter-label">ราคา</label>
+                                    <div class="price-range-inputs">
+                                        <input type="number" value="150" class="price-input" aria-label="ราคาต่ำสุด">
+                                        <span class="price-separator">ถึง</span>
+                                        <input type="number" value="500" class="price-input" aria-label="ราคาสูงสุด">
+                                    </div>
+                                </div>
+
+                                <!-- เลือกสภาพสินค้า -->
+                                <div class="filter-group">
+                                    <label class="filter-label">สภาพสินค้า</label>
+                                    <div class="checkbox-list">
+                                        <div class="checkbox-item">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox">
+                                                <span>ใหม่</span>
+                                            </label>
+                                            <span class="item-count">24</span>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" checked>
+                                                <span>มือสอง</span>
+                                            </label>
+                                            <span class="item-count">15</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- เลือกช่วงอายุ -->
+                                <div class="filter-group">
+                                    <label class="filter-label">สำหรับช่วงอายุ</label>
+                                    <div class="checkbox-list">
+                                        <div class="checkbox-item">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox">
+                                                <span>15-20 ปี</span>
+                                            </label>
+                                            <span class="item-count">14</span>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" checked>
+                                                <span>7-15 ปีและครอบครัว</span>
+                                            </label>
+                                            <span class="item-count">15</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ปุ่มล้างตัวกรองและปุ่มใช้งาน (ใส่ label เพื่อให้กด 'ใช้ตัวกรอง' แล้วปิด popup ได้ทันที) -->
+                                <div class="filter-actions">
+                                    <button type="reset" class="btn-clear-filter">ล้างตัวกรองทั้งหมด</button>
+                                    <label for="filter-toggle" class="btn btn-apply-filter-label">ใช้ตัวกรอง</label>
+                                </div>
+                            </form>
+                        </aside>
+                    </div>
 
 
 
