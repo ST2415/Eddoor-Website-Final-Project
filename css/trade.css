@@ -473,6 +473,18 @@ input {
     font-size: 12px;
 }
 
+.select-arrow,
+.sort-arrow {
+    transform: rotate(0deg);
+    transition: transform 0.25s ease-in-out, rotate 0.25s ease;
+}
+
+.filter-select:focus ~ .select-arrow,
+.sort-select:focus ~ .sort-arrow {
+    transform: rotate(180deg);
+    transition: transform 0.25s ease-in-out;
+}
+
 /* ตัวเลือกรีวิวดาว */
 .review-options {
     display: flex;
@@ -488,9 +500,12 @@ input {
     font-size: var(--fs-small);
 }
 
-.radio-label input[type="radio"] {
+input[type="radio"] {
     accent-color: var(--color-primary);
+    width: 24px;
+    height: 24px;
     cursor: pointer;
+    border: var(--border-general);
 }
 
 .stars-view {
@@ -563,8 +578,8 @@ input {
 
 .checkbox-label input[type="checkbox"] {
     accent-color: var(--color-primary);
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
 }
 
