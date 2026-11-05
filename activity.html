@@ -29,7 +29,7 @@
 
             <div class="navbar_actions">
                 <a class="coin-balance" href="trade.html">
-                    <img src="img/assets/coin.svg" alt="Coin balance">1,250 COIN
+                    <img src="img/assets/coin.svg" alt="Coin balance">0 COIN
                 </a>
                 <a class="login-button" href="#">Login / Sign up</a>
             </div>
@@ -126,156 +126,762 @@
                     </select>
                 </div>
 
-                <div class="activity-grid" id="activityGrid">
+                <!-- แสดงผลด้วย Grid cards-grid จาก generals.css -->
+                <div class="cards-grid" id="activityGrid">
 
-                    <article class="activity-card" data-title="ปั้นดินให้เป็นตัวเรา" data-category="ศิลปะและงานคราฟต์"
-                        data-date="2026-10-24">
-                        <div class="activity-card_image">
-                            <img src="img/img_home_activity/img_1.jpg" alt="ปั้นดินให้เป็นตัวเรา">
-                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
-                                <input type="checkbox">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-heart"></i>
-                            </label>
-                            <span class="activity-card_coin">
-                                <img src="img/assets/coin.svg" alt="">+200 COIN
-                            </span>
-                        </div>
-                        <div class="activity-card_body">
-                            <span class="activity-card_tag">ศิลปะและงานคราฟต์</span>
-                            <h3>ปั้นดินให้เป็นตัวเรา</h3>
-                            <ul class="activity-card_info">
-                                <li><i class="icon icon-calendar"></i>24 ต.ค. 2569 ณ เวลา 13:00–16:00 น.</li>
-                                <li><i class="icon icon-users"></i>8/20 ที่นั่ง</li>
-                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
-                            </ul>
-                        </div>
-                    </article>
+                    <!-- ================= หน้า 1 (รายการ 1 - 6) ================= -->
+                    <a href="activity-detail.html" class="activity-card-link" data-title="ปั้นดินให้เป็นตัวเรา" data-category="ศิลปะและสื่อบันเทิง" data-date="2026-09-25">
+                        <article class="activity-card category-art">
+                            <div class="card-img-wrapper">
+                                <img src="img/img_home_activity/img_1.jpg" alt="ปั้นดินให้เป็นตัวเรา">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+200 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                                <h4>ปั้นดินให้เป็นตัวเรา</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>25 ก.ย. 2026 | 09.00-12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 15 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>อารีย์, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
 
-                    <article class="activity-card" data-title="สวนเล็กๆ ที่เราเริ่มได้" data-category="ธรรมชาติและชุมชน"
-                        data-date="2026-10-25">
-                        <div class="activity-card_image">
-                            <img src="img/img_home_activity/img_2.webp" alt="สวนเล็กๆ ที่เราเริ่มได้">
-                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
-                                <input type="checkbox">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-heart"></i>
-                            </label>
-                            <span class="activity-card_coin">
-                                <img src="img/assets/coin.svg" alt="">+200 COIN
-                            </span>
-                        </div>
-                        <div class="activity-card_body">
-                            <span class="activity-card_tag">ธรรมชาติและชุมชน</span>
-                            <h3>สวนเล็กๆ ที่เราเริ่มได้</h3>
-                            <ul class="activity-card_info">
-                                <li><i class="icon icon-calendar"></i>25 ต.ค. 2569 ณ เวลา 09:00–12:00 น.</li>
-                                <li><i class="icon icon-users"></i>4/20 ที่นั่ง</li>
-                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
-                            </ul>
-                        </div>
-                    </article>
+                    <a href="#" class="activity-card-link" data-title="สวนปลูก ที่เราสร้าง" data-category="ธรรมชาติและผจญภัย" data-date="2026-09-28">
+                        <article class="activity-card category-nature">
+                            <div class="card-img-wrapper">
+                                <img src="img/img_home_activity/img_2.webp" alt="สวนปลูก ที่เราสร้าง">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+200 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ธรรมชาติและผจญภัย</span>
+                                <h4>สวนปลูก ที่เราสร้าง</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>28 ก.ย. 2026 | 10.00-15.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 20 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>บางกระเจ้า, สมุทรปราการ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
 
-                    <article class="activity-card" data-title="ถ่ายภาพชีวิตประจำวัน" data-category="ศิลปะและงานคราฟต์"
-                        data-date="2026-10-26">
-                        <div class="activity-card_image">
-                            <img src="img/img_home_activity/img_3.jpg" alt="ถ่ายภาพชีวิตประจำวัน">
-                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
-                                <input type="checkbox">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-heart"></i>
-                            </label>
-                            <span class="activity-card_coin">
-                                <img src="img/assets/coin.svg" alt="">+100 COIN
-                            </span>
-                        </div>
-                        <div class="activity-card_body">
-                            <span class="activity-card_tag">ศิลปะและงานคราฟต์</span>
-                            <h3>ถ่ายภาพชีวิตประจำวัน</h3>
-                            <ul class="activity-card_info">
-                                <li><i class="icon icon-calendar"></i>26 ต.ค. 2569 ณ เวลา 09:00–12:00 น.</li>
-                                <li><i class="icon icon-users"></i>14/20 ที่นั่ง</li>
-                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
-                            </ul>
-                        </div>
-                    </article>
+                    <a href="#" class="activity-card-link" data-title="ถ่ายภาพชีวิตประจำวัน" data-category="ศิลปะและสื่อบันเทิง" data-date="2026-10-02">
+                        <article class="activity-card category-art">
+                            <div class="card-img-wrapper">
+                                <img src="img/img_home_activity/img_3.jpg" alt="ถ่ายภาพชีวิตประจำวัน">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+100 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                                <h4>ถ่ายภาพชีวิตประจำวัน</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>02 ต.ค. 2026 | 13.00-17.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 10 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>ย่านเจริญกรุง, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
 
-                    <article class="activity-card" data-title="วาดรูปจากประสบการณ์" data-category="ศิลปะและงานคราฟต์"
-                        data-date="2026-10-27">
-                        <div class="activity-card_image">
-                            <img src="img/img_home_activity/img_4.jpg" วาดรูปจากประสบการณ์">
-                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
-                                <input type="checkbox">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-heart"></i>
-                            </label>
-                            <span class="activity-card_coin">
-                                <img src="img/assets/coin.svg" alt="">+50 COIN
-                            </span>
-                        </div>
-                        <div class="activity-card_body">
-                            <span class="activity-card_tag">ศิลปะและงานคราฟต์</span>
-                            <h3>วาดรูปจากประสบการณ์</h3>
-                            <ul class="activity-card_info">
-                                <li><i class="icon icon-calendar"></i>27 ต.ค. 2569 ณ เวลา 09:00–12:00 น.</li>
-                                <li><i class="icon icon-users"></i>18/20 ที่นั่ง</li>
-                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
-                            </ul>
-                        </div>
-                    </article>
+                    <a href="#" class="activity-card-link" data-title="วาดภาพและกระดาษทำมือ" data-category="ศิลปะและสื่อบันเทิง" data-date="2026-10-05">
+                        <article class="activity-card category-art">
+                            <div class="card-img-wrapper">
+                                <img src="img/img_home_activity/img_4.jpg" alt="วาดภาพและกระดาษทำมือ">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+50 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                                <h4>วาดภาพและกระดาษทำมือ</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>05 ต.ค. 2026 | 09.00-12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 12 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>สามย่าน, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
 
-                    <article class="activity-card" data-title="ทำอาหารจากวัตถุดิบใกล้ตัว"
-                        data-category="ธรรมชาติและชุมชน" data-date="2026-10-30">
-                        <div class="activity-card_image">
-                            <img src="img/img_home_activity/img_5.jpg" alt="ทำอาหารจากวัตถุดิบใกล้ตัว">
-                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
-                                <input type="checkbox">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-heart"></i>
-                            </label>
-                            <span class="activity-card_coin">
-                                <img src="img/assets/coin.svg" alt="">+100 COIN
-                            </span>
-                        </div>
-                        <div class="activity-card_body">
-                            <span class="activity-card_tag">ธรรมชาติและชุมชน</span>
-                            <h3>ทำอาหารจากวัตถุดิบใกล้ตัว</h3>
-                            <ul class="activity-card_info">
-                                <li><i class="icon icon-calendar"></i>30 ต.ค. 2569 ณ เวลา 09:00–12:00 น.</li>
-                                <li><i class="icon icon-users"></i>1/20 ที่นั่ง</li>
-                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
-                            </ul>
-                        </div>
-                    </article>
+                    <a href="#" class="activity-card-link" data-title="ทำอาหารด้วยวัตถุดิบใกล้ตัว" data-category="อาหารและสุขภาพ" data-date="2026-10-10">
+                        <article class="activity-card category-food">
+                            <div class="card-img-wrapper">
+                                <img src="img/img_home_activity/img_5.jpg" alt="ทำอาหารด้วยวัตถุดิบใกล้ตัว">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+100 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">อาหารและสุขภาพ</span>
+                                <h4>ทำอาหารด้วยวัตถุดิบใกล้ตัว</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>10 ต.ค. 2026 | 09.30-13.30 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 8 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>ลาดพร้าว, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
 
-                    <article class="activity-card" data-title="ซ่อมผ้าเสื้อผ้า" data-category="ศิลปะและงานคราฟต์"
-                        data-date="2026-11-14">
-                        <div class="activity-card_image">
-                            <img src="img/img_home_activity/img_6.webp" alt="ซ่อมผ้าเสื้อผ้า">
-                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
-                                <input type="checkbox">
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-heart"></i>
-                            </label>
-                            <span class="activity-card_coin">
-                                <img src="img/assets/coin.svg" alt="">+100 COIN
-                            </span>
-                        </div>
-                        <div class="activity-card_body">
-                            <span class="activity-card_tag">ศิลปะและงานคราฟต์</span>
-                            <h3>ซ่อมผ้าเสื้อผ้า</h3>
-                            <ul class="activity-card_info">
-                                <li><i class="icon icon-calendar"></i>14 พ.ย. 2569 ณ เวลา 09:00–12:00 น.</li>
-                                <li><i class="icon icon-users"></i>7/10 ที่นั่ง</li>
-                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
-                            </ul>
-                        </div>
-                    </article>
+                    <a href="#" class="activity-card-link" data-title="ซ่อมแซมเสื้อผ้า" data-category="ชีวิตและชุมชน" data-date="2026-10-15">
+                        <article class="activity-card category-community">
+                            <div class="card-img-wrapper">
+                                <img src="img/img_home_activity/img_6.webp" alt="ซ่อมแซมเสื้อผ้า">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+100 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ชีวิตและชุมชน</span>
+                                <h4>ซ่อมแซมเสื้อผ้า</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>15 ต.ค. 2026 | 09.00-12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 15 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>อารีย์, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- ================= หน้า 2 (รายการ 7 - 12) ================= -->
+                    <a href="#" class="activity-card-link" data-title="ประดิษฐ์หุ่นยนต์จิ๋วจากของเหลือใช้" data-category="วิทยาศาสตร์และเทคโนโลยี" data-date="2026-10-18">
+                        <article class="activity-card category-tech">
+                            <div class="card-img-wrapper">
+                                <img src="https://s3-ap-southeast-1.amazonaws.com/com.csitereport.s3/public_img/da4b18259018721ef565004ad186520832880152.jpg" alt="ประดิษฐ์หุ่นยนต์จิ๋ว">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+50 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                                <h4>นักปลูกตัวจิ๋ว สำรวจสวน</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>10 พ.ย. 2026 | 13.00-16.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 10 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>สวนวชิรเบญจทัศ กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="เดินป่าศึกษาธรรมชาติและดูนก" data-category="ธรรมชาติและผจญภัย" data-date="2026-10-20">
+                        <article class="activity-card category-nature">
+                            <div class="card-img-wrapper">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYtgyAY_phxgpjQPegKg6fskft4sJfHx6tPiuFAn4uhQ5k6CXos0ex9wL&s=10" alt="เดินป่าศึกษาธรรมชาติ">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+120 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                                <h4>เล่าเรื่องเมืองผ่านเลนส์</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>30 ต.ค. 2026 | 09.00–12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 20 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>ย่านเจริญกรุง กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="เบเกอรี่โฮมเมดสไตล์ญี่ปุ่น" data-category="อาหารและสุขภาพ" data-date="2026-10-22">
+                        <article class="activity-card category-food">
+                            <div class="card-img-wrapper">
+                                <img src="img/img_home_activity/img_5.jpg" alt="เบเกอรี่โฮมเมด">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+80 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">วิทยาศาสตร์และเทคโนโลยี</span>
+                                <h4>ทดลองสนุก จุดประกายวิทย์</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>14 พ.ย. 2026 | 09.00–12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 10 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>พิพิธภัณฑ์วิทยาศาสตร์ ปทุมธานี</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="เทคนิคการเล่าเรื่องผ่านพอดแคสต์" data-category="ศิลปะและสื่อบันเทิง" data-date="2026-10-24">
+                        <article class="activity-card category-art">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="พอดแคสต์">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+50 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">อาหารและสุขภาพ</span>
+                                <h4>พายืดเส้นเตรียมสภาพร่างกายยามเช้า</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>24 ต.ค. 2026 | 09.00–12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 30 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>สวนวชิรเบญจทัศ กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="จิตอาสาทำความสะอาดคลองชุมชน" data-category="ชีวิตและชุมชน" data-date="2026-10-26">
+                        <article class="activity-card category-community">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="จิตอาสาชุมชน">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+50 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">อาหารและสุขภาพ</span>
+                                <h4>โยคะสำหรับมือใหม่</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>24 ต.ค. 2026 | 08.00-12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 35 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>ชะอำ, เพชรบุรี</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="เวิร์กช็อปโมเดลกระดาษ 3D" data-category="ศิลปะและสื่อบันเทิง" data-date="2026-10-28">
+                        <article class="activity-card category-art">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1770563181920-b1defff2ad0c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="โมเดลกระดาษ 3D">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+200 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">อาหารและสุขภาพ</span>
+                                <h4>มาราทอนขึ้นเขา</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>01 พ.ย. 2026 | 8.00-12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 20 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>เขาใหญ่, นครราชสีมา</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- ================= หน้า 3 (รายการ 13 - 18) ================= -->
+                    <a href="#" class="activity-card-link" data-title="สร้างแอปฯ ด้วย No-Code สำหรับวัยรุ่น" data-category="วิทยาศาสตร์และเทคโนโลยี" data-date="2026-11-01">
+                        <article class="activity-card category-tech">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1758691736980-c619fa4203bb?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="แอป No-Code">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+180 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">วิทยาศาสตร์และเทคโนโลยี</span>
+                                <h4>ฝึกการทำงานเป็นทีม</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>08 พ.ย. 2026 | 09.30-16.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 40 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>พญาไท, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="เพาะเห็ดอินทรีย์กินเองในบ้าน" data-category="ธรรมชาติและผจญภัย" data-date="2026-11-03">
+                        <article class="activity-card category-nature">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1781656570008-1f80c57161a5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="เพาะเห็ดอินทรีย์">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+200 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ธรรมชาติและผจญภัย</span>
+                                <h4>พายเรือในทะเล</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>14 พ.ย. 2026 | 10.00-12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 20 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>ชลบุรี</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="ฝึกผสมม็อกเทลและเครื่องดื่มสุขภาพ" data-category="อาหารและสุขภาพ" data-date="2026-11-05">
+                        <article class="activity-card category-food">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1788882679821-e6d85bd17d5f?q=80&w=1083&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="ผสมม็อกเทล">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+100 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                                <h4>ฝึกระบายสีน้ำ</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>13 พ.ย. 2026 | 14.00-17.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 15 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>เอกมัย, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="ออกแบบสติ๊กเกอร์ไลน์และลายกราฟิก" data-category="ศิลปะและสื่อบันเทิง" data-date="2026-11-08">
+                        <article class="activity-card category-art">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1771257807779-a72e74deaa11?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="สติ๊กเกอร์ไลน์">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+100 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">อาหารและสุขภาพ</span>
+                                <h4>กิจกรรมเล่นฟุตบอล</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>02 พ.ย. 2026 | 13.00-16.30 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 20 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>ลาดกระบัง, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="จัดตู้ไม้น้ำขนาดมินิ" data-category="ธรรมชาติและผจญภัย" data-date="2026-11-10">
+                        <article class="activity-card category-nature">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1762881293996-30a4b83d57b0?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="ตู้ไม้น้ำมินิ">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+200 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ธรรมชาติและผจญภัย</span>
+                                <h4>สวมบทบาทในโลกแฟนตาซี</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>20 พ.ย. 2026 | 09.00-13.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 10 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>จตุจักร, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="ชมรมบอร์ดเกมเพื่อการสื่อสารและตรรกะ" data-category="ชีวิตและชุมชน" data-date="2026-11-12">
+                        <article class="activity-card category-community">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1778145214610-9f3a5efd5760?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="บอร์ดเกม">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+150 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">อาหารและสุขภาพ</span>
+                                <h4>ฝึกว่ายน้ำสำหรับผู้เริ่มต้น</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>12 พ.ย. 2026 | 14.00-18.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 20 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>อนุสาวรีย์ชัยฯ, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- ================= หน้า 4 (รายการ 19 - 24) ================= -->
+                    <a href="#" class="activity-card-link" data-title="การทำเทียนหอมอโรมาปรับสมดุล" data-category="ศิลปะและสื่อบันเทิง" data-date="2026-11-14">
+                        <article class="activity-card category-art">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1627373369589-1faf52348826?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="เทียนหอมอโรมา">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+100 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                                <h4>ทีมช็อกโกแลต</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>24 พ.ย. 2026 | 13.00-16.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 18 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>พระโขนง, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="ถ่ายดาวและดาราศาสตร์เบื้องต้น" data-category="วิทยาศาสตร์และเทคโนโลยี" data-date="2026-11-16">
+                        <article class="activity-card category-tech">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1758272960336-e304478e50de?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="ดาราศาสตร์เบื้องต้น">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+200 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ธรรมชาติและผจญภัย</span>
+                                <h4>ตั้งแคมป์เล่าเรื่องราว</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>30 พ.ย. 2026 | 18.00-21.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 10 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>เชียงราย</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="ฝึกทักษะการเอาตัวรอดแคมป์ปิ้ง" data-category="ธรรมชาติและผจญภัย" data-date="2026-11-18">
+                        <article class="activity-card category-nature">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1784933360152-66e6d44591d9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="ทักษะแคมป์ปิ้ง">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+100 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">อาหารและสุขภาพ</span>
+                                <h4>ฝึกรอเลอร์สเก็ต</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>01 ธ.ค. 2026 | 09.00-12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 10 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>นครนายก</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="ทำกาแฟ Specialty ดริปด้วยตนเอง" data-category="อาหารและสุขภาพ" data-date="2026-11-20">
+                        <article class="activity-card category-food">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1698076019037-07ce5f9cc59f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="ดริปกาแฟ">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+100 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ธรรมชาติและผจญภัย</span>
+                                <h4>ขี่ม้ารอบจิมทอมสัน ฟาร์ม</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>27 พ.ย. 2026 | 13.00-15.30 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 20 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>ธงชัย, นครราชสีมา</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="เย็บสมุดบันทึกหนังทำมือ" data-category="ศิลปะและสื่อบันเทิง" data-date="2026-11-22">
+                        <article class="activity-card category-art">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1772517403501-c4bb361a4bdc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="สมุดบันทึกหนัง">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+150 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">อาหารและสุขภาพ</span>
+                                <h4>กีฬาพื้นบ้าน</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>22 พ.ย. 2026 | 10.00-14.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 20 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>เจริญกรุง, กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="#" class="activity-card-link" data-title="เวิร์กช็อปช่วยฟื้นคืนชีพขั้นพื้นฐาน (CPR)" data-category="ชีวิตและชุมชน" data-date="2026-11-25">
+                        <article class="activity-card category-community">
+                            <div class="card-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1762955911769-d652ceaa94bb?q=80&w=1121&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="CPR Workshop">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+100 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-category">ศิลปะและสื่อสร้างสรรค์</span>
+                                <h4>อาม่าสอนถักเอง</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>29 พ.ย. 2026 | 09.00-12.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 20 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>กรุงเทพฯ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </a>
 
                 </div>
 
                 <p class="activity-empty" id="activityEmpty" hidden>ไม่พบกิจกรรมที่ตรงกับการค้นหา</p>
 
+                <!-- แถบสลับหน้า Pagination 4 หน้า -->
                 <div class="activity-list_foot">
                     <p class="activity-list_count" id="activityCount">แสดง 1–6 จาก 24 กิจกรรม</p>
 
@@ -364,87 +970,7 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const grid = document.getElementById('activityGrid');
-            const form = document.getElementById('activityFilterForm');
-            const keyword = document.getElementById('filterKeyword');
-            const category = document.getElementById('filterCategory');
-            const sortSelect = document.getElementById('activitySort');
-            const emptyMsg = document.getElementById('activityEmpty');
-            const countText = document.getElementById('activityCount');
-            const pagination = document.querySelector('.pagination');
-
-            const cards = Array.from(grid.querySelectorAll('.activity-card'));
-            const numberButtons = Array.from(pagination.querySelectorAll('[data-page]'))
-                .filter(b => !isNaN(Number(b.dataset.page)));
-            const TOTAL_ACTIVITIES = 24;
-            const PER_PAGE = 6;
-            let currentPage = 1;
-
-            /* ค้นหาด้วยคำ + หมวดหมู่ */
-            function applyFilter() {
-                const q = keyword.value.trim().toLowerCase();
-                const cat = category.value;
-                const filtering = q || cat;
-                let visible = 0;
-
-                cards.forEach(card => {
-                    const matchText = !q || card.dataset.title.toLowerCase().includes(q);
-                    const matchCat = !cat || card.dataset.category === cat;
-                    const match = matchText && matchCat;
-                    card.hidden = !match;
-                    if (match) visible++;
-                });
-
-                emptyMsg.hidden = visible !== 0;
-                countText.textContent = filtering
-                    ? `พบ ${visible} กิจกรรม`
-                    : `แสดง ${(currentPage - 1) * PER_PAGE + 1}–${currentPage * PER_PAGE} จาก ${TOTAL_ACTIVITIES} กิจกรรม`;
-            }
-
-            form.addEventListener('submit', e => {
-                e.preventDefault();
-                applyFilter();
-            });
-            keyword.addEventListener('input', applyFilter);
-            category.addEventListener('change', applyFilter);
-
-            /* เรียงลำดับ */
-            const originalOrder = cards.slice();
-            sortSelect.addEventListener('change', () => {
-                const sorted = originalOrder.slice();
-                if (sortSelect.value === 'date') {
-                    sorted.sort((a, b) => a.dataset.date.localeCompare(b.dataset.date));
-                }
-                sorted.forEach(card => grid.appendChild(card));
-            });
-
-            /* แบ่งหน้า */
-            function setPage(page) {
-                currentPage = Math.min(Math.max(page, 1), numberButtons.length);
-
-                numberButtons.forEach(btn => {
-                    btn.classList.toggle('is-active', Number(btn.dataset.page) === currentPage);
-                });
-                pagination.querySelector('[data-page="prev"]').disabled = currentPage === 1;
-                pagination.querySelector('[data-page="next"]').disabled = currentPage === numberButtons.length;
-
-                applyFilter();
-            }
-
-            pagination.addEventListener('click', e => {
-                const btn = e.target.closest('[data-page]');
-                if (!btn) return;
-                const value = btn.dataset.page;
-                if (value === 'prev') setPage(currentPage - 1);
-                else if (value === 'next') setPage(currentPage + 1);
-                else setPage(Number(value));
-            });
-
-            setPage(1);
-        });
-    </script>
+    <script src="js/activity-function.js"></script>
 </body>
 
 </html>

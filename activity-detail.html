@@ -76,13 +76,13 @@
                             <div class="detail-gallery_main">
                                 <img id="detailMainImage" src="img/img_home_activity/img_1.jpg"
                                     alt="ปั้นดินให้เป็นตัวเรา">
-                                <label class="detail-fav detail-fav--large" aria-label="บันทึกกิจกรรม">
+                                <label class="btn-favorite" aria-label="บันทึกกิจกรรม">
                                     <input type="checkbox">
                                     <i class="fa-regular fa-heart"></i>
                                     <i class="fa-solid fa-heart"></i>
                                 </label>
-                                <span class="detail-coin">
-                                    <img src="img/assets/coin.svg" alt="">+150 COIN
+                                <span class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="">+200 COIN
                                 </span>
                             </div>
                             <div class="detail-gallery_thumbs">
@@ -149,9 +149,9 @@
                             </div>
 
                             <div class="detail-actions">
-                                <a class="detail-button detail-button--outline"
+                                <a class="btn btn-outline-general"
                                     href="#how-to-join">วิธีการสมัครกิจกรรม</a>
-                                <a class="detail-button detail-button--solid" href="#join">สมัครเข้าร่วมกิจกรรม</a>
+                                <a class="btn btn-primary" href="#join">สมัครเข้าร่วมกิจกรรม</a>
                             </div>
                         </div>
 
@@ -197,7 +197,7 @@
                             <span class="detail-schedule_time">15:30</span>
                             <div>
                                 <strong>แชร์เรื่องราวและสรุปการเรียนรู้</strong>
-                                <p>นำเสนอผลงาน เช็กการเข้าร่วม และรับ 150 COIN</p>
+                                <p>นำเสนอผลงาน เช็กการเข้าร่วม และรับ 200 COIN</p>
                             </div>
                         </li>
 
@@ -210,78 +210,98 @@
                 <div class="detail-more_inner">
                     <h2>สำรวจกิจกรรมเพิ่มเติม</h2>
                     <div class="detail-more_grid">
-                        <article class="detail-card">
-                            <div class="detail-card_image">
-                                <img src="https://s3-ap-southeast-1.amazonaws.com/com.csitereport.s3/public_img/da4b18259018721ef565004ad186520832880152.jpg"
-                                    alt="นักปลูกตัวจิ๋ว สำรวจสวน">
-                                <label class="detail-fav" aria-label="บันทึกกิจกรรม">
-                                    <input type="checkbox">
+                        <a href="#" class="activity-card-link" data-title="ประดิษฐ์หุ่นยนต์จิ๋วจากของเหลือใช้" data-category="วิทยาศาสตร์และเทคโนโลยี" data-date="2026-10-18">
+                        <article class="activity-card category-tech">
+                            <div class="card-img-wrapper">
+                                <img src="https://s3-ap-southeast-1.amazonaws.com/com.csitereport.s3/public_img/da4b18259018721ef565004ad186520832880152.jpg" alt="ประดิษฐ์หุ่นยนต์จิ๋ว">
+                                <div class="coin-pill">
+                                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                    <span>+50 COIN</span>
+                                </div>
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
                                     <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-solid fa-heart"></i>
-                                </label>
-                                <span class="detail-coin">
-                                    <img src="img/assets/coin.svg" alt="">+50 COIN
-                                </span>
+                                </button>
                             </div>
-                            <div class="detail-card_body">
-                                <span class="detail-card_tag">ศิลปะและสื่อบันเทิง</span>
-                                <h3>นักปลูกตัวจิ๋ว สำรวจสวน</h3>
-                                <ul class="detail-card_info">
-                                    <li><i class="icon icon-calendar"></i>10 พ.ย. 2569 ณ เวลา 09:00–12:00 น.</li>
-                                    <li><i class="icon icon-users"></i>10/20 ที่นั่ง</li>
-                                    <li><i class="icon icon-pin"></i>สวนวชิรเบญจทัศ กรุงเทพฯ</li>
-                                </ul>
+                            <div class="card-content">
+                                <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                                <h4>นักปลูกตัวจิ๋ว สำรวจสวน</h4>
+                                <p class="info">
+                                    <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                    <span>10 พ.ย. 2026 | 13.00-16.00 น.</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                    <span>รับ 10 คน</span>
+                                </p>
+                                <p class="info">
+                                    <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                    <span>สวนวชิรเบญจทัศ กรุงเทพฯ</span>
+                                </p>
                             </div>
                         </article>
+                        </a>
 
-                        <article class="detail-card">
-                            <div class="detail-card_image">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYtgyAY_phxgpjQPegKg6fskft4sJfHx6tPiuFAn4uhQ5k6CXos0ex9wL&s=10"
-                                    alt="เล่าเรื่องเมืองผ่านเลนส์">
-                                <label class="detail-fav" aria-label="บันทึกกิจกรรม">
-                                    <input type="checkbox">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-solid fa-heart"></i>
-                                </label>
-                                <span class="detail-coin">
-                                    <img src="img/assets/coin.svg" alt="">+120 COIN
-                                </span>
-                            </div>
-                            <div class="detail-card_body">
-                                <span class="detail-card_tag">ศิลปะและสื่อบันเทิง</span>
-                                <h3>เล่าเรื่องเมืองผ่านเลนส์</h3>
-                                <ul class="detail-card_info">
-                                    <li><i class="icon icon-calendar"></i>30 ต.ค. 2569 ณ เวลา 09:00–12:00 น.</li>
-                                    <li><i class="icon icon-users"></i>1/20 ที่นั่ง</li>
-                                    <li><i class="icon icon-pin"></i>ย่านเจริญกรุง กรุงเทพฯ</li>
-                                </ul>
-                            </div>
-                        </article>
+                        <a href="#" class="activity-card-link" data-title="เดินป่าศึกษาธรรมชาติและดูนก" data-category="ธรรมชาติและผจญภัย" data-date="2026-10-20">
+                            <article class="activity-card category-nature">
+                                <div class="card-img-wrapper">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFYtgyAY_phxgpjQPegKg6fskft4sJfHx6tPiuFAn4uhQ5k6CXos0ex9wL&s=10" alt="เดินป่าศึกษาธรรมชาติ">
+                                    <div class="coin-pill">
+                                        <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                        <span>+120 COIN</span>
+                                    </div>
+                                    <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                                    <h4>เล่าเรื่องเมืองผ่านเลนส์</h4>
+                                    <p class="info">
+                                        <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                        <span>30 ต.ค. 2026 | 09.00–12.00 น.</span>
+                                    </p>
+                                    <p class="info">
+                                        <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                        <span>รับ 20 คน</span>
+                                    </p>
+                                    <p class="info">
+                                        <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                        <span>ย่านเจริญกรุง กรุงเทพฯ</span>
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
 
-                        <article class="detail-card">
-                            <div class="detail-card_image">
-                                <img src="https://www.aksorn.com/storage/upload/images/iStock-1151466026.jpg"
-                                    alt="ทดลองสนุก จุดประกายวิทย์">
-                                <label class="detail-fav" aria-label="บันทึกกิจกรรม">
-                                    <input type="checkbox">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-solid fa-heart"></i>
-                                </label>
-                                <span class="detail-coin">
-                                    <img src="img/assets/coin.svg" alt="">+80 COIN
-                                </span>
-                            </div>
-                            <div class="detail-card_body">
-                                <span class="detail-card_tag">วิทยาศาสตร์และเทคโนโลยี</span>
-                                <h3>ทดลองสนุก จุดประกายวิทย์</h3>
-                                <ul class="detail-card_info">
-                                    <li><i class="icon icon-calendar"></i>14 พ.ย. 2569 ณ เวลา 09:00–12:00 น.</li>
-                                    <li><i class="icon icon-users"></i>9/10 ที่นั่ง</li>
-                                    <li><i class="icon icon-pin"></i>พิพิธภัณฑ์วิทยาศาสตร์ ปทุมธานี</li>
-                                </ul>
-                            </div>
-                        </article>
-
+                        <a href="#" class="activity-card-link" data-title="เบเกอรี่โฮมเมดสไตล์ญี่ปุ่น" data-category="อาหารและสุขภาพ" data-date="2026-10-22">
+                            <article class="activity-card category-food">
+                                <div class="card-img-wrapper">
+                                    <img src="img/img_home_activity/img_5.jpg" alt="เบเกอรี่โฮมเมด">
+                                    <div class="coin-pill">
+                                        <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                        <span>+80 COIN</span>
+                                    </div>
+                                    <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-category">วิทยาศาสตร์และเทคโนโลยี</span>
+                                    <h4>ทดลองสนุก จุดประกายวิทย์</h4>
+                                    <p class="info">
+                                        <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                        <span>14 พ.ย. 2026 | 09.00–12.00 น.</span>
+                                    </p>
+                                    <p class="info">
+                                        <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                        <span>รับ 10 คน</span>
+                                    </p>
+                                    <p class="info">
+                                        <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                        <span>พิพิธภัณฑ์วิทยาศาสตร์ ปทุมธานี</span>
+                                    </p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
                 </div>
             </section>

@@ -280,73 +280,7 @@
   box-shadow: var(--shadow-md);
 }
 
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
 
-a.activity-card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-.activity-card {
-  border: 1px solid #E5E7EB;
-  border-radius: var(--radius-lg, 18px);
-  overflow: hidden;
-  background: var(--color-light);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-a.activity-card-link:hover .activity-card {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-primary);
-}
-
-.card-img-wrapper {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-}
-
-.card-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-a.activity-card-link:hover .card-img-wrapper img {
-  transform: scale(1.05);
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.card-content h4 {
-  margin: 0 0 10px;
-  font-size: 1.15rem;
-  color: var(--color-primary);
-}
-
-.card-content .info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 6px 0;
-  color: var(--color-grey);
-  font-size: 0.9rem;
-}
-
-.card-info-icon {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-}
 
 /* ==========================================
    5. How It Works Section
@@ -641,65 +575,12 @@ a.activity-card-link:hover .card-img-wrapper img {
   border: none !important;
 }
 
-/* ==========================================
-   FIX HOVER OVERFLOW & CARD BORDERS / CATEGORIES
-   ========================================== */
 
-.activities-section {
-  padding-top: 15px !important;
-  overflow: visible !important;
-}
-
-.cards-grid {
-  margin-top: 20px !important;
-  padding-top: 15px !important;
-  padding-bottom: 15px !important;
-  overflow: visible !important;
-}
-
-a.activity-card-link {
-  display: block !important;
-  text-decoration: none !important;
-  position: relative !important;
-  z-index: 1 !important;
-}
-
-a.activity-card-link:hover {
-  z-index: 20 !important;
-}
-
-.card-category {
-  display: block !important;
-  font-size: 0.85rem !important;
-  color: var(--color-grey, #737373) !important;
-  margin-bottom: 6px !important;
-  font-weight: 500 !important;
-}
-
-.activity-card {
-  border: 2px solid var(--color-primary, #3e2b67) !important;
-  border-radius: var(--radius-lg, 18px) !important;
-  overflow: hidden !important;
-  background: var(--color-light, #ffffff) !important;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
-}
-
-.activity-card.category-art,
-.activity-card.category-nature,
-.activity-card.category-food,
-.activity-card.category-community {
-  border-color: #3e2b67 !important;
-}
-
-a.activity-card-link:hover .activity-card {
-  transform: translateY(-8px) !important;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12) !important;
-}
 
 /* ==========================================
-   📱 Responsive Mobile Layout (<= 768px & 428px)
+   Responsive Mobile Layout (<= 768px & 428px)
    ========================================== */
-@media (max-width: 768px) {
+@media (max-width: 428px) {
   .hero-section {
     padding: 40px 0 60px !important;
   }
@@ -768,12 +649,7 @@ a.activity-card-link:hover .activity-card {
     flex-direction: column !important;
     width: 100% !important;
   }
-}
-
-/* ==========================================
-   📱 EXACT MOBILE SPECIFIC FIX (<= 428PX)
-   ========================================== */
-@media (max-width: 428px) {
+  
   /* 1. ระยะขอบ Filter Section บนมือถือ */
   .filter-section {
     padding: 24px 16px 32px 16px !important;
