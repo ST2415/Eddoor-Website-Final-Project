@@ -112,8 +112,8 @@
 
                     <!-- 2. รูปแบบกิจกรรม -->
                     <select class="filter-select" name="type" id="filterType">
-                        <option value="" disabled selected>ทุกพื้นที่</option>
-                        <option value="all">ทุกพื้นที่</option>
+                        <option value="" disabled selected>รูปแบบกิจกรรม</option>
+                        <option value="all">รูปแบบกิจกรรม</option>
                         <option value="onsite">On-site (ลงพื้นที่จริง)</option>
                         <option value="online">Online (ออนไลน์)</option>
                         <option value="workshop">Workshop / อบรมเชิงปฏิบัติการ</option>
@@ -122,8 +122,8 @@
 
                     <!-- 3. จังหวัด / พื้นที่ (ครบ 77 จังหวัด) -->
                     <select class="filter-select" name="location" id="filterLocation">
-                        <option value="" disabled selected>ทุกช่วงวัย</option>
-                        <option value="all">ทุกช่วงวัย</option>
+                        <option value="" disabled selected>ทุกพื้นที่</option>
+                        <option value="all">ทุกพื้นที่</option>
                         
                         <optgroup label="กรุงเทพฯ และปริมณฑล">
                             <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
@@ -234,10 +234,12 @@
                     </select>
                 </div>
                 <div class="search-bar">
-                    <input type="text" class="filter-input-search" placeholder="ชื่อกิจกรรม หรือสิ่งที่สนใจ...">
+                    <div class="search-input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" class="filter-input-search" placeholder="ชื่อกิจกรรม หรือสิ่งที่สนใจ...">
+                    </div>
                     <button class="btn-search">ค้นหากิจกรรม</button>
                 </div>
-            </div>
         </section>
 
         <!-- Recommended Activities -->
