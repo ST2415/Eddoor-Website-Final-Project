@@ -1,28 +1,3 @@
-/* ==========================================
-   1. Reset & Global Styles
-   ========================================== */
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --primary-purple: #3A235F;
-  --accent-green: #00E599;
-  --accent-yellow: #FFD200;
-  --bg-light: #F8F9FA;
-  --text-dark: #222222;
-  --text-muted: #666666;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: 'Prompt', 'IBM Plex Sans Thai', sans-serif;
-  color: var(--text-dark);
-  background-color: #ffffff;
-}
-
 /* คลาสจัดกลางหลักสำหรับเนื้อหา */
 .container {
   max-width: 1200px;
@@ -37,33 +12,13 @@ body {
   text-align: center;
 }
 
-/* Buttons */
-.btn {
-  padding: 12px 24px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-block;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 0.95rem;
-}
-
-.btn-primary { background-color: var(--accent-green); color: var(--primary-purple); }
-.btn-outline { border: 1px solid #00E599; color: #00E599; background: transparent; }
-.btn-purple { background-color: var(--primary-purple); color: #fff; }
-.btn-purple-lg { background-color: var(--primary-purple); color: #fff; padding: 14px 36px; border-radius: 30px; font-size: 1.05rem; }
-.btn-green { background-color: var(--accent-green); color: var(--primary-purple); }
-.btn-outline-light { border: 1px solid #00E599; color: #00E599; background: transparent; }
-
 /* ==========================================
    2. Hero Section
    ========================================== */
 .hero-section {
   width: 100%;
-  background-color: var(--primary-purple);
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-light);
   padding: 60px 0 100px;
   display: flex;
   justify-content: center;
@@ -77,14 +32,14 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: var(--fs-h1);
   line-height: 1.2;
   margin: 0 0 5px 0;
 }
 
 .subtitle {
-  color: var(--accent-yellow);
-  font-size: 1.2rem;
+  color: var(--color-yellow);
+  font-size: var(--fs-h3);
   font-weight: bold;
   margin: 0;
 }
@@ -116,22 +71,22 @@ body {
   position: absolute;
   top: -20px;
   right: -20px;
-  background-color: var(--accent-yellow);
-  color: var(--primary-purple);
+  background-color: var(--color-yellow);
+  color: var(--color-primary);
   padding: 10px 16px;
   border-radius: 12px;
   font-weight: bold;
   transform: rotate(5deg);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-md);
 }
 
 .badge-float span {
   display: block;
-  font-size: 0.85rem;
+  font-size: var(--fs-p);
 }
 
 .badge-float small {
-  font-size: 0.75rem;
+  font-size: var(--fs-small);
   font-weight: normal;
 }
 
@@ -148,10 +103,10 @@ body {
 
 .filter-card {
   width: 100%;
-  background: #fff;
+  background: var(--color-light);
   border-radius: 16px;
   padding: 24px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-lg);
 }
 
 .filter-title {
@@ -169,7 +124,7 @@ body {
 .filter-select, .search-bar input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: var(--border-general);
   border-radius: 8px;
   font-family: inherit;
 }
@@ -180,8 +135,8 @@ body {
 }
 
 .btn-search {
-  background: var(--primary-purple);
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-light);
   border: none;
   padding: 0 24px;
   border-radius: 8px;
@@ -198,7 +153,7 @@ body {
 }
 
 .section-title {
-  font-size: 1.8rem;
+  font-size: var(--fs-h3);
   margin-bottom: 20px;
 }
 
@@ -207,21 +162,6 @@ body {
   gap: 10px;
   margin-bottom: 30px;
   overflow-x: auto;
-}
-
-.tag {
-  background: #EFEFEF;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 20px;
-  cursor: pointer;
-  white-space: nowrap;
-  font-family: inherit;
-}
-
-.tag.active {
-  background: var(--primary-purple);
-  color: #fff;
 }
 
 .cards-grid {
@@ -234,7 +174,7 @@ body {
   border: 1px solid #eee;
   border-radius: 16px;
   overflow: hidden;
-  background: #fff;
+  background: var(--color-light);
 }
 
 .card-img-wrapper {
@@ -246,18 +186,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.coin-badge {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background: var(--accent-yellow);
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-weight: bold;
-  font-size: 0.85rem;
-  color: var(--primary-purple);
 }
 
 .fav-btn {
@@ -283,7 +211,7 @@ body {
 
 .card-content .info {
   margin: 4px 0;
-  color: var(--text-muted);
+  color: var(--color-grey);
   font-size: 0.9rem;
 }
 
@@ -292,12 +220,12 @@ body {
    ========================================== */
 .how-it-works {
   width: 100%;
-  background: var(--accent-green);
+  background: var(--color-green);
   padding: 60px 0;
 }
 
 .how-title {
-  color: var(--primary-purple);
+  color: var(--color-primary);
   margin-bottom: 40px;
 }
 
@@ -308,7 +236,7 @@ body {
 }
 
 .step-card {
-  background: #fff;
+  background: var(--color-light);
   padding: 24px;
   border-radius: 16px;
 }
@@ -316,7 +244,7 @@ body {
 .step-num {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--primary-purple);
+  color: var(--color-primary);
   display: block;
 }
 
@@ -349,7 +277,7 @@ body {
 
 .invite-text p {
   margin: 0;
-  color: var(--text-muted);
+  color: var(--color-grey);
 }
 
 /* ==========================================
@@ -357,8 +285,8 @@ body {
    ========================================== */
 .coin-section {
   width: 100%;
-  background: var(--primary-purple);
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-light);
   padding: 60px 0;
 }
 
@@ -386,8 +314,8 @@ body {
 }
 
 .coin-display-card {
-  background: var(--accent-yellow);
-  color: var(--primary-purple);
+  background: var(--color-yellow);
+  color: var(--color-primary);
   padding: 30px;
   border-radius: 16px;
   text-align: center;
@@ -423,7 +351,7 @@ body {
 }
 
 .faq-header p {
-  color: var(--text-muted);
+  color: var(--color-grey);
 }
 
 .faq-item {
@@ -438,7 +366,7 @@ body {
 
 .faq-item p {
   margin: 0;
-  color: var(--text-muted);
+  color: var(--color-grey);
 }
 
 /* ==========================================
@@ -446,12 +374,12 @@ body {
    ========================================== */
 .bottom-cta {
   width: 100%;
-  background: var(--accent-yellow);
+  background: var(--color-yellow);
   padding: 50px 0;
 }
 
 .bottom-cta h2 {
-  color: var(--primary-purple);
+  color: var(--color-primary);
   margin-bottom: 20px;
 }
 
@@ -510,8 +438,8 @@ main.eddoor-home {
   position: absolute;
   bottom: -15px;
   left: -20px;
-  background-color: #ffffff;
-  color: var(--primary-purple);
+  background-color: var(--color-light);
+  color: var(--color-primary);
   padding: 8px 18px;
   border-radius: 30px;
   display: flex;
@@ -523,7 +451,7 @@ main.eddoor-home {
 }
 
 .badge-coin-float .coin-icon {
-  background-color: var(--accent-yellow);
+  background-color: var(--color-yellow);
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -542,8 +470,7 @@ main.eddoor-home {
 
 .badge-coin-float .coin-text-group strong {
   font-size: 1rem;
-  font-weight: 700;
-  color: var(--primary-purple);
+  color: var(--color-primary);
 }
 
 .badge-coin-float .coin-text-group span {
@@ -558,32 +485,10 @@ main.eddoor-home {
   object-fit: contain;
 }
 
-/* ปรับให้ภาพกับข้อความใน Badge จัดวางแนวนอนสวยงาม */
-.coin-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
 .badge-icon-img {
   width: 16px;
   height: 16px;
   object-fit: contain;
-}
-
-/* ปรับแต่งป้ายสีเหลือง */
-.coin-badge {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background-color: var(--accent-yellow);
-  padding: 4px 12px;
-  border-radius: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px; /* เว้นระยะห่างระหว่างเหรียญกับตัวหนังสือ */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  z-index: 2;
 }
 
 /* ควบคุมขนาดรูปไอคอนเหรียญไม่ให้ขยายใหญ่เกินไป */
@@ -596,7 +501,7 @@ main.eddoor-home {
 
 /* จัดข้อความให้อยู่ในบรรทัดเดียวกัน */
 .coin-text {
-  color: var(--primary-purple);
+  color: var(--color-primary);
   font-weight: 700;
   font-size: 0.85rem;
   white-space: nowrap; /* บังคับไม่ให้ข้อความตกบรรทัด */
@@ -609,19 +514,26 @@ main.eddoor-home {
 
 /* สไตล์พื้นฐานของแท็ก */
 .tag {
+  background: var(--color-light);
+  border: var(--border-general);
+  padding: 8px 18px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  user-select: none;
-  border: none;
-  outline: none;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.tag.active {
+  background: var(--color-primary);
+  color: var(--color-light);
 }
 
 /* 1. เมื่อเอาเมาส์ไปวาง (Hover) */
 .tag:hover {
-  background-color: var(--primary-purple) !important;
-  color: #ffffff !important;
+  background-color: var(--color-primary) !important;
+  color: var(--color-light) !important;
   transform: translateY(-2px); /* ลอยขึ้นเล็กน้อย */
-  box-shadow: 0 4px 10px rgba(58, 35, 95, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
 /* 2. เมื่อกดปุ่มลงไป (Active / Click) */
@@ -646,7 +558,7 @@ main.eddoor-home {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: transparent; /* เปลี่ยนเป็นพื้นหลังโปร่งใส หรือใช้ #ffffff ก็ได้ครับ */
+  background-color: transparent; /* เปลี่ยนเป็นพื้นหลังโปร่งใส หรือใช้ var(--color-light) ก็ได้ครับ */
   gap: 30px;
 }
 
@@ -667,60 +579,20 @@ main.eddoor-home {
 
 .invite-text-group h3 {
   margin: 0 0 8px 0;
-  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-purple);
+  color: var(--color-primary);
   line-height: 1.3;
 }
 
 .invite-text-group p {
   margin: 0;
-  color: #6B7280;
+  color: var(--color-grey);
   font-size: 0.95rem;
   line-height: 1.6;
   max-width: 620px;
 }
 
-/* ปุ่มสร้างกิจกรรมทรงแคปซูลสีม่วง */
-.btn-create-activity {
-  background-color: var(--primary-purple);
-  color: #ffffff;
-  padding: 12px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
-  transition: all 0.2s ease-in-out;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(58, 35, 95, 0.2);
-}
 
-.btn-create-activity .arrow-icon {
-  font-size: 1.2rem;
-  line-height: 1;
-  transition: transform 0.2s ease;
-}
-
-/* เอฟเฟกต์ Hover และ Click */
-.btn-create-activity:hover {
-  background-color: #2D1A4B;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(58, 35, 95, 0.3);
-}
-
-.btn-create-activity:hover .arrow-icon {
-  transform: translateX(3px); /* ลูกศรขยับไปทางขวาเล็กน้อย */
-}
-
-.btn-create-activity:active {
-  transform: translateY(0) scale(0.96);
-  box-shadow: none;
-}
 
 /* ==========================================
    Coin Banner Section (เปลี่ยน COIN เป็นความสุข)
@@ -732,7 +604,7 @@ main.eddoor-home {
   right: 50% !important;
   margin-left: -50vw !important;
   margin-right: -50vw !important;
-  background-color: var(--primary-purple);
+  background-color: var(--color-primary);
   padding: 60px 0;
   box-sizing: border-box !important;
 }
@@ -750,7 +622,7 @@ main.eddoor-home {
 }
 
 .coin-tagline {
-  color: var(--accent-green);
+  color: var(--color-green);
   font-size: 0.9rem;
   font-weight: 500;
   display: block;
@@ -760,13 +632,13 @@ main.eddoor-home {
 .coin-text h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-light);
   margin: 0 0 12px 0;
   line-height: 1.2;
 }
 
 .coin-desc {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-light);
   font-size: 0.95rem;
   margin: 0 0 28px 0;
 }
@@ -776,52 +648,10 @@ main.eddoor-home {
   gap: 12px;
 }
 
-/* ปุ่มกดฝั่งซ้าย */
-.btn-exchange {
-  background-color: var(--accent-green);
-  color: #3A235F;
-  font-weight: 600;
-  padding: 12px 24px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-}
-
-.btn-exchange:hover {
-  filter: brightness(0.95);
-  transform: translateY(-2px);
-}
-
-.btn-get-more {
-  background-color: transparent;
-  color: #00E599;
-  border: 1.5px solid #00E599 !important; /* เส้นกรอบขอบสีขาว */
-  border-radius: 25px;                   /* ปรับความโค้งมนทรงแคปซูล */
-  font-weight: 500;
-  padding: 10px 24px;
-  text-decoration: none;
-  font-size: 0.95rem;
-  display: inline-block;
-  transition: all 0.2s ease-in-out;
-}
-
-/* เอฟเฟกต์เมื่อเอาเมาส์ไปชี้ (Hover) */
-.btn-get-more:hover {
-  background-color: rgba(255, 255, 255, 0.15); /* เพิ่มพื้นหลังสว่างใสขึ้นเมื่อชี้ */
-  transform: translateY(-2px);
-}
-
-/* เอฟเฟกต์ตอนกดคลิก (Active) */
-.btn-get-more:active {
-  transform: translateY(0) scale(0.96);
-}
-
-
 /* ฝั่งขวา: การ์ดสีเหลือง */
 .coin-display-card {
-  background-color: var(--accent-yellow);
-  color: var(--primary-purple);
+  background-color: var(--color-yellow);
+  color: var(--color-primary);
   padding: 28px 36px;
   border-radius: 24px;
   min-width: 320px;
@@ -848,7 +678,7 @@ main.eddoor-home {
   font-weight: 800;
   margin: 0 0 10px 0;
   line-height: 1;
-  color: var(--primary-purple);
+  color: var(--color-primary);
 }
 
 .coin-note {
@@ -857,6 +687,7 @@ main.eddoor-home {
   font-weight: 600;
   opacity: 0.85;
 }
+
 
 
 /* ==========================================
@@ -937,8 +768,8 @@ main.eddoor-home {
     left: 0 !important;
     margin-top: 15px !important;
     width: 100% !important;
-    background-color: var(--accent-yellow) !important;
-    color: var(--primary-purple) !important;
+    background-color: var(--color-yellow) !important;
+    color: var(--color-primary) !important;
     transform: none !important;
     box-shadow: none !important;
     justify-content: center !important;
@@ -1007,8 +838,8 @@ main.eddoor-home {
     width: 100% !important;
     max-width: 200px;
     margin: 25px auto 0 !important;
-    background-color: var(--primary-purple) !important;
-    color: #fff !important;
+    background-color: var(--color-primary) !important;
+    color: var(--color-light) !important;
     text-align: center;
     padding: 10px 20px;
     border-radius: 25px;
@@ -1123,9 +954,9 @@ main.eddoor-home {
     font-size: 0.85rem !important;
     padding: 8px 16px !important;
     border-radius: 25px !important;
-    border: 1.5px solid var(--primary-purple) !important; /* เส้นกรอบขอบสีม่วง */
-    background-color: #ffffff !important;                /* พื้นหลังสีขาว */
-    color: var(--primary-purple) !important;            /* ตัวหนังสือสีม่วง */
+    border: 1.5px solid var(--color-primary) !important; /* เส้นกรอบขอบสีม่วง */
+    background-color: var(--color-light) !important;                /* พื้นหลังสีขาว */
+    color: var(--color-primary) !important;            /* ตัวหนังสือสีม่วง */
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px !important;
@@ -1135,8 +966,8 @@ main.eddoor-home {
 
   /* ปุ่มที่กำลังเลือกอยู่ (Active State) ให้เป็นสีม่วงเข้มทึบ */
   .category-tags .tag.active {
-    background-color: var(--primary-purple) !important;
-    color: #ffffff !important;
+    background-color: var(--color-primary) !important;
+    color: var(--color-light) !important;
   }
 }
 
@@ -1167,7 +998,7 @@ main.eddoor-home {
 
   /* ปรับสีคำว่า More than classroom เป็นสีเหลืองตามภาพแรก */
   .hero-text .subtitle {
-    color: var(--accent-yellow) !important;
+    color: var(--color-yellow) !important;
     font-size: 1.1rem !important;
     font-weight: 700 !important;
     margin: 8px 0 16px 0 !important;
@@ -1213,7 +1044,7 @@ a.activity-card-link .activity-card {
   position: relative !important;
   border-radius: 16px !important;
   overflow: hidden !important;
-  background-color: #ffffff !important;
+  background-color: var(--color-light) !important;
   border: 1px solid #E5E7EB !important;
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
               box-shadow 0.3s ease, 
@@ -1236,7 +1067,7 @@ a.activity-card-link .card-img-wrapper img {
 a.activity-card-link:hover .activity-card {
   transform: translateY(-10px) !important; /* ลอยขึ้น 10px */
   box-shadow: 0 16px 32px rgba(58, 35, 95, 0.18) !important; /* เงาสีม่วงสวยงาม */
-  border-color: var(--primary-purple) !important;
+  border-color: var(--color-primary) !important;
 }
 
 /* รูปภาพขยายเล็กน้อยเวลา Hover */
@@ -1253,13 +1084,13 @@ a.activity-card-link:active .activity-card {
 /* ==========================================
    Mobile Category Tags - Hover & Active Effect
    ========================================== */
-@media (max-width: 768px) {
+@media (max-width: 428px) {
   
   /* เพิ่มเอฟเฟกต์เวลาเมาส์ชี้ (Hover) บนจอมือถือ/จอเล็ก */
   .category-tags .tag:hover:not(.active) {
-    background-color: var(--primary-purple) !important; /* เปลี่ยนพื้นหลังเป็นสีม่วง */
-    color: #ffffff !important;                          /* เปลี่ยนตัวหนังสือเป็นสีขาว */
-    border-color: var(--primary-purple) !important;      /* เปลี่ยนขอบเป็นสีม่วง */
+    background-color: var(--color-primary) !important; /* เปลี่ยนพื้นหลังเป็นสีม่วง */
+    color: var(--color-light) !important;                          /* เปลี่ยนตัวหนังสือเป็นสีขาว */
+    border-color: var(--color-primary) !important;      /* เปลี่ยนขอบเป็นสีม่วง */
     transform: translateY(-2px) !important;
   }
 

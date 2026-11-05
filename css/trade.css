@@ -67,50 +67,6 @@ input {
     flex-wrap: wrap;
 }
 
-/* ปุ่มแลกเหรียญกับเพื่อน */
-.btn-exchange-friend {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-green);
-    color: var(--color-primary);
-    font-weight: 600;
-    font-size: var(--fs-p);
-    padding: 12px 26px;
-    border-radius: 12px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: filter 0.2s ease-in-out;
-}
-
-.btn-exchange-friend:hover {
-    filter: brightness(85%);
-}
-
-/* ปุ่มรับเหรียญเพิ่ม */
-.btn-get-coin {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    color: var(--color-green);
-    font-weight: var(--fw-normal);
-    font-size: 15px;
-    padding: 12px 26px;
-    border-radius: 12px;
-    text-decoration: none;
-    border: var(--border-green);
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease, filter 0.2s ease;
-}
-
-.btn-get-coin:hover {
-    background-color: var(--color-green);
-    color: var(--color-primary);
-    filter: brightness(85%);
-}
-
 /* การ์ดยอดเหรียญสะสมสีเหลือง */
 .hero-coin-col {
     flex-shrink: 0;
@@ -720,42 +676,6 @@ input[type="radio"] {
     display: block;
 }
 
-/* ปุ่ม Favorite */
-.btn-favorite {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--color-light);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-primary);
-    font-size: var(--fs-icon);
-    cursor: pointer;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.15s ease, color 0.2s ease;
-}
-
-.btn-favorite:hover {
-    transform: scale(1.1);
-}
-
-.btn-favorite:active {
-    transform: scale(1.2);
-}
-
-.btn-favorite.is-active {
-    color: var(--color-primary);
-}
-
-.btn-favorite.is-active .fa-heart {
-    font-weight: 900;
-}
-
 /* รายละเอียดสินค้า */
 .reward-details {
     display: flex;
@@ -817,19 +737,6 @@ input[type="radio"] {
     flex-direction: column;
     justify-content: space-between;
     gap: 16px;
-}
-
-.coin-price-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: var(--color-yellow);
-    padding: 12px 16px;
-    border-radius: 50px;
-    font-size: var(--fs-small);
-    font-family: var(--ff);
-    white-space: nowrap;
-    transition: filter 0.2s ease-in-out;
 }
 
 .coin-small-icon {
@@ -1044,14 +951,6 @@ input[type="radio"] {
         margin-top: 18px;
     }
 
-    .btn-exchange-friend,
-    .btn-get-coin {
-        width: 100%;
-        padding: 12px 10px;
-        font-size: 13px;
-        text-align: center;
-    }
-
     .reward-card {
         grid-template-columns: 1fr;
         padding: 16px;
@@ -1070,17 +969,6 @@ input[type="radio"] {
         margin-top: 6px;
     }
 
-    .coin-price-pill {
-        width: 100%;
-        padding: 12px;
-        border-radius: 50px;
-        font-size: var(--fs-p);
-        justify-content: center;
-    }
-
-    .coin-price-pill:hover {
-        filter: brightness(85%);
-    }
 
     .btn-reward-detail {
         display: none;
