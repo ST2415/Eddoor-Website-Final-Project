@@ -1,0 +1,593 @@
+/* =========================================================
+   activity.css  —  เฉพาะหน้า "กิจกรรม"
+   (header / footer ใช้สไตล์เดิมจาก generals.css)
+   ========================================================= */
+
+/* ---------- เต็มจอทั้งซ้าย-ขวา ---------- */
+html {
+    width: 100%;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.site-header,
+main.activity-page,
+.site-footer {
+    width: 100%;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* ---------- ตัวแปร / พื้นฐาน ---------- */
+.activity-page {
+    --act-purple: #3f2b69;
+    --act-green: #00f5a0;
+    --act-yellow: #ffe600;
+    --act-coin: #fce94b;
+    --act-white: #ffffff;
+    --act-text: #3a3a4a;
+    --act-muted: #6f6f80;
+    --act-radius: 18px;
+
+    padding: 0 !important;
+    background: var(--act-white);
+    color: var(--act-text);
+}
+
+.activity-page *,
+.activity-page *::before,
+.activity-page *::after {
+    box-sizing: border-box;
+}
+
+.activity-page h1,
+.activity-page h2,
+.activity-page h3,
+.activity-page p,
+.activity-page ul {
+    margin: 0;
+    padding: 0;
+}
+
+.activity-page ul {
+    list-style: none;
+}
+
+/* ---------- ไอคอนเส้น (ปฏิทิน / คน / หมุด) ---------- */
+.activity-page .icon {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background: currentColor;
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+}
+
+.icon-calendar {
+    --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 2v4M16 2v4'/%3E%3Crect x='3' y='4' width='18' height='18' rx='2'/%3E%3Cpath d='M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01'/%3E%3C/svg%3E");
+}
+
+.icon-users {
+    --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E");
+}
+
+.icon-pin {
+    --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E");
+}
+
+/* ---------- Select (ลูกศรเอง) ---------- */
+.activity-page select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233f2b69' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+/* ---------------- HERO ---------------- */
+.activity-hero {
+    background: var(--act-purple);
+    color: var(--act-white);
+    padding: 58px 24px 62px;
+}
+
+.activity-hero_inner {
+    max-width: 1290px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.activity-hero_tag {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--act-green);
+    margin-bottom: 14px;
+}
+
+.activity-hero_text h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.activity-hero_text p {
+    margin-top: 24px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.activity-hero_button {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    background: var(--act-green);
+    color: var(--act-purple);
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.activity-hero_button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+/* ---------------- SEARCH ---------------- */
+.activity-search {
+    background: var(--act-green);
+    padding: 58px 24px 56px;
+}
+
+.activity-search_inner {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.activity-search_inner h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--act-purple);
+    margin-bottom: 22px;
+}
+
+.activity-search_selects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.activity-search select {
+    width: 100%;
+    height: 50px;
+    padding: 0 44px 0 16px;
+    border: 2px solid var(--act-purple);
+    border-radius: 10px;
+    background-color: var(--act-white);
+    color: var(--act-purple);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.activity-search_row {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.activity-search_input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 50px;
+    padding: 0 18px;
+    background: var(--act-white);
+    border: 2px solid var(--act-purple);
+    border-radius: 10px;
+    color: var(--act-muted);
+}
+
+.activity-search_input input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 15px;
+    color: var(--act-text);
+}
+
+.activity-search_input input::placeholder {
+    color: var(--act-muted);
+}
+
+.activity-search_submit {
+    flex-shrink: 0;
+    width: 180px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--act-purple);
+    color: var(--act-white);
+    font: inherit;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.activity-search_submit:hover {
+    filter: brightness(1.15);
+}
+
+/* ---------------- LIST ---------------- */
+.activity-list {
+    padding: 76px 24px 70px;
+}
+
+.activity-list_inner {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.activity-list_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
+.activity-list_head h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--act-purple);
+}
+
+.activity-list_head select {
+    width: auto;
+    min-width: 170px;
+    height: 36px;
+    padding: 0 28px 0 0;
+    border: 0;
+    background-color: transparent;
+    background-position: right 4px center;
+    background-size: 14px;
+    color: var(--act-purple);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 16px;
+}
+
+/* ---------------- CARD ---------------- */
+.activity-card {
+    background: var(--act-white);
+    border: 2px solid var(--act-purple);
+    border-radius: var(--act-radius);
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.activity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(63, 43, 105, 0.18);
+}
+
+.activity-card_image {
+    position: relative;
+    aspect-ratio: 405 / 235;
+    background: #e9e7f5;
+}
+
+.activity-card_image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    color: transparent;
+}
+
+.activity-card_fav {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--act-purple);
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.activity-card_fav:hover {
+    transform: scale(1.1);
+}
+
+/* ปุ่มหัวใจทำงานด้วย CSS ล้วน (checkbox + :checked) */
+.activity-card_fav input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.activity-card_fav .fa-solid {
+    display: none;
+}
+
+.activity-card_fav:has(input:checked) {
+    color: #ef4466;
+}
+
+.activity-card_fav:has(input:checked) .fa-regular {
+    display: none;
+}
+
+.activity-card_fav:has(input:checked) .fa-solid {
+    display: inline-block;
+}
+
+.activity-card_coin {
+    position: absolute;
+    right: 0;
+    bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 42px;
+    padding: 0 14px;
+    margin-right: 0;
+    border-radius: 999px 0 0 999px;
+    background: var(--act-coin);
+    color: var(--act-purple);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.activity-card_coin img {
+    width: 20px;
+    height: 20px;
+}
+
+.activity-card_body {
+    padding: 22px 20px 24px;
+}
+
+.activity-card_tag {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--act-muted);
+    margin-bottom: 10px;
+}
+
+.activity-card_body h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--act-purple);
+    margin-bottom: 14px;
+}
+
+.activity-card_info li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    color: var(--act-muted);
+    margin-bottom: 10px;
+}
+
+.activity-card_info li:last-child {
+    margin-bottom: 0;
+}
+
+.activity-card_info .icon {
+    color: var(--act-purple);
+    opacity: 0.8;
+}
+
+.activity-empty {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--act-muted);
+}
+
+/* ---------------- FOOT / PAGINATION ---------------- */
+.activity-list_foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.activity-list_count {
+    font-size: 13px;
+    color: var(--act-muted);
+}
+
+.pagination {
+    display: flex;
+    border: 1px solid #d8d6e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pagination_btn {
+    min-width: 50px;
+    height: 50px;
+    padding: 0 16px;
+    border: 0;
+    border-left: 1px solid #d8d6e0;
+    background: var(--act-white);
+    color: var(--act-purple);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pagination_btn:first-child {
+    border-left: 0;
+    font-weight: 400;
+}
+
+.pagination_btn:last-child {
+    font-weight: 400;
+}
+
+.pagination_btn:hover {
+    background: #f1eef9;
+}
+
+.pagination_btn.is-active {
+    background: var(--act-purple);
+    color: var(--act-white);
+}
+
+.pagination_btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* ---------------- CTA (แถบเหลือง) ---------------- */
+.activity-cta {
+    background: var(--act-yellow);
+    padding: 64px 24px;
+}
+
+.activity-cta_inner {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.activity-cta_text h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--act-purple);
+}
+
+.activity-cta_text p {
+    margin-top: 10px;
+    font-size: 17px;
+    color: var(--act-purple);
+}
+
+.activity-cta_button {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 58px;
+    padding: 0 28px;
+    border-radius: 14px;
+    background: var(--act-purple);
+    color: var(--act-white);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: filter 0.2s, transform 0.2s;
+}
+
+.activity-cta_button:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+}
+
+.activity-cta_button i {
+    font-size: 13px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 992px) {
+    .activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .activity-search_selects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+
+    .activity-hero_inner,
+    .activity-cta_inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .activity-hero_text h1 {
+        font-size: 32px;
+    }
+
+    .activity-search_inner h2,
+    .activity-list_head h2,
+    .activity-cta_text h2 {
+        font-size: 24px;
+    }
+
+    .activity-search_selects {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-search_row {
+        flex-direction: column;
+    }
+
+    .activity-search_submit {
+        width: 100%;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-list_foot {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+}
