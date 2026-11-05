@@ -50,7 +50,8 @@
 
 .hero-text .subtitle {
   color: var(--color-yellow);
-  font-size: var(--fs-h3);
+  /* font-size: var(--fs-h3); */
+  font-size: 1.4rem;
   font-weight: 700;
   margin: 0 0 16px 0;
 }
@@ -1134,3 +1135,29 @@ h2.title {
         font-size: 1.75rem !important;    /* ขนาดตัวหนังสือบนจอมือถือให้พอดีบรรทัด */
     }
 }
+
+/* ==========================================
+   FORCE REDUCE FILTER TITLE SIZE (.filter-title)
+   ========================================== */
+
+/* ย่อขนาดตัวหนังสือและบังคับให้อยู่บรรทัดเดียว */
+.filter-section .filter-title,
+.filter-card .filter-title,
+h3.filter-title {
+    font-size: 1.5rem !important;        /* ย่อขนาดตัวอักษรลง (หากต้องการเล็กกว่านี้ปรับเป็น 1.15rem ได้) */
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    white-space: nowrap !important;       /* บังคับให้อยู่บรรทัดเดียว ไม่ตกไป 2 บรรทัด */
+    margin-bottom: 16px !important;
+}
+
+/* ปรับสมส่วนเมื่อแสดงผลบนมือถือ (<= 428px) */
+@media (max-width: 428px) {
+    .filter-section .filter-title,
+    .filter-card .filter-title,
+    h3.filter-title {
+        font-size: 1.4rem !important;      /* ขนาดบนหน้าจอมือถือ */
+        margin-bottom: 12px !important;
+    }
+}
+
