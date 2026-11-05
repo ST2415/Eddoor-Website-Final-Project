@@ -587,243 +587,515 @@ a.activity-card-link:hover .card-img-wrapper img {
 }
 
 /* ==========================================
-   📱 Responsive Mobile Layout (<= 768px)
+   FIX SCROLL OVERLAPPING & FULL-WIDTH 1440PX
+   ========================================== */
+
+/* 1. ดึง Navbar อยู่ชั้นบนสุดเสมอ */
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999 !important;
+  background-color: var(--color-light, #ffffff) !important;
+}
+
+/* 2. คุมโครงสร้าง 1440px และพื้นหลังสีเทาของ Filter Section */
+.eddoor-home,
+.eddoor-home main,
+.hero-section,
+.filter-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.filter-section {
+  background-color: #f4f4f7 !important;
+  padding: 40px 0 50px 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 40px !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.eddoor-home .container,
+.hero-container,
+.filter-container {
+  width: 100% !important;
+  max-width: 1440px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  box-sizing: border-box !important;
+}
+
+.filter-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+/* ==========================================
+   FIX HOVER OVERFLOW & CARD BORDERS / CATEGORIES
+   ========================================== */
+
+.activities-section {
+  padding-top: 15px !important;
+  overflow: visible !important;
+}
+
+.cards-grid {
+  margin-top: 20px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  overflow: visible !important;
+}
+
+a.activity-card-link {
+  display: block !important;
+  text-decoration: none !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+a.activity-card-link:hover {
+  z-index: 20 !important;
+}
+
+.card-category {
+  display: block !important;
+  font-size: 0.85rem !important;
+  color: var(--color-grey, #737373) !important;
+  margin-bottom: 6px !important;
+  font-weight: 500 !important;
+}
+
+.activity-card {
+  border: 2px solid var(--color-primary, #3e2b67) !important;
+  border-radius: var(--radius-lg, 18px) !important;
+  overflow: hidden !important;
+  background: var(--color-light, #ffffff) !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.activity-card.category-art,
+.activity-card.category-nature,
+.activity-card.category-food,
+.activity-card.category-community {
+  border-color: #3e2b67 !important;
+}
+
+a.activity-card-link:hover .activity-card {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* ==========================================
+   📱 Responsive Mobile Layout (<= 768px & 428px)
    ========================================== */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 40px 0 60px;
+    padding: 40px 0 60px !important;
   }
 
   .hero-container {
-    flex-direction: column;
-    text-align: left;
-    gap: 24px;
+    flex-direction: column !important;
+    text-align: left !important;
+    gap: 24px !important;
   }
 
   .hero-text h1 {
-    font-size: 2.2rem;
+    font-size: 2.2rem !important;
   }
 
   .hero-btns {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: column !important;
+    width: 100% !important;
   }
 
   .hero-btns .btn {
-    width: 100%;
+    width: 100% !important;
   }
 
   .hero-image-wrapper {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
   }
 
   .hero-img {
-    width: 100%;
-    height: 220px;
-  }
-
-  .filter-section {
-    margin-top: 20px;
-  }
-
-  .filter-inputs {
-    grid-template-columns: 1fr;
-  }
-
-  .search-bar {
-    flex-direction: column;
+    width: 100% !important;
+    height: 220px !important;
   }
 
   .cards-grid,
   .steps-grid,
   .faq-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .invite-box {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column !important;
+    text-align: center !important;
   }
 
   .invite-left-content {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .invite-logo-img {
-    width: 130px;
-    height: 130px;
+    width: 130px !important;
+    height: 130px !important;
   }
 
   .coin-container {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column !important;
+    text-align: center !important;
   }
 
   .coin-display-card {
-    width: 100%;
-    box-sizing: border-box;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .coin-btns {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: column !important;
+    width: 100% !important;
   }
 }
 
 /* ==========================================
-   FIX OVERLAPPING HERO BADGES & NAVBAR
+   📱 EXACT MOBILE SPECIFIC FIX (<= 428PX)
    ========================================== */
-
-/* 1. เพิ่มระยะห่างด้านบนของ Hero Section ไม่ให้ป้ายชน Navbar */
-.hero-section {
-    padding-top: 80px !important; /* เพิ่มพื้นที่ด้านบนสำหรับป้ายลอย */
-    padding-bottom: 100px !important;
-    position: relative !important;
-    overflow: visible !important;
-}
-
-/* 2. ดึงป้ายลอยสีเหลืองขวาบนให้อยู่ในพื้นที่ Hero ไม่หลุดไปทับ Navbar */
-.hero-image-wrapper {
-    position: relative !important;
-    margin-top: 20px !important; /* เว้นระยะลงมาจากด้านบน */
-}
-
-.badge-float {
-    top: -15px !important; /* ปรับดึงป้ายลงมาจากเดิมที่ดันสูงเกินไป */
-    right: -10px !important;
-    z-index: 1 !important; /* อยู่ใต้ Navbar (ซึ่ง z-index: 2) */
-}
-
-/* 3. ปรับป้ายลอยด้านล่าง (+150 COIN) ไม่ให้ทับเนื้อหาซ้อนกัน */
-.badge-coin-float {
-    bottom: -15px !important;
-    left: -15px !important;
-    z-index: 1 !important;
-}
-
-/* ==========================================
-   FIX FILTER CARD OVERLAPPING TITLE
-   ========================================== */
-
-/* 1. เพิ่มพื้นที่ด้านล่างของ Hero Section ให้เพียงพอรองรับ Filter Card */
-.hero-section {
-    padding-bottom: 120px !important;
-}
-
-/* 2. ปรับระยะการดึงขึ้น (margin-top) ของ Filter Section ให้อยู่ในระดับพอดี */
-.filter-section {
-    margin-top: -60px !important;
-    position: relative !important;
-    z-index: 2 !important;
-}
-
-/* 3. จัดระยะ Padding และ Margin ของข้อความหัวข้อใน Filter Card */
-.filter-card {
-    padding: 32px 28px 28px 28px !important;
-}
-
-.filter-title {
+@media (max-width: 428px) {
+  /* 1. ระยะขอบ Filter Section บนมือถือ */
+  .filter-section {
+    padding: 24px 16px 32px 16px !important;
     margin-top: 0 !important;
     margin-bottom: 24px !important;
+    background-color: #f4f4f7 !important;
+  }
+
+  .filter-title {
+    font-size: 1.35rem !important;
+    margin-bottom: 16px !important;
     line-height: 1.3 !important;
-    display: block !important;
+  }
+
+  /* 2. จัด Dropdown 4 ตัวเรียง 2 คอลัมน์ */
+  .filter-inputs {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .filter-select {
+    height: 44px !important;
+    padding: 0 10px !important;
+    font-size: 0.85rem !important;
+    border-radius: 12px !important;
+    border: 1.5px solid var(--color-primary, #3e2b67) !important;
+    background-color: #ffffff !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. ช่องค้นหากิจกรรมยืดใหญ่ได้สัดส่วนตรงตามเป้าหมาย */
+  .search-bar-wrapper,
+  .search-bar {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .search-input-group,
+  .search-bar input,
+  .filter-section input[type="text"] {
+    width: 100% !important;
+    height: 48px !important;
+    padding: 0 18px !important;
+    font-family: var(--ff-text, "Prompt", sans-serif) !important;
+    font-size: 0.95rem !important;
+    color: var(--color-primary, #3e2b67) !important;
+    background-color: #ffffff !important;
+    border: 1.5px solid var(--color-primary, #3e2b67) !important;
+    border-radius: 12px !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .search-bar input::placeholder,
+  .search-input-group input::placeholder,
+  .filter-section input[type="text"]::placeholder {
+    color: #737373 !important;
+    opacity: 0.85 !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* 4. ปุ่มค้นหากิจกรรมเต็มความกว้าง */
+  .btn-search {
+    width: 100% !important;
+    height: 48px !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 5. แท็กหมวดหมู่ขึ้นบรรทัดใหม่สวยงาม */
+  .category-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px 8px !important;
+    overflow-x: visible !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .tag {
+    font-size: 0.82rem !important;
+    padding: 8px 16px !important;
+    border-radius: 25px !important;
+    border: 1.5px solid var(--color-primary, #3e2b67) !important;
+    background-color: #ffffff !important;
+    color: var(--color-primary, #3e2b67) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+
+  .tag.active {
+    background-color: var(--color-primary, #3e2b67) !important;
+    color: #ffffff !important;
+  }
 }
 
 /* ==========================================
-   RESET & FIX FILTER CARD OVERLAPPING NAVBAR
+   FORCE RESET & COMPLETE FIX FOR FILTER & MOBILE
    ========================================== */
 
-/* 1. คุม Hero Section ให้มีพื้นที่รองรับและไม่หายไป */
-.hero-section {
-    padding-top: 40px !important;
-    padding-bottom: 60px !important;
-    position: relative !important;
-    z-index: 1 !important;
-}
-
-/* 2. ดึง Filter Section กลับลงมาในตำแหน่งปกติ */
+/* แถบพื้นหลังสีเทาเต็มความกว้าง */
 .filter-section {
-    position: relative !important;
-    z-index: 2 !important;
-    margin-top: -40px !important; /* ปรับระยะลอยเกย Hero ให้พอดี ไม่ดันสูงเกิน */
-    margin-bottom: 50px !important;
+    width: 100% !important;
+    background-color: #f4f4f7 !important;
+    padding: 36px 0 44px 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-/* 3. ปรับแต่ง Padding ของกล่องค้นหาให้หัวข้อไม่ชิดขอบบน */
-.filter-card {
-    padding: 28px 24px !important;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08) !important;
+.filter-container {
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+    box-sizing: border-box !important;
 }
 
 .filter-title {
-    margin-top: 0 !important;
-    margin-bottom: 20px !important;
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    color: var(--color-primary, #3e2b67) !important;
+    margin: 0 0 20px 0 !important;
 }
 
-/* ==========================================
-   FIX SCROLL OVERLAPPING - NAVBAR Z-INDEX
-   ========================================== */
-
-/* 1. ดึง Navbar ให้ลอยอยู่ชั้นบนสุดเสมอ เวลาเลื่อน Scroll */
-.site-header {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 999 !important; /* อยู่เหนือทุก Element ในหน้าเว็บ */
-    background-color: var(--color-light, #ffffff) !important;
-}
-
-/* 2. กำหนดให้ Filter Card อยู่ในระดับปกติ ไม่ให้ลอยเกิน Header */
-.filter-section {
-    position: relative !important;
-    z-index: 10 !important; /* ต่ำกว่า Header ที่เป็น 999 */
-}
-
-/* ==========================================
-   FIX FULL-WIDTH 1440PX ALIGNMENT
-   ========================================== */
-
-/* 1. คุมให้แท็ก main และ section ขยายเต็มความกว้างขอบจอ */
-.eddoor-home,
-.eddoor-home main,
-.hero-section,
-.filter-section {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
-}
-
-/* 2. บังคับพื้นหลังสีเทาของ Filter Section ขยายเต็ม 100% ไม่หดแคบ */
-.filter-section {
-    background-color: #f4f4f7 !important;
-    padding: 40px 0 50px 0 !important;
-    margin-top: 0 !important;
-    margin-bottom: 40px !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-/* 3. คุม Container ด้านในให้ขยายกว้างเท่ากัน 1440px พอดีเป๊ะทุก Section */
-.eddoor-home .container,
-.hero-container,
-.filter-container {
-    width: 100% !important;
-    max-width: 1440px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-    box-sizing: border-box !important;
-}
-
-/* 4. ลบการ์ดลอยสีขาวออก เพื่อใช้พื้นหลังสีเทาเรียบเนียนเต็มความกว้าง */
-.filter-card {
+/* ลบเงากล่องการ์ดเดิมออกเพื่อใช้สไตล์ใหม่ */
+.filter-card, .filter-box-main {
     background: transparent !important;
+    border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
-    border-radius: 0 !important;
+}
+
+/* เดสก์ท็อป: Dropdown 4 ช่องแนวนอน */
+.filter-inputs {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+    margin-bottom: 16px !important;
+}
+
+.filter-select {
+    width: 100% !important;
+    height: 48px !important;
+    padding: 0 16px !important;
+    border: 1.5px solid var(--color-primary, #3e2b67) !important;
+    border-radius: 12px !important;
+    background-color: #ffffff !important;
+    color: var(--color-primary, #3e2b67) !important;
+    font-family: var(--ff-text, "Prompt", sans-serif) !important;
+    font-size: 0.95rem !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+}
+
+/* ช่องค้นหา + ปุ่มกด บนเดสก์ท็อป */
+.search-action-group {
+    display: flex !important;
+    gap: 16px !important;
+    width: 100% !important;
+}
+
+.search-input-field {
+    flex: 1 !important;
+    height: 48px !important;
+    padding: 0 20px !important;
+    border: 1.5px solid var(--color-primary, #3e2b67) !important;
+    border-radius: 12px !important;
+    background-color: #ffffff !important;
+    color: var(--color-primary, #3e2b67) !important;
+    font-family: var(--ff-text, "Prompt", sans-serif) !important;
+    font-size: 0.95rem !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+}
+
+.search-input-field::placeholder {
+    color: #737373 !important;
+    opacity: 0.85 !important;
+}
+
+.btn-search-main {
+    height: 48px !important;
+    padding: 0 32px !important;
+    background-color: var(--color-primary, #3e2b67) !important;
+    color: #ffffff !important;
     border: none !important;
+    border-radius: 12px !important;
+    font-family: var(--ff-text, "Prompt", sans-serif) !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+}
+
+/* ==========================================
+   📱 ปรับแต่งสำหรับจอมือถือ (<= 428px)
+   ========================================== */
+@media (max-width: 428px) {
+    .filter-container {
+        padding: 0 16px !important;
+    }
+
+    .filter-title {
+        font-size: 1.35rem !important;
+        margin-bottom: 16px !important;
+    }
+
+    /* 1. บังคับ Dropdown 4 ช่องเรียงเป็น 2 คอลัมน์ */
+    .filter-inputs {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .filter-select {
+        height: 44px !important;
+        padding: 0 12px !important;
+        font-size: 0.85rem !important;
+        border-radius: 12px !important;
+    }
+
+    /* 2. บังคับช่องค้นหาและปุ่มกดเป็นแนวตั้งเต็มจอ */
+    .search-action-group {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .search-input-field {
+        width: 100% !important;
+        height: 48px !important;            /* ขยายความสูงช่องใส่ชื่อกิจกรรม */
+        padding: 0 18px !important;
+        font-size: 0.95rem !important;       /* ขยายตัวหนังสือให้อ่านง่าย */
+        border-radius: 12px !important;
+    }
+
+    .btn-search-main {
+        width: 100% !important;
+        height: 48px !important;
+        font-size: 0.95rem !important;
+        border-radius: 12px !important;
+    }
+}
+/* ==========================================
+   SHRINK DROPDOWNS TO MATCH SEARCH INPUT (MOBILE)
+   ========================================== */
+
+@media (max-width: 428px) {
+    /* ปรับขนาดความสูง มุมมน และตัวหนังสือของ Dropdown ทั้ง 4 ช่องให้เล็กลง */
+    .filter-section .filter-select,
+    .filter-inputs .filter-select,
+    select.filter-select {
+        height: 36px !important;                 /* ลดความสูงจาก 48px เหลือ 36px ให้แบนเรียวขึ้น */
+        padding: 0 10px !important;              /* ลดระยะเว้นขอบซ้าย-ขวา */
+        font-size: 0.82rem !important;           /* ลดขนาดตัวอักษรให้กระทัดรัด */
+        border: 1.5px solid #3e2b67 !important;  /* เส้นขอบสีม่วงชัดเจน */
+        border-radius: 20px !important;          /* ปรับขอบมนให้เป็นแคปซูลแบนเท่ากับช่องค้นหาด้านล่าง */
+        background-color: #ffffff !important;
+        box-sizing: border-box !important;
+    }
+
+    /* ปรับระยะห่างระหว่างแถวของ Dropdown ให้กระชับขึ้น */
+    .filter-inputs {
+        gap: 8px 10px !important;
+        margin-bottom: 10px !important;
+    }
+}
+
+/* ==========================================
+   FORCE EXPAND SEARCH INPUT HEIGHT (EXACT MATCH)
+   ========================================== */
+
+/* 1. ขยายกล่องแม่ให้สูงรองรับ */
+.search-bar {
+    height: auto !important;
+    min-height: 54px !important;
+}
+
+/* 2. บังคับตัวช่องกรอกค้นหาให้สูงหนาเท่ารูปตัวอย่างเป้าหมาย */
+.search-bar input.filter-input-search,
+.filter-section .search-bar input,
+input.filter-input-search {
+    display: block !important;
+    width: 100% !important;
+    height: 54px !important;              /* เพิ่มความสูงช่องค้นหาเป็น 54px */
+    min-height: 54px !important;
+    padding: 12px 16px !important;        /* ขยายระยะขอบบน-ล่างให้โปร่งขึ้น */
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;           /* ปรับระยะบรรทัดไม่ให้ถูกบีบแบน */
+    border: 1.5px solid #3e2b67 !important;
+    border-radius: 10px !important;        /* มุมมน 10px ทรงเหลี่ยมสวยเท่ากล่องบน */
+    background-color: #ffffff !important;
+    box-sizing: border-box !important;
+}
+
+/* 3. บังคับขนาดบนจอมือถือ */
+@media (max-width: 428px) {
+    .search-bar input.filter-input-search,
+    .filter-section .search-bar input,
+    input.filter-input-search {
+        height: 42px !important;          /* จอมือถือปรับความสูง 42px ให้หนาสมส่วน */
+        min-height: 42px !important;
+        padding: 10px 14px !important;
+        font-size: 0.9rem !important;
+        border-radius: 6px !important;
+    }
+}
+
+/* ลดความมนลง ให้เป็นทรงเหลี่ยมมนกำลังสวย */
+.filter-section select.filter-select,
+.filter-inputs .filter-select,
+select.filter-select {
+    border-radius: 6px !important; /* ปรับลดจาก 20px เหลือ 10px */
 }
