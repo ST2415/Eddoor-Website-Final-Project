@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eddoor</title>
+    <title>กิจกรรม | Eddoor</title>
     <link rel="stylesheet" href="css/generals.css">
-    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/activity.css">
     <link rel="shortcut icon" href="img/logo/EddoorFavicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
@@ -20,15 +21,15 @@
             </a>
 
             <nav class="navbar_links">
-                <a class="navbar_link is-active" href="index.html">หน้าหลัก</a>
-                <a class="navbar_link" href="activity.html">กิจกรรม</a>
+                <a class="navbar_link" href="index.html">หน้าหลัก</a>
+                <a class="navbar_link is-active" href="activity.html">กิจกรรม</a>
                 <a class="navbar_link" href="trade.html">แลกของรางวัล</a>
                 <a class="navbar_link" href="contact.html">ติดต่อเรา</a>
             </nav>
 
             <div class="navbar_actions">
                 <a class="coin-balance" href="trade.html">
-                    <img src="img/assets/coin.svg" alt="Coin balance">0 COIN
+                    <img src="img/assets/coin.svg" alt="Coin balance">1,250 COIN
                 </a>
                 <a class="login-button" href="#">Login / Sign up</a>
             </div>
@@ -45,7 +46,7 @@
                     <a href="trade.html">แลกของรางวัล</a>
                     <a href="contact.html">ติดต่อเรา</a>
                     <a class="coin-balance" href="trade.html">
-                        <img src="img/assets/coin-white.svg" alt="Coin balance">0 COIN
+                        <img src="img/assets/coin-white.svg" alt="Coin balance">1,250 COIN
                     </a>
                     <a class="login-button" href="#login">Login / Sign up</a>
                 </nav>
@@ -55,7 +56,254 @@
 
 
     <!-- BODY -->
-    <main>
+    <main class="activity-page">
+
+        <!-- HERO -->
+        <section class="activity-hero">
+            <div class="activity-hero_inner">
+                <div class="activity-hero_text">
+                    <span class="activity-hero_tag">โลกจริงรอให้คุณไปเรียนรู้</span>
+                    <h1>ออกไปลองสิ่งที่ยังไม่เคย</h1>
+                    <p>กิจกรรมและคอร์สในสถานที่จริง เลือกความสนใจ แล้วเปิดประตูบานใหม่ของคุณ</p>
+                </div>
+                <a class="activity-hero_button" href="#create">
+                    <i class="fa-solid fa-plus"></i> สร้างกิจกรรม
+                </a>
+            </div>
+        </section>
+
+        <!-- SEARCH -->
+        <section class="activity-search">
+            <div class="activity-search_inner">
+                <h2>อยากลองอะไร ค้นหาได้เลย</h2>
+
+                <form class="activity-search_form" id="activityFilterForm">
+                    <div class="activity-search_selects">
+                        <select id="filterCategory" aria-label="หมวดหมู่">
+                            <option value="">หมวดหมู่</option>
+                            <option value="ศิลปะและงานคราฟต์">ศิลปะและงานคราฟต์</option>
+                            <option value="ธรรมชาติและชุมชน">ธรรมชาติและชุมชน</option>
+                        </select>
+                        <select id="filterPlace" aria-label="พื้นที่">
+                            <option value="">ทุกพื้นที่</option>
+                            <option value="studio">เวิร์กช็อปในสตูดิโอ</option>
+                            <option value="outdoor">กลางแจ้ง</option>
+                        </select>
+                        <select id="filterAge" aria-label="ช่วงวัย">
+                            <option value="">ทุกช่วงวัย</option>
+                            <option value="kid">เด็ก</option>
+                            <option value="teen">วัยรุ่น</option>
+                            <option value="adult">ผู้ใหญ่</option>
+                        </select>
+                        <select id="filterDate" aria-label="ช่วงเวลา">
+                            <option value="">ทุกช่วงเวลา</option>
+                            <option value="week">สัปดาห์นี้</option>
+                            <option value="month">เดือนนี้</option>
+                            <option value="next">เดือนหน้า</option>
+                        </select>
+                    </div>
+
+                    <div class="activity-search_row">
+                        <label class="activity-search_input">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" id="filterKeyword" placeholder="ชื่อกิจกรรม หรือสิ่งที่สนใจ...">
+                        </label>
+                        <button class="activity-search_submit" type="submit">ค้นหากิจกรรม</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ACTIVITY LIST -->
+        <section class="activity-list">
+            <div class="activity-list_inner">
+
+                <div class="activity-list_head">
+                    <h2>กิจกรรมทั้งหมด</h2>
+                    <select id="activitySort" aria-label="เรียงลำดับ">
+                        <option value="latest">เรียงตาม: ล่าสุด</option>
+                        <option value="date">เรียงตาม: วันที่จัดกิจกรรม</option>
+                    </select>
+                </div>
+
+                <div class="activity-grid" id="activityGrid">
+
+                    <article class="activity-card" data-title="ปั้นดินให้เป็นตัวเรา" data-category="ศิลปะและงานคราฟต์"
+                        data-date="2026-10-24">
+                        <div class="activity-card_image">
+                            <img src="img/activity/activity-1.jpg" alt="ปั้นดินให้เป็นตัวเรา">
+                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
+                                <input type="checkbox">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
+                            <span class="activity-card_coin">
+                                <img src="img/assets/coin.svg" alt="">+200 COIN
+                            </span>
+                        </div>
+                        <div class="activity-card_body">
+                            <span class="activity-card_tag">ศิลปะและงานคราฟต์</span>
+                            <h3>ปั้นดินให้เป็นตัวเรา</h3>
+                            <ul class="activity-card_info">
+                                <li><i class="icon icon-calendar"></i>24 ต.ค. 2569 ณ เวลา 13:00–16:00 น.</li>
+                                <li><i class="icon icon-users"></i>8/20 ที่นั่ง</li>
+                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="activity-card" data-title="สวนเล็กๆ ที่เราเริ่มได้" data-category="ธรรมชาติและชุมชน"
+                        data-date="2026-10-25">
+                        <div class="activity-card_image">
+                            <img src="img/activity/activity-2.jpg" alt="สวนเล็กๆ ที่เราเริ่มได้">
+                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
+                                <input type="checkbox">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
+                            <span class="activity-card_coin">
+                                <img src="img/assets/coin.svg" alt="">+200 COIN
+                            </span>
+                        </div>
+                        <div class="activity-card_body">
+                            <span class="activity-card_tag">ธรรมชาติและชุมชน</span>
+                            <h3>สวนเล็กๆ ที่เราเริ่มได้</h3>
+                            <ul class="activity-card_info">
+                                <li><i class="icon icon-calendar"></i>25 ต.ค. 2569 ณ เวลา 09:00–12:00 น.</li>
+                                <li><i class="icon icon-users"></i>4/20 ที่นั่ง</li>
+                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="activity-card" data-title="ถ่ายภาพชีวิตประจำวัน" data-category="ศิลปะและงานคราฟต์"
+                        data-date="2026-10-26">
+                        <div class="activity-card_image">
+                            <img src="img/activity/activity-3.jpg" alt="ถ่ายภาพชีวิตประจำวัน">
+                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
+                                <input type="checkbox">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
+                            <span class="activity-card_coin">
+                                <img src="img/assets/coin.svg" alt="">+100 COIN
+                            </span>
+                        </div>
+                        <div class="activity-card_body">
+                            <span class="activity-card_tag">ศิลปะและงานคราฟต์</span>
+                            <h3>ถ่ายภาพชีวิตประจำวัน</h3>
+                            <ul class="activity-card_info">
+                                <li><i class="icon icon-calendar"></i>26 ต.ค. 2569 ณ เวลา 09:00–12:00 น.</li>
+                                <li><i class="icon icon-users"></i>14/20 ที่นั่ง</li>
+                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="activity-card" data-title="วาดรูปจากประสบการณ์" data-category="ศิลปะและงานคราฟต์"
+                        data-date="2026-10-27">
+                        <div class="activity-card_image">
+                            <img src="img/activity/activity-4.jpg" alt="วาดรูปจากประสบการณ์">
+                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
+                                <input type="checkbox">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
+                            <span class="activity-card_coin">
+                                <img src="img/assets/coin.svg" alt="">+50 COIN
+                            </span>
+                        </div>
+                        <div class="activity-card_body">
+                            <span class="activity-card_tag">ศิลปะและงานคราฟต์</span>
+                            <h3>วาดรูปจากประสบการณ์</h3>
+                            <ul class="activity-card_info">
+                                <li><i class="icon icon-calendar"></i>27 ต.ค. 2569 ณ เวลา 09:00–12:00 น.</li>
+                                <li><i class="icon icon-users"></i>18/20 ที่นั่ง</li>
+                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="activity-card" data-title="ทำอาหารจากวัตถุดิบใกล้ตัว"
+                        data-category="ธรรมชาติและชุมชน" data-date="2026-10-30">
+                        <div class="activity-card_image">
+                            <img src="img/activity/activity-5.jpg" alt="ทำอาหารจากวัตถุดิบใกล้ตัว">
+                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
+                                <input type="checkbox">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
+                            <span class="activity-card_coin">
+                                <img src="img/assets/coin.svg" alt="">+100 COIN
+                            </span>
+                        </div>
+                        <div class="activity-card_body">
+                            <span class="activity-card_tag">ธรรมชาติและชุมชน</span>
+                            <h3>ทำอาหารจากวัตถุดิบใกล้ตัว</h3>
+                            <ul class="activity-card_info">
+                                <li><i class="icon icon-calendar"></i>30 ต.ค. 2569 ณ เวลา 09:00–12:00 น.</li>
+                                <li><i class="icon icon-users"></i>1/20 ที่นั่ง</li>
+                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="activity-card" data-title="ซ่อมผ้าเสื้อผ้า" data-category="ศิลปะและงานคราฟต์"
+                        data-date="2026-11-14">
+                        <div class="activity-card_image">
+                            <img src="img/activity/activity-6.jpg" alt="ซ่อมผ้าเสื้อผ้า">
+                            <label class="activity-card_fav" aria-label="บันทึกกิจกรรม">
+                                <input type="checkbox">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
+                            <span class="activity-card_coin">
+                                <img src="img/assets/coin.svg" alt="">+100 COIN
+                            </span>
+                        </div>
+                        <div class="activity-card_body">
+                            <span class="activity-card_tag">ศิลปะและงานคราฟต์</span>
+                            <h3>ซ่อมผ้าเสื้อผ้า</h3>
+                            <ul class="activity-card_info">
+                                <li><i class="icon icon-calendar"></i>14 พ.ย. 2569 ณ เวลา 09:00–12:00 น.</li>
+                                <li><i class="icon icon-users"></i>7/10 ที่นั่ง</li>
+                                <li><i class="icon icon-pin"></i>เวิร์กช็อปในสตูดิโอ</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="activity-empty" id="activityEmpty" hidden>ไม่พบกิจกรรมที่ตรงกับการค้นหา</p>
+
+                <div class="activity-list_foot">
+                    <p class="activity-list_count" id="activityCount">แสดง 1–6 จาก 24 กิจกรรม</p>
+
+                    <nav class="pagination" aria-label="เลือกหน้า">
+                        <button class="pagination_btn" type="button" data-page="prev">ก่อนหน้า</button>
+                        <button class="pagination_btn is-active" type="button" data-page="1">1</button>
+                        <button class="pagination_btn" type="button" data-page="2">2</button>
+                        <button class="pagination_btn" type="button" data-page="3">3</button>
+                        <button class="pagination_btn" type="button" data-page="4">4</button>
+                        <button class="pagination_btn" type="button" data-page="next">ถัดไป</button>
+                    </nav>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="activity-cta">
+            <div class="activity-cta_inner">
+                <div class="activity-cta_text">
+                    <h2>ชวนคนอื่นมาเรียนรู้จากสิ่งที่คุณรัก</h2>
+                    <p>มีไอเดียกิจกรรมหรือคอร์สเรียน? เริ่มเล่าเรื่องของคุณได้เลย</p>
+                </div>
+                <a class="activity-cta_button" href="#create">
+                    สร้างกิจกรรมของคุณ <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </section>
 
     </main>
 
@@ -69,7 +317,8 @@
                     <a class="footer_logo" href="index.html">
                         <img src="img/logo/Eddoor-logo-white.svg" alt="Eddoor">
                     </a>
-                    <p>Eddoor เรารวมกิจกรรมนอกห้องเรียนที่ได้ ลงมือ ทำจริง เราเชื่อว่าการค้นพบตัวเองไม่ได้ เกิดจากการคิดอย่างเดียวแต่เกิดจากการลอง และเรียนรู้มากกว่าแค่ในห้องเรียน</p>
+                    <p>Eddoor เรารวมกิจกรรมนอกห้องเรียนที่ได้ ลงมือ ทำจริง เราเชื่อว่าการค้นพบตัวเองไม่ได้
+                        เกิดจากการคิดอย่างเดียวแต่เกิดจากการลอง และเรียนรู้มากกว่าแค่ในห้องเรียน</p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
@@ -114,6 +363,88 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('activityGrid');
+            const form = document.getElementById('activityFilterForm');
+            const keyword = document.getElementById('filterKeyword');
+            const category = document.getElementById('filterCategory');
+            const sortSelect = document.getElementById('activitySort');
+            const emptyMsg = document.getElementById('activityEmpty');
+            const countText = document.getElementById('activityCount');
+            const pagination = document.querySelector('.pagination');
+
+            const cards = Array.from(grid.querySelectorAll('.activity-card'));
+            const numberButtons = Array.from(pagination.querySelectorAll('[data-page]'))
+                .filter(b => !isNaN(Number(b.dataset.page)));
+            const TOTAL_ACTIVITIES = 24;
+            const PER_PAGE = 6;
+            let currentPage = 1;
+
+            /* ค้นหาด้วยคำ + หมวดหมู่ */
+            function applyFilter() {
+                const q = keyword.value.trim().toLowerCase();
+                const cat = category.value;
+                const filtering = q || cat;
+                let visible = 0;
+
+                cards.forEach(card => {
+                    const matchText = !q || card.dataset.title.toLowerCase().includes(q);
+                    const matchCat = !cat || card.dataset.category === cat;
+                    const match = matchText && matchCat;
+                    card.hidden = !match;
+                    if (match) visible++;
+                });
+
+                emptyMsg.hidden = visible !== 0;
+                countText.textContent = filtering
+                    ? `พบ ${visible} กิจกรรม`
+                    : `แสดง ${(currentPage - 1) * PER_PAGE + 1}–${currentPage * PER_PAGE} จาก ${TOTAL_ACTIVITIES} กิจกรรม`;
+            }
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                applyFilter();
+            });
+            keyword.addEventListener('input', applyFilter);
+            category.addEventListener('change', applyFilter);
+
+            /* เรียงลำดับ */
+            const originalOrder = cards.slice();
+            sortSelect.addEventListener('change', () => {
+                const sorted = originalOrder.slice();
+                if (sortSelect.value === 'date') {
+                    sorted.sort((a, b) => a.dataset.date.localeCompare(b.dataset.date));
+                }
+                sorted.forEach(card => grid.appendChild(card));
+            });
+
+            /* แบ่งหน้า */
+            function setPage(page) {
+                currentPage = Math.min(Math.max(page, 1), numberButtons.length);
+
+                numberButtons.forEach(btn => {
+                    btn.classList.toggle('is-active', Number(btn.dataset.page) === currentPage);
+                });
+                pagination.querySelector('[data-page="prev"]').disabled = currentPage === 1;
+                pagination.querySelector('[data-page="next"]').disabled = currentPage === numberButtons.length;
+
+                applyFilter();
+            }
+
+            pagination.addEventListener('click', e => {
+                const btn = e.target.closest('[data-page]');
+                if (!btn) return;
+                const value = btn.dataset.page;
+                if (value === 'prev') setPage(currentPage - 1);
+                else if (value === 'next') setPage(currentPage + 1);
+                else setPage(Number(value));
+            });
+
+            setPage(1);
+        });
+    </script>
 </body>
 
 </html>
