@@ -54,545 +54,512 @@
     </header>
 
 
-        <!-- BODY -->
-    <main>
-            <main class="eddoor-home">
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container hero-container">
-        <div class="hero-text">
-            <h1>เปิดประตู<br>ไปลองเป็นตัวเอง</h1>
-            <p class="subtitle">More than classroom</p>
-            <p class="description">
-                ค้นหากิจกรรมที่ใช่ ลองสิ่งที่ไม่เคยทำ 
-                แล้วเก็บประสบการณ์กลับมาใช้ในชีวิตจริง ได้ทักษะ ได้เพื่อน 
-                และได้ COIN เพื่อแลกของรางวัลเพราะโลกคือห้องเรียนขนาดใหญ่ ที่เต็มไปด้วยบทเรียนนอกตำรา
-            </p>
-            <div class="hero-btns">
-                <a href="#" class="btn btn-green">ดูตัวอย่างกิจกรรม<i class="fa-solid fa-angle-right"></i></a>
-                <a href="#" class="btn btn-outline-green">ดูหน้าเทรด<i class="fa-solid fa-angle-right"></i></a>
+    <!-- BODY -->
+    <main class="eddoor-home">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1>เปิดประตู<br>ไปลองเป็นตัวเอง</h1>
+                    <p class="subtitle">More than classroom</p>
+                    <p class="description">
+                        ค้นหากิจกรรมที่ใช่ ลองสิ่งที่ไม่เคยทำ 
+                        แล้วเก็บประสบการณ์กลับมาใช้ในชีวิตจริง ได้ทักษะ ได้เพื่อน 
+                        และได้ COIN เพื่อแลกของรางวัลเพราะโลกคือห้องเรียนขนาดใหญ่ ที่เต็มไปด้วยบทเรียนนอกตำรา
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#" class="btn btn-green">ดูตัวอย่างกิจกรรม<i class="fa-solid fa-angle-right"></i></a>
+                        <a href="#" class="btn btn-outline-green">ดูหน้าเทรด<i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <!-- ป้ายลอยมุมขวาบน (อันเดิม) -->
+                    <div class="badge-float">
+                        <span>ตัวเลือกค้นหาบ่อย</span>
+                        <small>กิจกรรมชวนเพื่อนสนิท</small>
+                    </div>
+
+                    <!-- รูปภาพ Hero -->
+                    <img src="img/img_home_activity/img_hero.jpg" alt="Hero Activity" class="hero-img">
+
+                    <!-- ป้ายลอย +150 COIN มุมซ้ายล่าง (สร้างขึ้นใหม่) -->
+                    <div class="badge-coin-float">
+                        <img src="img/assets/coin-yellow.svg" alt="Coin Sticker" class="coin-sticker-img">
+                        <div class="coin-text-group">
+                            <strong>+150 COIN</strong>
+                            <span>จากการลงมือทำจริง</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="hero-image-wrapper">
-        <!-- ป้ายลอยมุมขวาบน (อันเดิม) -->
-        <div class="badge-float">
-            <span>ตัวเลือกค้นหาบ่อย</span>
-            <small>กิจกรรมชวนเพื่อนสนิท</small>
-        </div>
+        </section>
 
-        <!-- รูปภาพ Hero -->
-        <img src="img/img_home_activity/img_hero.jpg" alt="Hero Activity" class="hero-img">
+        <!-- Filter & Search Section -->
+        <section class="filter-section container">
+            <div class="filter-card">
+                <h3 class="filter-title">อยากลองอะไร ค้นหาได้เลย</h3>
+                <div class="filter-inputs">
+                    <!-- 1. หมวดหมู่ -->
+                    <select class="filter-select" name="category" id="filterCategory">
+                        <option value="" disabled selected>หมวดหมู่</option>
+                        <option value="all">ทั้งหมด</option>
+                        <option value="outdoor">ศิลปะและสื่อบันเทิง</option>
+                        <option value="art">ธรรมชาติและผจญภัย</option>
+                        <option value="game">วิทยาศาสตร์และเทคโนโลยี</option>
+                        <option value="volunteer">ชีวิตและชุมชน</option>
+                        <option value="music">อาหารและสุขภาพ</option>
+                    </select>
 
-        <!-- ป้ายลอย +150 COIN มุมซ้ายล่าง (สร้างขึ้นใหม่) -->
-        <div class="badge-coin-float">
-            <img src="img/assets/coin-yellow.svg" alt="Coin Sticker" class="coin-sticker-img">
-            <div class="coin-text-group">
-            <strong>+150 COIN</strong>
-            <span>จากการลงมือทำจริง</span>
+                    <!-- 2. รูปแบบกิจกรรม -->
+                    <select class="filter-select" name="type" id="filterType">
+                        <option value="" disabled selected>ทุกพื้นที่</option>
+                        <option value="all">ทุกพื้นที่</option>
+                        <option value="onsite">On-site (ลงพื้นที่จริง)</option>
+                        <option value="online">Online (ออนไลน์)</option>
+                        <option value="workshop">Workshop / อบรมเชิงปฏิบัติการ</option>
+                        <option value="camp">ค่าย / ค่ายอาสา</option>
+                    </select>
+
+                    <!-- 3. จังหวัด / พื้นที่ (ครบ 77 จังหวัด) -->
+                    <select class="filter-select" name="location" id="filterLocation">
+                        <option value="" disabled selected>ทุกช่วงวัย</option>
+                        <option value="all">ทุกช่วงวัย</option>
+                        
+                        <optgroup label="กรุงเทพฯ และปริมณฑล">
+                            <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                            <option value="นนทบุรี">นนทบุรี</option>
+                            <option value="ปทุมธานี">ปทุมธานี</option>
+                            <option value="สมุทรปราการ">สมุทรปราการ</option>
+                            <option value="สมุทรสาคร">สมุทรสาคร</option>
+                            <option value="นครปฐม">นครปฐม</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคกลาง">
+                            <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
+                            <option value="อ่างทอง">อ่างทอง</option>
+                            <option value="ลพบุรี">ลพบุรี</option>
+                            <option value="สิงห์บุรี">สิงห์บุรี</option>
+                            <option value="ชัยนาท">ชัยนาท</option>
+                            <option value="สระบุรี">สระบุรี</option>
+                            <option value="นครนายก">นครนายก</option>
+                            <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+                            <option value="สมุทรสงคราม">สมุทรสงคราม</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคตะวันตก">
+                            <option value="เพชรบุรี">เพชรบุรี</option>
+                            <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+                            <option value="กาญจนบุรี">กาญจนบุรี</option>
+                            <option value="ราชบุรี">ราชบุรี</option>
+                            <option value="ตาก">ตาก</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคเหนือ">
+                            <option value="เชียงใหม่">เชียงใหม่</option>
+                            <option value="เชียงราย">เชียงราย</option>
+                            <option value="ลำปาง">ลำปาง</option>
+                            <option value="ลำพูน">ลำพูน</option>
+                            <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+                            <option value="น่าน">น่าน</option>
+                            <option value="พะเยา">พะเยา</option>
+                            <option value="แพร่">แพร่</option>
+                            <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+                            <option value="สุโขทัย">สุโขทัย</option>
+                            <option value="พิษณุโลก">พิษณุโลก</option>
+                            <option value="พิจิตร">พิจิตร</option>
+                            <option value="กำแพงเพชร">กำแพงเพชร</option>
+                            <option value="เพชรบูรณ์">เพชรบูรณ์</option>
+                            <option value="นครสวรรค์">นครสวรรค์</option>
+                            <option value="อุทัยธานี">อุทัยธานี</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคตะวันออกเฉียงเหนือ (อีสาน)">
+                            <option value="ขอนแก่น">ขอนแก่น</option>
+                            <option value="นครราชสีมา">นครราชสีมา</option>
+                            <option value="อุดรธานี">อุดรธานี</option>
+                            <option value="อุบลราชธานี">อุบลราชธานี</option>
+                            <option value="กาฬสินธุ์">กาฬสินธุ์</option>
+                            <option value="ชัยภูมิ">ชัยภูมิ</option>
+                            <option value="นครพนม">นครพนม</option>
+                            <option value="บึงกาฬ">บึงกาฬ</option>
+                            <option value="บุรีรัมย์">บุรีรัมย์</option>
+                            <option value="มหาสารคาม">มหาสารคาม</option>
+                            <option value="มุกดาหาร">มุกดาหาร</option>
+                            <option value="ยโสธร">ยโสธร</option>
+                            <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
+                            <option value="เลย">เลย</option>
+                            <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                            <option value="สกลนคร">สกลนคร</option>
+                            <option value="สุรินทร์">สุรินทร์</option>
+                            <option value="หนองคาย">หนองคาย</option>
+                            <option value="หนองบัวลำภู">หนองบัวลำภู</option>
+                            <option value="อำนาจเจริญ">อำนาจเจริญ</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคตะวันออก">
+                            <option value="ชลบุรี">ชลบุรี</option>
+                            <option value="ระยอง">ระยอง</option>
+                            <option value="จันทบุรี">จันทบุรี</option>
+                            <option value="ตราด">ตราด</option>
+                            <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+                            <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+                            <option value="สระแก้ว">สระแก้ว</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคใต้">
+                            <option value="ภูเก็ต">ภูเก็ต</option>
+                            <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+                            <option value="สงขลา">สงขลา</option>
+                            <option value="กระบี่">กระบี่</option>
+                            <option value="ชุมพร">ชุมพร</option>
+                            <option value="ตรัง">ตรัง</option>
+                            <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+                            <option value="นราธิวาส">นราธิวาส</option>
+                            <option value="ปัตตานี">ปัตตานี</option>
+                            <option value="พังงา">พังงา</option>
+                            <option value="พัทลุง">พัทลุง</option>
+                            <option value="ยะลา">ยะลา</option>
+                            <option value="ระนอง">ระนอง</option>
+                            <option value="สตูล">สตูล</option>
+                        </optgroup>
+                    </select>
+
+                    <!-- 4. ช่วงเวลา (3 ช่วงเวลานาฬิกา) -->
+                    <select class="filter-select" name="timeframe" id="filterTime">
+                        <option value="" disabled selected>ทุกช่วงเวลา</option>
+                        <option value="all">ทุกช่วงเวลา</option>
+                        <option value="morning">ช่วงเช้า (09.00 - 12.00 น.)</option>
+                        <option value="afternoon">ช่วงบ่าย (13.00 - 16.00 น.)</option>
+                        <option value="evening">ช่วงเย็น-ค่ำ (17.00 - 20.00 น.)</option>
+                    </select>
+                </div>
+                <div class="search-bar">
+                    <input type="text" class="filter-input-search" placeholder="ชื่อกิจกรรม หรือสิ่งที่สนใจ...">
+                    <button class="btn-search">ค้นหากิจกรรม</button>
+                </div>
             </div>
-        </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Filter & Search Section -->
-    <section class="filter-section container">
-        <div class="filter-card">
-        <h3 class="filter-title">อยากลองอะไร ค้นหาได้เลย</h3>
-        <div class="filter-inputs">
-            <!-- 1. หมวดหมู่ -->
-            <select class="filter-select" name="category" id="filterCategory">
-                <option value="" disabled selected>หมวดหมู่</option>
-                <option value="all">ทั้งหมด</option>
-                <option value="outdoor">ศิลปะและสื่อบันเทิง</option>
-                <option value="art">ธรรมชาติและผจญภัย</option>
-                <option value="game">วิทยาศาสตร์และเทคโนโลยี</option>
-                <option value="volunteer">ชีวิตและชุมชน</option>
-                <option value="music">อาหารและสุขภาพ</option>
-            </select>
+        <!-- Recommended Activities -->
+        <section class="activities-section container">
+            <h2 class="section-title">กิจกรรมที่แนะนำ</h2>
+            <div class="category-tags">
+                <button class="tag active">ทั้งหมด</button>
+                <button class="tag"><i class="fa-solid fa-seedling"></i> ธรรมชาติและผจญภัย</button>
+                <button class="tag"><i class="fa-solid fa-palette"></i> ศิลปะและสื่อบันเทิง</button>
+                <button class="tag"><i class="fa-solid fa-lightbulb"></i> วิทยาศาสตร์และเทคโนโลยี</button>
+                <button class="tag"><i class="fa-solid fa-handshake"></i> ชีวิตและชุมชน</button>
+                <button class="tag"><i class="fa-solid fa-utensils"></i> อาหารและสุขภาพ</button>
+            </div>
 
-            <!-- 2. รูปแบบกิจกรรม -->
-            <select class="filter-select" name="type" id="filterType">
-                <option value="" disabled selected>รูปแบบกิจกรรม</option>
-                <option value="all">ทั้งหมด</option>
-                <option value="onsite">On-site (ลงพื้นที่จริง)</option>
-                <option value="online">Online (ออนไลน์)</option>
-                <option value="workshop">Workshop / อบรมเชิงปฏิบัติการ</option>
-                <option value="camp">ค่าย / ค่ายอาสา</option>
-            </select>
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <a href="activity-detail.html" class="activity-card-link">
+                    <div class="activity-card category-art">
+                        <div class="card-img-wrapper">
+                            <img src="img/img_home_activity/img_1.jpg" alt="ปั้นดินให้เป็นตัวเรา">
+                            <div class="coin-pill">
+                                <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                <span>+200 COIN</span>
+                            </div>
+                            <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                            <h4>ปั้นดินให้เป็นตัวเรา</h4>
+                            <p class="info">
+                                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                <span>25 ก.ย. 2026 | 09.00-12.00 น.</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                <span>รับ 15 คน</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                <span>อารีย์, กรุงเทพฯ</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
 
-            <!-- 3. จังหวัด / พื้นที่ (ครบ 77 จังหวัด) -->
-            <select class="filter-select" name="location" id="filterLocation">
-                <option value="" disabled selected>จังหวัด / พื้นที่</option>
-                <option value="all">ทุกจังหวัด</option>
+                <!-- Card 2 -->
+                <a href="#" class="activity-card-link">
+                    <div class="activity-card category-nature">
+                        <div class="card-img-wrapper">
+                            <img src="img/img_home_activity/img_2.webp" alt="Activity 2">
+                            <div class="coin-pill">
+                                <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                <span>+200 COIN</span>
+                            </div>
+                            <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">ธรรมชาติและผจญภัย</span>
+                            <h4>สวนปลูก ที่เราสร้าง</h4>
+                            <p class="info">
+                                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                <span>28 ก.ย. 2026</span>
+                                <span class="divider">|</span>
+                                <span>10.00-15.00 น.</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                <span>รับ 20 คน</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                <span>บางกระเจ้า, สมุทรปราการ</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="#" class="activity-card-link">
+                    <div class="activity-card category-art">
+                        <div class="card-img-wrapper">
+                            <img src="img/img_home_activity/img_3.jpg" alt="Activity 3">
+                            <div class="coin-pill">
+                                <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                <span>+100 COIN</span>
+                            </div>
+                            <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                            <h4>ถ่ายภาพชีวิตประจำวัน</h4>
+                            <p class="info">
+                                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                <span>02 ต.ค. 2026</span>
+                                <span class="divider">|</span>
+                                <span>13.00-17.00 น.</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                <span>รับ 10 คน</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                <span>ย่านเจริญกรุง, กรุงเทพฯ</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="#" class="activity-card-link">
+                    <div class="activity-card category-art">
+                        <div class="card-img-wrapper">
+                            <img src="img/img_home_activity/img_4.jpg" alt="Activity 4">
+                            <div class="coin-pill">
+                                <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                <span>+50 COIN</span>
+                            </div>
+                            <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">ศิลปะและสื่อบันเทิง</span>
+                            <h4>วาดภาพและกระดาษทำมือ</h4>
+                            <p class="info">
+                                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                <span>05 ต.ค. 2026</span>
+                                <span class="divider">|</span>
+                                <span>09.00-12.00 น.</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                <span>รับ 12 คน</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                <span>สามย่าน, กรุงเทพฯ</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 5 -->
+                <a href="#" class="activity-card-link">
+                    <div class="activity-card category-food">
+                        <div class="card-img-wrapper">
+                            <img src="img/img_home_activity/img_5.jpg" alt="Activity 5">
+                            <div class="coin-pill">
+                                <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                <span>+100 COIN</span>
+                            </div>
+                            <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">อาหารและสุขภาพ</span>
+                            <h4>ทำอาหารด้วยวัตถุดิบใกล้ตัว</h4>
+                            <p class="info">
+                                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                <span>10 ต.ค. 2026</span>
+                                <span class="divider">|</span>
+                                <span>09.30-13.30 น.</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                <span>รับ 8 คน</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                <span>ลาดพร้าว, กรุงเทพฯ</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 6 -->
+                <a href="#" class="activity-card-link">
+                    <div class="activity-card category-community">
+                        <div class="card-img-wrapper">
+                            <img src="img/img_home_activity/img_6.webp" alt="Activity 6">
+                            <div class="coin-pill">
+                                <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
+                                <span>+100 COIN</span>
+                            </div>
+                            <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">ชีวิตและชุมชน</span>
+                            <h4>ซ่อมแซมเสื้อผ้า</h4>
+                            <p class="info">
+                                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
+                                <span>25 ก.ย. 2026</span>
+                                <span class="divider">|</span>
+                                <span>09.00-12.00 น.</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
+                                <span>รับ 15 คน</span>
+                            </p>
+                            <p class="info">
+                                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
+                                <span>อารีย์, กรุงเทพฯ</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="how-title">เรื่องง่าย ๆ แค่กล้าลอง</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <span class="step-num">01</span>
+                        <h4>เลือกเนื้อหาที่อยากลอง</h4>
+                        <p>เลือกกิจกรรมที่สนใจและเหมาะกับเวลาของคุณ</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">02</span>
+                        <h4>เช็คอินแล้ว ลงมือทำจริง</h4>
+                        <p>เดินทางไปยังสถานที่และเข้าร่วมกิจกรรม</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">03</span>
+                        <h4>รับความรู้และคูปอง</h4>
+                        <p>รับ COIN เพื่อสะสมนำไปแลกของรางวัล</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Invite Organizer Section -->
+        <section class="invite-banner container">
+            <div class="invite-box">
+                <div class="invite-left-content">
+                    <!-- รูปภาพโลโก้ประตูทางซ้าย -->
+                    <img src="img/logo/Symbol.svg" alt="Eddoor Door Icon" class="invite-logo-img">
+                    
+                    <div class="invite-text-group">
+                        <h3>มีอะไรสนุก ๆ อยากชวนคนอื่นลองไหม?</h3>
+                        <p>เปลี่ยนความถนัดของคุณให้เป็นกิจกรรมหรือคอร์สเรียน บอกเล่าไอเดีย วันเวลา และสิ่งที่ผู้เข้าร่วมจะได้ลอง เพื่อเปิดประตูการเรียนรู้ให้คนอื่น</p>
+                    </div>
+                </div>
                 
-                <optgroup label="กรุงเทพฯ และปริมณฑล">
-                    <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-                    <option value="นนทบุรี">นนทบุรี</option>
-                    <option value="ปทุมธานี">ปทุมธานี</option>
-                    <option value="สมุทรปราการ">สมุทรปราการ</option>
-                    <option value="สมุทรสาคร">สมุทรสาคร</option>
-                    <option value="นครปฐม">นครปฐม</option>
-                </optgroup>
-
-                <optgroup label="ภาคกลาง">
-                    <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
-                    <option value="อ่างทอง">อ่างทอง</option>
-                    <option value="ลพบุรี">ลพบุรี</option>
-                    <option value="สิงห์บุรี">สิงห์บุรี</option>
-                    <option value="ชัยนาท">ชัยนาท</option>
-                    <option value="สระบุรี">สระบุรี</option>
-                    <option value="นครนายก">นครนายก</option>
-                    <option value="สุพรรณบุรี">สุพรรณบุรี</option>
-                    <option value="สมุทรสงคราม">สมุทรสงคราม</option>
-                </optgroup>
-
-                <optgroup label="ภาคตะวันตก">
-                    <option value="เพชรบุรี">เพชรบุรี</option>
-                    <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
-                    <option value="กาญจนบุรี">กาญจนบุรี</option>
-                    <option value="ราชบุรี">ราชบุรี</option>
-                    <option value="ตาก">ตาก</option>
-                </optgroup>
-
-                <optgroup label="ภาคเหนือ">
-                    <option value="เชียงใหม่">เชียงใหม่</option>
-                    <option value="เชียงราย">เชียงราย</option>
-                    <option value="ลำปาง">ลำปาง</option>
-                    <option value="ลำพูน">ลำพูน</option>
-                    <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
-                    <option value="น่าน">น่าน</option>
-                    <option value="พะเยา">พะเยา</option>
-                    <option value="แพร่">แพร่</option>
-                    <option value="อุตรดิตถ์">อุตรดิตถ์</option>
-                    <option value="สุโขทัย">สุโขทัย</option>
-                    <option value="พิษณุโลก">พิษณุโลก</option>
-                    <option value="พิจิตร">พิจิตร</option>
-                    <option value="กำแพงเพชร">กำแพงเพชร</option>
-                    <option value="เพชรบูรณ์">เพชรบูรณ์</option>
-                    <option value="นครสวรรค์">นครสวรรค์</option>
-                    <option value="อุทัยธานี">อุทัยธานี</option>
-                </optgroup>
-
-                <optgroup label="ภาคตะวันออกเฉียงเหนือ (อีสาน)">
-                    <option value="ขอนแก่น">ขอนแก่น</option>
-                    <option value="นครราชสีมา">นครราชสีมา</option>
-                    <option value="อุดรธานี">อุดรธานี</option>
-                    <option value="อุบลราชธานี">อุบลราชธานี</option>
-                    <option value="กาฬสินธุ์">กาฬสินธุ์</option>
-                    <option value="ชัยภูมิ">ชัยภูมิ</option>
-                    <option value="นครพนม">นครพนม</option>
-                    <option value="บึงกาฬ">บึงกาฬ</option>
-                    <option value="บุรีรัมย์">บุรีรัมย์</option>
-                    <option value="มหาสารคาม">มหาสารคาม</option>
-                    <option value="มุกดาหาร">มุกดาหาร</option>
-                    <option value="ยโสธร">ยโสธร</option>
-                    <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
-                    <option value="เลย">เลย</option>
-                    <option value="ศรีสะเกษ">ศรีสะเกษ</option>
-                    <option value="สกลนคร">สกลนคร</option>
-                    <option value="สุรินทร์">สุรินทร์</option>
-                    <option value="หนองคาย">หนองคาย</option>
-                    <option value="หนองบัวลำภู">หนองบัวลำภู</option>
-                    <option value="อำนาจเจริญ">อำนาจเจริญ</option>
-                </optgroup>
-
-                <optgroup label="ภาคตะวันออก">
-                    <option value="ชลบุรี">ชลบุรี</option>
-                    <option value="ระยอง">ระยอง</option>
-                    <option value="จันทบุรี">จันทบุรี</option>
-                    <option value="ตราด">ตราด</option>
-                    <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
-                    <option value="ปราจีนบุรี">ปราจีนบุรี</option>
-                    <option value="สระแก้ว">สระแก้ว</option>
-                </optgroup>
-
-                <optgroup label="ภาคใต้">
-                    <option value="ภูเก็ต">ภูเก็ต</option>
-                    <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
-                    <option value="สงขลา">สงขลา</option>
-                    <option value="กระบี่">กระบี่</option>
-                    <option value="ชุมพร">ชุมพร</option>
-                    <option value="ตรัง">ตรัง</option>
-                    <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
-                    <option value="นราธิวาส">นราธิวาส</option>
-                    <option value="ปัตตานี">ปัตตานี</option>
-                    <option value="พังงา">พังงา</option>
-                    <option value="พัทลุง">พัทลุง</option>
-                    <option value="ยะลา">ยะลา</option>
-                    <option value="ระนอง">ระนอง</option>
-                    <option value="สตูล">สตูล</option>
-                </optgroup>
-            </select>
-
-            <!-- 4. ช่วงเวลา (3 ช่วงเวลานาฬิกา) -->
-            <select class="filter-select" name="timeframe" id="filterTime">
-                <option value="" disabled selected>ช่วงเวลา</option>
-                <option value="all">ทุกช่วงเวลา</option>
-                <option value="morning">ช่วงเช้า (09.00 - 12.00 น.)</option>
-                <option value="afternoon">ช่วงบ่าย (13.00 - 16.00 น.)</option>
-                <option value="evening">ช่วงเย็น-ค่ำ (17.00 - 20.00 น.)</option>
-            </select>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="พิมพ์ชื่อกิจกรรม หรือคีย์เวิร์ด...">
-            <button class="btn-search">ค้นหากิจกรรม</button>
-        </div>
-        </div>
-    </section>
-
-    <!-- Recommended Activities -->
-    <section class="activities-section container">
-        <h2 class="section-title">กิจกรรมที่แนะนำ</h2>
-        <div class="category-tags">
-        <button class="tag active">ทั้งหมด</button>
-        <button class="tag">ศิลปะและสื่อบันเทิง</button>
-        <button class="tag">ธรรมชาติและผจญภัย</button>
-        <button class="tag">วิทยาศาสตร์และเทคโนโลยี</button>
-        <button class="tag">ชีวิตและชุมชน</button>
-        <button class="tag">อาหารและสุขภาพ</button>
-        </div>
-
-        <div class="cards-grid">
-        <!-- Card 1 -->
-        <a href="activity-detail.html" class="activity-card-link">
-            <div class="activity-card">
-            <div class="card-img-wrapper">
-                <img src="img/img_home_activity/img_1.jpg" alt="ปั้นดินให้เป็นตัวเรา">
-                <div class="coin-pill">
-                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
-                    <span>+200 COIN</span>
-                </div>
-                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
+                <!-- ปุ่มสร้างกิจกรรม -->
+                <a href="#" class="btn btn-primary-round">
+                    <span>สร้างกิจกรรม</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
             </div>
-            <div class="card-content">
-                <h4>ปั้นดินให้เป็นตัวเรา</h4>
-                <p class="info">
-                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
-                <span>25 ก.ย. 2026 | 09.00-12.00 น.</span>
-                </p>
-                <p class="info">
-                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
-                <span>รับ 15 คน</span>
-                </p>
-                <p class="info">
-                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
-                <span>อารีย์, กรุงเทพฯ</span>
-                </p>
-            </div>
-            </div>
-        </a>
-
-        <!-- Card 2 -->
-         <a href="#" class="activity-card-link">
-            <div class="activity-card">
-            <div class="card-img-wrapper">
-                <img src="img/img_home_activity/img_2.webp" alt="Activity 2">
-                <div class="coin-pill">
-                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
-                    <span>+200 COIN</span>
-                </div>
-                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-            </div>
-            <div class="card-content">
-            <h4>สวนปลูก ที่เราสร้าง</h4>
-            
-            <!-- บรรทัดวันที่และเวลา -->
-            <p class="info">
-                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
-                <span>28 ก.ย. 2026</span>
-                <span class="divider">|</span>
-                <!-- <img src="assets/logo/icon-time.png" alt="Time" class="card-info-icon"> -->
-                <span>10.00-15.00 น.</span>
-            </p>
-            
-            <!-- บรรทัดจำนวนคน -->
-            <p class="info">
-                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
-                <span>รับ 20 คน</span>
-            </p>
-            
-            <!-- บรรทัดสถานที่ -->
-            <p class="info">
-                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
-                <span>บางกระเจ้า, สมุทรปราการ</span>
-            </p>
-            </div>
-            </div>
-        </a>
-
-        <!-- Card 3 -->
-         <a href="#" class="activity-card-link">
-            <div class="activity-card">
-            <div class="card-img-wrapper">
-                <img src="img/img_home_activity/img_3.jpg" alt="Activity 3">
-                <div class="coin-pill">
-                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
-                    <span>+100 COIN</span>
-                </div>
-                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-            </div>
-            <div class="card-content">
-            <h4>ถ่ายภาพชีวิตประจำวัน</h4>
-            
-            <!-- บรรทัดวันที่และเวลา -->
-            <p class="info">
-                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
-                <span>02 ต.ค. 2026</span>
-                <span class="divider">|</span>
-                <!-- <img src="assets/logo/icon-time.png" alt="Time" class="card-info-icon"> -->
-                <span>13.00-17.00 น.</span>
-            </p>
-            
-            <!-- บรรทัดจำนวนคน -->
-            <p class="info">
-                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
-                <span>รับ 10 คน</span>
-            </p>
-            
-            <!-- บรรทัดสถานที่ -->
-            <p class="info">
-                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
-                <span>ย่านเจริญกรุง, กรุงเทพฯ</span>
-            </p>
-            </div>
-            </div>
-        </a>
-
-        <!-- Card 4 -->
-        <a href="#" class="activity-card-link">
-            <div class="activity-card">
-            <div class="card-img-wrapper">
-                <img src="img/img_home_activity/img_4.jpg" alt="Activity 4">
-                <div class="coin-pill">
-                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
-                    <span>+50 COIN</span>
-                </div>
-                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-            </div>
-            <div class="card-content">
-            <h4>วาดภาพและกระดาษทำมือ</h4>
-            
-            <!-- บรรทัดวันที่และเวลา -->
-            <p class="info">
-                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
-                <span>05 ต.ค. 2026</span>
-                <span class="divider">|</span>
-                <!-- <img src="assets/logo/icon-time.png" alt="Time" class="card-info-icon"> -->
-                <span>09.00-12.00 น.</span>
-            </p>
-            
-            <!-- บรรทัดจำนวนคน -->
-            <p class="info">
-                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
-                <span>รับ 12 คน</span>
-            </p>
-            
-            <!-- บรรทัดสถานที่ -->
-            <p class="info">
-                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
-                <span>สามย่าน, กรุงเทพฯ</span>
-            </p>
-            </div>
-            </div>
-        </a>
-
-        <!-- Card 5 -->
-        <a href="#" class="activity-card-link">
-            <div class="activity-card">
-            <div class="card-img-wrapper">
-                <img src="img/img_home_activity/img_5.jpg" alt="Activity 5">
-                <div class="coin-pill">
-                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
-                    <span>+100 COIN</span>
-                </div>
-                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-            </div>
-            <div class="card-content">
-            <h4>ทำอาหารด้วยวัตถุดิบใกล้ตัว</h4>
-            
-            <!-- บรรทัดวันที่และเวลา -->
-            <p class="info">
-                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
-                <span>10 ต.ค. 2026</span>
-                <span class="divider">|</span>
-                <!-- <img src="assets/logo/icon-time.png" alt="Time" class="card-info-icon"> -->
-                <span>09.30-13.30 น.</span>
-            </p>
-            
-            <!-- บรรทัดจำนวนคน -->
-            <p class="info">
-                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
-                <span>รับ 8 คน</span>
-            </p>
-            
-            <!-- บรรทัดสถานที่ -->
-            <p class="info">
-                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
-                <span>ลาดพร้าว, กรุงเทพฯ</span>
-            </p>
-            </div>
-            </div>
-        </a>
-
-        <!-- Card 6 -->
-        <a href="#" class="activity-card-link">
-            <div class="activity-card">
-            <div class="card-img-wrapper">
-                <img src="img/img_home_activity/img_6.webp" alt="Activity 6">
-                <div class="coin-pill">
-                    <img src="img/assets/coin.svg" alt="Coin" class="coin-small-icon">
-                    <span>+100 COIN</span>
-                </div>
-                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-            </div>
-            <div class="card-content">
-            <h4>ซ่อมแซมเสื้อผ้า</h4>
-            
-            <!-- บรรทัดวันที่และเวลา -->
-            <p class="info">
-                <img src="img/img_home_activity/calendar.png" alt="Date" class="card-info-icon">
-                <span>25 ก.ย. 2026</span>
-                <span class="divider">|</span>
-                <!-- <img src="assets/logo/icon-time.png" alt="Time" class="card-info-icon"> -->
-                <span>09.00-12.00 น.</span>
-            </p>
-            
-            <!-- บรรทัดจำนวนคน -->
-            <p class="info">
-                <img src="img/img_home_activity/users.png" alt="People" class="card-info-icon">
-                <span>รับ 15 คน</span>
-            </p>
-            
-            <!-- บรรทัดสถานที่ -->
-            <p class="info">
-                <img src="img/img_home_activity/location.png" alt="Location" class="card-info-icon">
-                <span>อารีย์, กรุงเทพฯ</span>
-            </p>
-            </div>
-            </div>
-        </a>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <div class="container">
-        <h2 class="how-title">เรื่องง่าย ๆ แค่กล้าลอง</h2>
-        <div class="steps-grid">
-            <div class="step-card">
-            <span class="step-num">01</span>
-            <h4>เลือกเนื้อหาที่อยากลอง</h4>
-            <p>เลือกกิจกรรมที่สนใจและเหมาะกับเวลาของคุณ</p>
-            </div>
-            <div class="step-card">
-            <span class="step-num">02</span>
-            <h4>เช็คอินแล้ว ลงมือทำจริง</h4>
-            <p>เดินทางไปยังสถานที่และเข้าร่วมกิจกรรม</p>
-            </div>
-            <div class="step-card">
-            <span class="step-num">03</span>
-            <h4>รับความรู้และคูปอง</h4>
-            <p>รับ COIN เพื่อสะสมนำไปแลกของรางวัล</p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Invite Organizer Section -->
-    <section class="invite-banner container">
-        <div class="invite-box">
-            <div class="invite-left-content">
-            <!-- รูปภาพโลโก้ประตูทางซ้าย -->
-            <img src="img/logo/Symbol.svg" alt="Eddoor Door Icon" class="invite-logo-img">
-            
-            <div class="invite-text-group">
-                <h3>มีอะไรสนุก ๆ อยากชวนคนอื่นลองไหม?</h3>
-                <p>เปลี่ยนความถนัดของคุณให้เป็นกิจกรรมหรือคอร์สเรียน บอกเล่าไอเดีย วันเวลา และสิ่งที่ผู้เข้าร่วมจะได้ลอง เพื่อเปิดประตูการเรียนรู้ให้คนอื่น</p>
-            </div>
-            </div>
-            
-            <!-- ปุ่มสร้างกิจกรรม -->
-            <a href="#" class="btn btn-primary-round">
-                <span>สร้างกิจกรรม</span>
-                <i class="fa-solid fa-angle-right"></i>
-            </a>
-        </div>
         </section>
 
-    <!-- Coin Section -->
+        <!-- Coin Section -->
         <section class="coin-section">
-        <div class="container coin-container">
-            <!-- ฝั่งซ้าย: ข้อความและปุ่ม -->
-            <div class="coin-text">
-            <span class="coin-tagline">รางวัลของคนออกไปลอง</span>
-            <h2>เปลี่ยน COIN เป็นความสุข</h2>
-            <p class="coin-desc">ความพยายามของคุณ แลกเป็นของที่ใช้ได้จริง</p>
-            <div class="coin-btns">
-                <a href="#" class="btn btn-exchange-friend">แลกเหรียญกับเพื่อน</a>
-                <a href="#" class="btn btn-get-coin">รับเหรียญเพิ่ม</a>
-            </div>
-            </div>
+            <div class="container coin-container">
+                <!-- ฝั่งซ้าย: ข้อความและปุ่ม -->
+                <div class="coin-text">
+                    <span class="coin-tagline">รางวัลของคนออกไปลอง</span>
+                    <h2>เปลี่ยน COIN เป็นความสุข</h2>
+                    <p class="coin-desc">ความพยายามของคุณ แลกเป็นของที่ใช้ได้จริง</p>
+                    <div class="coin-btns">
+                        <a href="#" class="btn btn-exchange-friend">แลกเหรียญกับเพื่อน</a>
+                        <a href="#" class="btn btn-get-coin">รับเหรียญเพิ่ม</a>
+                    </div>
+                </div>
 
-            <!-- ฝั่งขวา: การ์ดสีเหลืองแสดงแต้ม COIN -->
-            <div class="coin-display-card">
-            <div class="coin-card-header">
-                <!-- ใส่พาธรูปไอคอนเหรียญของคุณตรงนี้ หรือใช้อีโมจิ 🪙 ก็ได้ครับ -->
-                <img src="img/assets/coin.svg" alt="Coin" class="coin-card-icon">
-                <span>เหรียญของคุณตอนนี้</span>
+                <!-- ฝั่งขวา: การ์ดสีเหลืองแสดงแต้ม COIN -->
+                <div class="coin-display-card">
+                    <div class="coin-card-header">
+                        <img src="img/assets/coin.svg" alt="Coin" class="coin-card-icon">
+                        <span>เหรียญของคุณตอนนี้</span>
+                    </div>
+                    <h3 class="coin-amount">1,250</h3>
+                    <p class="coin-note">COIN พร้อมแลก · ไม่มีมูลค่าเงินสด</p>
+                </div>
             </div>
-            <h3 class="coin-amount">1,250</h3>
-            <p class="coin-note">COIN พร้อมแลก · ไม่มีมูลค่าเงินสด</p>
-            </div>
-        </div>
         </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section container">
-        <div class="faq-grid">
-        <div class="faq-header">
-            <h3>ยังสงสัยอยู่ไหม?</h3>
-            <p>หาคำตอบเบื้องต้น ได้จากคำถามที่พบบ่อย</p>
-        </div>
-        <div class="faq-list">
-            <div class="faq-item">
-            <h4>เข้าร่วมกิจกรรม มีค่าใช้จ่ายไหม?</h4>
-            <p>มีทั้งกิจกรรมฟรีและกิจกรรมที่มีค่าวัสดุอุปกรณ์ ซึ่งจะระบุไว้อย่างชัดเจน</p>
+        <!-- FAQ Section -->
+        <section class="faq-section container">
+            <div class="faq-grid">
+                <div class="faq-header">
+                    <h3>ยังสงสัยอยู่ไหม?</h3>
+                    <p>หาคำตอบเบื้องต้น ได้จากคำถามที่พบบ่อย</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h4>เข้าร่วมกิจกรรม มีค่าใช้จ่ายไหม?</h4>
+                        <p>มีทั้งกิจกรรมฟรีและกิจกรรมที่มีค่าวัสดุอุปกรณ์ ซึ่งจะระบุไว้อย่างชัดเจน</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>ผู้จัดสามารถจัดกิจกรรมแบบไหนได้บ้าง?</h4>
+                        <p>สามารถจัดได้หลากหลายประเภทตามทักษะและความถนัดของคุณ</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>COIN ใช้ทำอะไรได้บ้าง?</h4>
+                        <p>นำไปแลกเป็นส่วนลดค่ากิจกรรม หรือของรางวัลพิเศษจากพาร์ทเนอร์</p>
+                    </div>
+                </div>
             </div>
-            <div class="faq-item">
-            <h4>ผู้จัดสามารถจัดกิจกรรมแบบไหนได้บ้าง?</h4>
-            <p>สามารถจัดได้หลากหลายประเภทตามทักษะและความถนัดของคุณ</p>
-            </div>
-            <div class="faq-item">
-            <h4>COIN ใช้ทำอะไรได้บ้าง?</h4>
-            <p>นำไปแลกเป็นส่วนลดค่ากิจกรรม หรือของรางวัลพิเศษจากพาร์ทเนอร์</p>
-            </div>
-        </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Bottom Callout Section -->
-    <section class="bottom-cta">
-        <div class="container text-center">
-        <h2>ประตูบานต่อไปอาจเป็นสิ่งที่ใช่สำหรับคุณ</h2>
-            <button class="btn btn-primary-round">ค้นหากิจกรรมกันเลย<i class="fa-solid fa-angle-right"></i></button>
-        </div>
-    </section>
+        <!-- Bottom Callout Section -->
+        <section class="bottom-cta">
+            <div class="container text-center">
+                <h2>ประตูบานต่อไปอาจเป็นสิ่งที่ใช่สำหรับคุณ</h2>
+                <button class="btn btn-primary-round">ค้นหากิจกรรมกันเลย<i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </section>
     </main>
-        </main>
-
-
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -648,6 +615,4 @@
         </div>
     </footer>
 </body>
-
-
 </html>
