@@ -73,45 +73,151 @@
         </section>
 
         <!-- SEARCH -->
-        <section class="activity-search">
-            <div class="activity-search_inner">
-                <h2>อยากลองอะไร ค้นหาได้เลย</h2>
+        <section class="filter-section container">
+            <div class="filter-card">
+                <h3 class="filter-title">อยากลองอะไร ค้นหาได้เลย</h3>
+                <div class="filter-inputs">
+                    <!-- 1. หมวดหมู่ -->
+                    <select class="filter-select" name="category" id="filterCategory">
+                        <option value="" disabled selected>หมวดหมู่</option>
+                        <option value="all">ทั้งหมด</option>
+                        <option value="outdoor">ศิลปะและสื่อบันเทิง</option>
+                        <option value="art">ธรรมชาติและผจญภัย</option>
+                        <option value="game">วิทยาศาสตร์และเทคโนโลยี</option>
+                        <option value="volunteer">ชีวิตและชุมชน</option>
+                        <option value="music">อาหารและสุขภาพ</option>
+                    </select>
 
-                <form class="activity-search_form" id="activityFilterForm">
-                    <div class="activity-search_selects">
-                        <select id="filterCategory" aria-label="หมวดหมู่">
-                            <option value="">หมวดหมู่</option>
-                            <option value="ศิลปะและงานคราฟต์">ศิลปะและงานคราฟต์</option>
-                            <option value="ธรรมชาติและชุมชน">ธรรมชาติและชุมชน</option>
-                        </select>
-                        <select id="filterPlace" aria-label="พื้นที่">
-                            <option value="">ทุกพื้นที่</option>
-                            <option value="studio">เวิร์กช็อปในสตูดิโอ</option>
-                            <option value="outdoor">กลางแจ้ง</option>
-                        </select>
-                        <select id="filterAge" aria-label="ช่วงวัย">
-                            <option value="">ทุกช่วงวัย</option>
-                            <option value="kid">เด็ก</option>
-                            <option value="teen">วัยรุ่น</option>
-                            <option value="adult">ผู้ใหญ่</option>
-                        </select>
-                        <select id="filterDate" aria-label="ช่วงเวลา">
-                            <option value="">ทุกช่วงเวลา</option>
-                            <option value="week">สัปดาห์นี้</option>
-                            <option value="month">เดือนนี้</option>
-                            <option value="next">เดือนหน้า</option>
-                        </select>
-                    </div>
+                    <!-- 2. รูปแบบกิจกรรม -->
+                    <select class="filter-select" name="type" id="filterType">
+                        <option value="" disabled selected>รูปแบบกิจกรรม</option>
+                        <option value="all">รูปแบบกิจกรรม</option>
+                        <option value="onsite">On-site (ลงพื้นที่จริง)</option>
+                        <option value="online">Online (ออนไลน์)</option>
+                        <option value="workshop">Workshop / อบรมเชิงปฏิบัติการ</option>
+                        <option value="camp">ค่าย / ค่ายอาสา</option>
+                    </select>
 
-                    <div class="activity-search_row">
-                        <label class="activity-search_input">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="search" id="filterKeyword" placeholder="ชื่อกิจกรรม หรือสิ่งที่สนใจ...">
-                        </label>
-                        <button class="activity-search_submit" type="submit">ค้นหากิจกรรม</button>
+                    <!-- 3. จังหวัด / พื้นที่ (ครบ 77 จังหวัด) -->
+                    <select class="filter-select" name="location" id="filterLocation">
+                        <option value="" disabled selected>ทุกพื้นที่</option>
+                        <option value="all">ทุกพื้นที่</option>
+                        
+                        <optgroup label="กรุงเทพฯ และปริมณฑล">
+                            <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                            <option value="นนทบุรี">นนทบุรี</option>
+                            <option value="ปทุมธานี">ปทุมธานี</option>
+                            <option value="สมุทรปราการ">สมุทรปราการ</option>
+                            <option value="สมุทรสาคร">สมุทรสาคร</option>
+                            <option value="นครปฐม">นครปฐม</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคกลาง">
+                            <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option>
+                            <option value="อ่างทอง">อ่างทอง</option>
+                            <option value="ลพบุรี">ลพบุรี</option>
+                            <option value="สิงห์บุรี">สิงห์บุรี</option>
+                            <option value="ชัยนาท">ชัยนาท</option>
+                            <option value="สระบุรี">สระบุรี</option>
+                            <option value="นครนายก">นครนายก</option>
+                            <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+                            <option value="สมุทรสงคราม">สมุทรสงคราม</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคตะวันตก">
+                            <option value="เพชรบุรี">เพชรบุรี</option>
+                            <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+                            <option value="กาญจนบุรี">กาญจนบุรี</option>
+                            <option value="ราชบุรี">ราชบุรี</option>
+                            <option value="ตาก">ตาก</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคเหนือ">
+                            <option value="เชียงใหม่">เชียงใหม่</option>
+                            <option value="เชียงราย">เชียงราย</option>
+                            <option value="ลำปาง">ลำปาง</option>
+                            <option value="ลำพูน">ลำพูน</option>
+                            <option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+                            <option value="น่าน">น่าน</option>
+                            <option value="พะเยา">พะเยา</option>
+                            <option value="แพร่">แพร่</option>
+                            <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+                            <option value="สุโขทัย">สุโขทัย</option>
+                            <option value="พิษณุโลก">พิษณุโลก</option>
+                            <option value="พิจิตร">พิจิตร</option>
+                            <option value="กำแพงเพชร">กำแพงเพชร</option>
+                            <option value="เพชรบูรณ์">เพชรบูรณ์</option>
+                            <option value="นครสวรรค์">นครสวรรค์</option>
+                            <option value="อุทัยธานี">อุทัยธานี</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคตะวันออกเฉียงเหนือ (อีสาน)">
+                            <option value="ขอนแก่น">ขอนแก่น</option>
+                            <option value="นครราชสีมา">นครราชสีมา</option>
+                            <option value="อุดรธานี">อุดรธานี</option>
+                            <option value="อุบลราชธานี">อุบลราชธานี</option>
+                            <option value="กาฬสินธุ์">กาฬสินธุ์</option>
+                            <option value="ชัยภูมิ">ชัยภูมิ</option>
+                            <option value="นครพนม">นครพนม</option>
+                            <option value="บึงกาฬ">บึงกาฬ</option>
+                            <option value="บุรีรัมย์">บุรีรัมย์</option>
+                            <option value="มหาสารคาม">มหาสารคาม</option>
+                            <option value="มุกดาหาร">มุกดาหาร</option>
+                            <option value="ยโสธร">ยโสธร</option>
+                            <option value="ร้อยเอ็ด">ร้อยเอ็ด</option>
+                            <option value="เลย">เลย</option>
+                            <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                            <option value="สกลนคร">สกลนคร</option>
+                            <option value="สุรินทร์">สุรินทร์</option>
+                            <option value="หนองคาย">หนองคาย</option>
+                            <option value="หนองบัวลำภู">หนองบัวลำภู</option>
+                            <option value="อำนาจเจริญ">อำนาจเจริญ</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคตะวันออก">
+                            <option value="ชลบุรี">ชลบุรี</option>
+                            <option value="ระยอง">ระยอง</option>
+                            <option value="จันทบุรี">จันทบุรี</option>
+                            <option value="ตราด">ตราด</option>
+                            <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+                            <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+                            <option value="สระแก้ว">สระแก้ว</option>
+                        </optgroup>
+
+                        <optgroup label="ภาคใต้">
+                            <option value="ภูเก็ต">ภูเก็ต</option>
+                            <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+                            <option value="สงขลา">สงขลา</option>
+                            <option value="กระบี่">กระบี่</option>
+                            <option value="ชุมพร">ชุมพร</option>
+                            <option value="ตรัง">ตรัง</option>
+                            <option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+                            <option value="นราธิวาส">นราธิวาส</option>
+                            <option value="ปัตตานี">ปัตตานี</option>
+                            <option value="พังงา">พังงา</option>
+                            <option value="พัทลุง">พัทลุง</option>
+                            <option value="ยะลา">ยะลา</option>
+                            <option value="ระนอง">ระนอง</option>
+                            <option value="สตูล">สตูล</option>
+                        </optgroup>
+                    </select>
+
+                    <!-- 4. ช่วงเวลา (3 ช่วงเวลานาฬิกา) -->
+                    <select class="filter-select" name="timeframe" id="filterTime">
+                        <option value="" disabled selected>ทุกช่วงเวลา</option>
+                        <option value="all">ทุกช่วงเวลา</option>
+                        <option value="morning">ช่วงเช้า (09.00 - 12.00 น.)</option>
+                        <option value="afternoon">ช่วงบ่าย (13.00 - 16.00 น.)</option>
+                        <option value="evening">ช่วงเย็น-ค่ำ (17.00 - 20.00 น.)</option>
+                    </select>
+                </div>
+                <div class="search-bar">
+                    <div class="search-input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" class="filter-input-search" placeholder="ชื่อกิจกรรม หรือสิ่งที่สนใจ...">
                     </div>
-                </form>
-            </div>
+                    <button class="btn-search">ค้นหากิจกรรม</button>
+                </div>
         </section>
 
         <!-- ACTIVITY LIST -->
