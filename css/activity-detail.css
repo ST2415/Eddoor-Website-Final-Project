@@ -231,6 +231,14 @@ main,
     color: transparent;
 }
 
+.detail-gallery_main>img {
+    transition: opacity 0.12s ease;
+}
+
+.detail-gallery_main>img.is-changing {
+    opacity: 0;
+}
+
 .detail-gallery_thumbs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -569,10 +577,38 @@ main,
     opacity: 0.8;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* =========================================================
+   RESPONSIVE (แท็บเล็ต / มือถือ)
+   ========================================================= */
 @media (max-width: 992px) {
+    .detail-hero {
+        padding: 36px 20px 40px;
+    }
+
     .detail-hero_grid {
         grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .detail-gallery {
+        max-width: 560px;
+    }
+
+    .detail-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 20px;
+    }
+
+    .detail-info_item--date,
+    .detail-info_item--place,
+    .detail-info_item--host {
+        grid-column: 1 / -1;
+    }
+
+    .detail-content,
+    .detail-more {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .detail-more_grid {
@@ -581,32 +617,183 @@ main,
 }
 
 @media (max-width: 640px) {
+    .detail-hero {
+        padding: 24px 16px 32px;
+    }
+
+    .detail-breadcrumb {
+        margin-bottom: 14px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .detail-hero_grid {
+        gap: 22px;
+    }
+
+    .detail-gallery {
+        max-width: none;
+    }
+
+    .detail-gallery_main {
+        border-radius: 14px;
+    }
+
+    .detail-gallery_thumbs {
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .detail-fav--large {
+        top: 10px;
+        right: 10px;
+        width: 44px;
+        height: 44px;
+        font-size: 19px;
+    }
+
+    .detail-coin {
+        right: 10px;
+        bottom: 10px;
+        height: 36px;
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    .detail-coin img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .detail-tags {
+        gap: 10px;
+    }
+
+    .detail-tag {
+        height: 40px;
+        padding: 0 14px;
+        gap: 8px;
+        font-size: 14px;
+    }
+
     .detail-summary h1 {
-        font-size: 34px;
+        margin: 14px 0 20px;
+        font-size: 32px;
     }
 
     .detail-info {
         grid-template-columns: 1fr;
+        gap: 18px;
     }
 
-    .detail-info_item--host {
+    .detail-info_item--seats,
+    .detail-info_item--reward {
         grid-column: 1;
+    }
+
+    .detail-info_label,
+    .detail-info_value {
+        font-size: 14px;
     }
 
     .detail-actions {
         grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 24px;
     }
 
-    .detail-content h2,
-    .detail-more h2 {
+    .detail-button {
+        height: 48px;
+    }
+
+    .detail-content {
+        padding: 40px 16px 36px;
+    }
+
+    .detail-content h2 {
         font-size: 26px;
     }
 
+    .detail-content_lead,
+    .detail-content_prepare,
+    .detail-content_list li {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .detail-content_lead {
+        margin-top: 16px;
+    }
+
+    .detail-content_prepare {
+        margin-top: 26px;
+    }
+
+    .detail-content_subtitle {
+        margin-top: 34px;
+        margin-bottom: 14px;
+    }
+
     .detail-schedule_item {
-        gap: 18px;
+        gap: 16px;
+        min-height: 0;
+        padding: 14px 16px;
+        border-radius: 14px;
+    }
+
+    .detail-schedule_time {
+        width: 48px;
+        font-size: 17px;
+    }
+
+    .detail-schedule_item strong {
+        font-size: 16px;
+    }
+
+    .detail-schedule_item p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .detail-more {
+        padding: 40px 16px 36px;
+    }
+
+    .detail-more h2 {
+        margin-bottom: 18px;
+        font-size: 26px;
     }
 
     .detail-more_grid {
         grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .detail-card_body {
+        padding: 18px 16px 20px;
+    }
+
+    .detail-card_body h3 {
+        font-size: 21px;
+    }
+
+    .detail-card_info li {
+        gap: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .detail-summary h1 {
+        font-size: 28px;
+    }
+
+    .detail-tag {
+        font-size: 13px;
+        padding: 0 12px;
+    }
+
+    .detail-schedule_item {
+        gap: 12px;
     }
 }

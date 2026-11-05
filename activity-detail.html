@@ -82,7 +82,7 @@
                                     <i class="fa-solid fa-heart"></i>
                                 </label>
                                 <span class="detail-coin">
-                                    <img src="img/assets/coin.svg" alt="">+150 COIN
+                                    <img src="img/assets/coin.svg" alt="">+200 COIN
                                 </span>
                             </div>
                             <div class="detail-gallery_thumbs">
@@ -347,18 +347,36 @@
     </footer>
 
     <script>
-        /* เปลี่ยนรูปใหญ่เมื่อคลิกรูปย่อ */
+        /* กดรูปย่อ → แสดงรูปนั้นเป็นรูปใหญ่ */
         document.addEventListener('DOMContentLoaded', () => {
             const mainImage = document.getElementById('detailMainImage');
             const thumbs = document.querySelectorAll('.detail-gallery_thumb');
+            if (!mainImage || !thumbs.length) return;
 
-            thumbs.forEach(thumb => {
-                thumb.addEventListener('click', () => {
-                    mainImage.src = thumb.dataset.full;
-                    thumbs.forEach(t => t.classList.remove('is-active'));
-                    thumb.classList.add('is-active');
-                });
-            });
+            /* ใช้รูปจากปุ่มที่กดโดยตรง (ไม่ต้องพึ่งไฟล์อื่น) */
+            const srcOf = thumb => thumb.querySelector('img').getAttribute('src');
+
+            function show(thumb) {
+                const src = srcOf(thumb);
+                if (mainImage.getAttribute('src') === src) return;
+
+                mainImage.classList.add('is-changing');
+                setTimeout(() => {
+                    mainImage.src = src;
+                    mainImage.classList.remove('is-changing');
+                }, 120);
+
+                thumbs.forEach(t => t.classList.remove('is-active'));
+                thumb.classList.add('is-active');
+            }
+
+            thumbs.forEach(thumb => thumb.addEventListener('click', () => show(thumb)));
+
+            /* ถ้ารูปใหญ่โหลดไม่ได้ ให้ใช้รูปแรกในแถบรูปย่อแทน */
+            mainImage.addEventListener('error', () => {
+                const fallback = srcOf(thumbs[0]);
+                if (mainImage.getAttribute('src') !== fallback) mainImage.src = fallback;
+            }, { once: true });
         });
     </script>
 </body>
