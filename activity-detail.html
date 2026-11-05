@@ -64,8 +64,8 @@
                 <div class="detail-hero_inner">
 
                     <nav class="detail-breadcrumb" aria-label="breadcrumb">
-                        <a href="index.html">Home</a> /
-                        <a href="activity.html">Activity</a> /
+                        <a href="index.html">Home</a>
+                        <a href="activity.html">Activity</a>
                         <span>ปั้นดินให้เป็นตัวเรา</span>
                     </nav>
 
@@ -76,11 +76,9 @@
                             <div class="detail-gallery_main">
                                 <img id="detailMainImage" src="img/img_home_activity/img_1.jpg"
                                     alt="ปั้นดินให้เป็นตัวเรา">
-                                <label class="btn-favorite" aria-label="บันทึกกิจกรรม">
-                                    <input type="checkbox">
+                                <button type="button" class="btn-favorite" title="บันทึกสิ่งที่สนใจ" aria-label="บันทึกสิ่งที่สนใจ">
                                     <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-solid fa-heart"></i>
-                                </label>
+                                </button>
                                 <span class="coin-pill">
                                     <img src="img/assets/coin.svg" alt="">+200 COIN
                                 </span>
@@ -366,21 +364,9 @@
         </div>
     </footer>
 
-    <script>
-        /* เปลี่ยนรูปใหญ่เมื่อคลิกรูปย่อ */
-        document.addEventListener('DOMContentLoaded', () => {
-            const mainImage = document.getElementById('detailMainImage');
-            const thumbs = document.querySelectorAll('.detail-gallery_thumb');
-
-            thumbs.forEach(thumb => {
-                thumb.addEventListener('click', () => {
-                    mainImage.src = thumb.dataset.full;
-                    thumbs.forEach(t => t.classList.remove('is-active'));
-                    thumb.classList.add('is-active');
-                });
-            });
-        });
-    </script>
+    <script src="js/generals-function.js"></script>
+    <script src="js/activity-details-function.js"></script>
+    
 </body>
 
 </html>
