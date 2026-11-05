@@ -83,7 +83,7 @@
                         </div>
                         
                         <div class="survey-footer">
-                            <button type="button" class="btn-next" id="btnNext" disabled>ถัดไป ›</button>
+                            <button type="button" class="btn btn-primary" id="btnNext">ถัดไป<i class="fa-solid fa-angle-right"></i></button>
                         </div>
                     </div>
 
@@ -182,7 +182,7 @@
                         <textarea id="message" name="message" rows="5" placeholder="เล่ารายละเอียดเรื่องที่ต้องการสอบถาม หากเกี่ยวกับรายการแลกของรางวัล โปรดระบุรหัสรายการ โดยไม่ส่งรหัสผ่านหรือข้อมูลอ่อนไหว"></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit">ส่งข้อความ</button>
+                    <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
                 </form>
             </section>
         </div>
@@ -333,7 +333,7 @@
             if (index === quizData.length - 1) {
                 btnNext.innerText = "เสร็จสิ้น ✓";
             } else {
-                btnNext.innerText = "ถัดไป ›";
+                btnNext.innerText = "ถัดไป";
             }
 
             // สร้างการ์ดตัวเลือก 6 ข้อ
