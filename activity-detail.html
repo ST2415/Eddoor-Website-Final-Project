@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eddoor</title>
     <link rel="stylesheet" href="css/generals.css">
-    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/activity-detail.css">
     <link rel="shortcut icon" href="img/logo/EddoorFavicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
@@ -56,7 +57,228 @@
 
     <!-- BODY -->
     <main>
+        <div class="detail-page">
 
+            <!-- รายละเอียดหลัก -->
+            <section class="detail-hero">
+                <div class="detail-hero_inner">
+
+                    <nav class="detail-breadcrumb" aria-label="breadcrumb">
+                        <a href="index.html">Home</a> /
+                        <a href="activity.html">Activity</a> /
+                        <span>ปั้นดินให้เป็นตัวเรา</span>
+                    </nav>
+
+                    <div class="detail-hero_grid">
+
+                        <!-- รูปภาพ -->
+                        <div class="detail-gallery">
+                            <div class="detail-gallery_main">
+                                <img id="detailMainImage" src="img/activity/detail-1.jpg" alt="ปั้นดินให้เป็นตัวเรา">
+                                <label class="detail-fav detail-fav--large" aria-label="บันทึกกิจกรรม">
+                                    <input type="checkbox">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </label>
+                                <span class="detail-coin">
+                                    <img src="img/assets/coin.svg" alt="">+150 COIN
+                                </span>
+                            </div>
+                            <div class="detail-gallery_thumbs">
+                                <button class="detail-gallery_thumb" type="button" data-full="img/activity/detail-1.jpg"
+                                    aria-label="ดูรูปที่ 1">
+                                    <img src="img/activity/detail-1.jpg" alt="">
+                                </button>
+                                <button class="detail-gallery_thumb" type="button" data-full="img/activity/detail-2.jpg"
+                                    aria-label="ดูรูปที่ 2">
+                                    <img src="img/activity/detail-2.jpg" alt="">
+                                </button>
+                                <button class="detail-gallery_thumb" type="button" data-full="img/activity/detail-3.jpg"
+                                    aria-label="ดูรูปที่ 3">
+                                    <img src="img/activity/detail-3.jpg" alt="">
+                                </button>
+                                <button class="detail-gallery_thumb" type="button" data-full="img/activity/detail-4.jpg"
+                                    aria-label="ดูรูปที่ 4">
+                                    <img src="img/activity/detail-4.jpg" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- สรุปกิจกรรม -->
+                        <div class="detail-summary">
+                            <div class="detail-tags">
+                                <span class="detail-tag"><i class="icon icon-palette"></i>ศิลปะและงานคราฟต์</span>
+                                <span class="detail-tag">15–20 ปี</span>
+                                <span class="detail-tag detail-tag--open">เปิดรับสมัคร</span>
+                            </div>
+
+                            <h1>ปั้นดินให้เป็นตัวเรา</h1>
+
+                            <div class="detail-info">
+                                <div class="detail-info_item detail-info_item--date">
+                                    <i class="icon icon-calendar"></i>
+                                    <span class="detail-info_label">วันและเวลา</span>
+                                    <strong class="detail-info_value">24 ต.ค. 2569 ณ เวลา 13:00–16:00 น.</strong>
+                                </div>
+                                <div class="detail-info_item detail-info_item--seats">
+                                    <i class="icon icon-users"></i>
+                                    <span class="detail-info_label">จำนวนที่รับสมัคร</span>
+                                    <strong class="detail-info_value">8/20 ที่นั่ง</strong>
+                                </div>
+                                <div class="detail-info_item detail-info_item--reward">
+                                    <i class="icon icon-award"></i>
+                                    <span class="detail-info_label">สิ่งที่ได้รับ</span>
+                                    <strong class="detail-info_value">เหรียญ, เกียรติบัตร</strong>
+                                </div>
+                                <div class="detail-info_item detail-info_item--place">
+                                    <i class="icon icon-pin"></i>
+                                    <span class="detail-info_label">สถานที่จัดกิจกรรม</span>
+                                    <strong class="detail-info_value">หอศิลปวัฒนธรรมแห่งกรุงเทพมหานคร<br>939 ถ.พระราม 1
+                                        แขวงวังใหม่ เขตปทุมวัน</strong>
+                                </div>
+                                <div class="detail-info_item detail-info_item--host">
+                                    <i class="icon icon-building"></i>
+                                    <span class="detail-info_label">จัดโดย</span>
+                                    <strong class="detail-info_value">นางกนกวรรณ พันธุ์กาฬ</strong>
+                                </div>
+                            </div>
+
+                            <div class="detail-actions">
+                                <a class="detail-button detail-button--outline"
+                                    href="#how-to-join">วิธีการสมัครกิจกรรม</a>
+                                <a class="detail-button detail-button--solid" href="#join">สมัครเข้าร่วมกิจกรรม</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- เนื้อหา + ตารางเวลา -->
+            <section class="detail-content">
+                <div class="detail-content_inner">
+                    <h2>ตัวกรองของรางวัล</h2>
+                    <p class="detail-content_lead">เวิร์กช็อปปั้นดินด้วยมือที่จะชวนคุณค่อย ๆ สังเกต สัมผัส
+                        และสร้างชิ้นงานในแบบของตัวเอง ไม่จำเป็นต้องมีพื้นฐาน ทุกคนเริ่มต้นจากก้อนดินเดียวกัน
+                        แต่กลับบ้านพร้อมเรื่องราวที่ไม่เหมือนกัน</p>
+
+                    <p class="detail-content_prepare">สิ่งที่ต้องเตรียมตัว</p>
+                    <ul class="detail-content_list">
+                        <li>สวมเสื้อผ้าที่เลอะดินได้</li>
+                        <li>นำขวดน้ำและผ้าเช็ดมือส่วนตัว</li>
+                        <li>มาถึงก่อนเวลา 15 นาที</li>
+                        <li>แจ้งอาการแพ้หรือข้อจำกัดกับผู้จัด</li>
+                    </ul>
+
+                    <h2 class="detail-content_subtitle">ตารางเวลา</h2>
+                    <ul class="detail-schedule">
+                        <li class="detail-schedule_item">
+                            <span class="detail-schedule_time">13:00</span>
+                            <div>
+                                <strong>รู้จักเพื่อนและวัสดุ</strong>
+                                <p>ลองสัมผัสดิน ดูตัวอย่าง และคิดไอเดียชิ้นงาน</p>
+                            </div>
+                        </li>
+
+                        <li class="detail-schedule_item">
+                            <span class="detail-schedule_time">13:30</span>
+                            <div>
+                                <strong>ลงมือปั้นชิ้นงานของเรา</strong>
+                                <p>เรียนรู้เทคนิคปั้น ขึ้นรูป และตกแต่งลวดลาย</p>
+                            </div>
+                        </li>
+
+                        <li class="detail-schedule_item">
+                            <span class="detail-schedule_time">15:30</span>
+                            <div>
+                                <strong>แชร์เรื่องราวและสรุปการเรียนรู้</strong>
+                                <p>นำเสนอผลงาน เช็กการเข้าร่วม และรับ 150 COIN</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+            <!-- กิจกรรมเพิ่มเติม -->
+            <section class="detail-more">
+                <div class="detail-more_inner">
+                    <h2>สำรวจกิจกรรมเพิ่มเติม</h2>
+                    <div class="detail-more_grid">
+                        <article class="detail-card">
+                            <div class="detail-card_image">
+                                <img src="img/activity/related-1.jpg" alt="นักปลูกตัวจิ๋ว สำรวจสวน">
+                                <label class="detail-fav" aria-label="บันทึกกิจกรรม">
+                                    <input type="checkbox">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </label>
+                                <span class="detail-coin">
+                                    <img src="img/assets/coin.svg" alt="">+50 COIN
+                                </span>
+                            </div>
+                            <div class="detail-card_body">
+                                <span class="detail-card_tag">ศิลปะและสื่อบันเทิง</span>
+                                <h3>นักปลูกตัวจิ๋ว สำรวจสวน</h3>
+                                <ul class="detail-card_info">
+                                    <li><i class="icon icon-calendar"></i>10 พ.ย. 2569 ณ เวลา 09:00–12:00 น.</li>
+                                    <li><i class="icon icon-users"></i>10/20 ที่นั่ง</li>
+                                    <li><i class="icon icon-pin"></i>สวนวชิรเบญจทัศ กรุงเทพฯ</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="detail-card">
+                            <div class="detail-card_image">
+                                <img src="img/activity/related-2.jpg" alt="เล่าเรื่องเมืองผ่านเลนส์">
+                                <label class="detail-fav" aria-label="บันทึกกิจกรรม">
+                                    <input type="checkbox">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </label>
+                                <span class="detail-coin">
+                                    <img src="img/assets/coin.svg" alt="">+120 COIN
+                                </span>
+                            </div>
+                            <div class="detail-card_body">
+                                <span class="detail-card_tag">ศิลปะและสื่อบันเทิง</span>
+                                <h3>เล่าเรื่องเมืองผ่านเลนส์</h3>
+                                <ul class="detail-card_info">
+                                    <li><i class="icon icon-calendar"></i>30 ต.ค. 2569 ณ เวลา 09:00–12:00 น.</li>
+                                    <li><i class="icon icon-users"></i>1/20 ที่นั่ง</li>
+                                    <li><i class="icon icon-pin"></i>ย่านเจริญกรุง กรุงเทพฯ</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="detail-card">
+                            <div class="detail-card_image">
+                                <img src="img/activity/related-3.jpg" alt="ทดลองสนุก จุดประกายวิทย์">
+                                <label class="detail-fav" aria-label="บันทึกกิจกรรม">
+                                    <input type="checkbox">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-solid fa-heart"></i>
+                                </label>
+                                <span class="detail-coin">
+                                    <img src="img/assets/coin.svg" alt="">+80 COIN
+                                </span>
+                            </div>
+                            <div class="detail-card_body">
+                                <span class="detail-card_tag">วิทยาศาสตร์และเทคโนโลยี</span>
+                                <h3>ทดลองสนุก จุดประกายวิทย์</h3>
+                                <ul class="detail-card_info">
+                                    <li><i class="icon icon-calendar"></i>14 พ.ย. 2569 ณ เวลา 09:00–12:00 น.</li>
+                                    <li><i class="icon icon-users"></i>9/10 ที่นั่ง</li>
+                                    <li><i class="icon icon-pin"></i>พิพิธภัณฑ์วิทยาศาสตร์ ปทุมธานี</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </main>
 
 
@@ -69,7 +291,8 @@
                     <a class="footer_logo" href="index.html">
                         <img src="img/logo/Eddoor-logo-white.svg" alt="Eddoor">
                     </a>
-                    <p>Eddoor เรารวมกิจกรรมนอกห้องเรียนที่ได้ ลงมือ ทำจริง เราเชื่อว่าการค้นพบตัวเองไม่ได้ เกิดจากการคิดอย่างเดียวแต่เกิดจากการลอง และเรียนรู้มากกว่าแค่ในห้องเรียน</p>
+                    <p>Eddoor เรารวมกิจกรรมนอกห้องเรียนที่ได้ ลงมือ ทำจริง เราเชื่อว่าการค้นพบตัวเองไม่ได้
+                        เกิดจากการคิดอย่างเดียวแต่เกิดจากการลอง และเรียนรู้มากกว่าแค่ในห้องเรียน</p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
@@ -114,6 +337,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        /* เปลี่ยนรูปใหญ่เมื่อคลิกรูปย่อ */
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainImage = document.getElementById('detailMainImage');
+            const thumbs = document.querySelectorAll('.detail-gallery_thumb');
+
+            thumbs.forEach(thumb => {
+                thumb.addEventListener('click', () => {
+                    mainImage.src = thumb.dataset.full;
+                    thumbs.forEach(t => t.classList.remove('is-active'));
+                    thumb.classList.add('is-active');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
