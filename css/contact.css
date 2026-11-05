@@ -2,7 +2,6 @@
    Eddoor - Contact Page Clean & Responsive CSS
    ========================================== */
 
-/* คุมความกว้างเนื้อหาตรงกลาง 1200px ให้ตรงกันทุกส่วน */
 .container {
   width: 100%;
 }
@@ -291,9 +290,7 @@
   transform: translateY(-2px);
 }
 
-/* ==========================================
-   📱 Responsive Mobile Layout (<= 768px)
-   ========================================== */
+/* Responsive Mobile Layout (428px) */
 @media (max-width: 428px) {
 
   /* 1. จัดการระยะขอบคอนเทนเนอร์หลักให้อยู่ที่ 24px */

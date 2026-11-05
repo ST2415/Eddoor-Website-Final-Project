@@ -384,31 +384,71 @@ a.activity-card-link:hover .card-img-wrapper img {
 }
 
 
+/* PAGINATION (ใช้ร่วมกันทุกหน้า) */
+.pagination-container,
+.activity-list_foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 36px;
+}
 
-@media (max-width: 1280px) and (min-width: 1101px) {
-    .site-header {
-        padding: 0 32px;
-    }
+.pagination-info,
+.activity-list_count {
+    font-size: var(--fs-small, 14px);
+    color: var(--color-grey);
+}
 
-    .navbar {
-        gap: 20px;
-    }
+.pagination {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid #d8d6e0;
+    border-radius: var(--radius-sm, 8px);
+    overflow: hidden;
+    background-color: var(--color-light);
+}
 
-    .navbar_links {
-        gap: 20px;
-    }
+.pagination_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 48px;
+    padding: 0 16px;
+    border: none;
+    border-left: 1px solid #d8d6e0;
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    font-family: var(--ff-text, inherit);
+    font-size: var(--fs-small, 14px);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
 
-    .navbar_actions {
-        gap: 12px;
-    }
+.pagination_btn:first-child {
+    border-left: none;
+    font-weight: 400;
+}
 
-    .coin-balance {
-        padding: 0 12px;
-    }
+.pagination_btn:last-child {
+    font-weight: 400;
+}
 
-    .login-button {
-        padding: 0 18px;
-    }
+.pagination_btn:hover:not(:disabled) {
+    background-color: #f1eef9;
+}
+
+.pagination_btn.is-active {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.pagination_btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
 }
 
 .navbar_logo,
@@ -794,5 +834,18 @@ main {
         display: flex;
         flex-direction: column;
         gap: 8px;
+    }
+    
+    .pagination-container,
+    .activity-list_foot {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

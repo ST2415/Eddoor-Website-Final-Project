@@ -873,15 +873,16 @@
 
                     </div>
 
-                    <!-- แถบเลขหน้า (Pagination) -->
-                    <div class="pagination-container">
-                        <span class="pagination-info" id="paginationInfo">แสดง 1 - 5 จาก 15 รายการรางวัล</span>
-                        <nav class="pagination-nav" aria-label="หน้ารายการของรางวัล">
-                            <a href="#" class="page-btn" id="prevPageBtn">ก่อนหน้า</a>
-                            <a href="#" class="page-number is-active" data-page="1">1</a>
-                            <a href="#" class="page-number" data-page="2">2</a>
-                            <a href="#" class="page-number" data-page="3">3</a>
-                            <a href="#" class="page-btn" id="nextPageBtn">ถัดไป</a>
+                    <!-- แถบเลขหน้า (Pagination) --><!-- แถบเลขหน้า (Pagination) แบบเดียวกับ Activity -->
+                    <div class="activity-list_foot pagination-container">
+                        <p class="activity-list_count" id="activityCount">แสดง 1–5 จาก 15 รายการรางวัล</p>
+
+                        <nav class="pagination" aria-label="หน้ารายการของรางวัล">
+                            <button class="pagination_btn" type="button" data-page="prev">ก่อนหน้า</button>
+                            <button class="pagination_btn is-active" type="button" data-page="1">1</button>
+                            <button class="pagination_btn" type="button" data-page="2">2</button>
+                            <button class="pagination_btn" type="button" data-page="3">3</button>
+                            <button class="pagination_btn" type="button" data-page="next">ถัดไป</button>
                         </nav>
                     </div>
 
