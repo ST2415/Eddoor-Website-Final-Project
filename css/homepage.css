@@ -1099,3 +1099,30 @@ input.filter-input-search {
 select.filter-select {
     border-radius: 6px !important; /* ปรับลดจาก 20px เหลือ 10px */
 }
+
+/* ==========================================
+   CUSTOM DROPDOWN ARROW (CUSTOM PADDING)
+   ========================================== */
+
+.filter-section select.filter-select,
+.filter-inputs .filter-select,
+select.filter-select {
+    -webkit-appearance: none !important;      /* ซ่อนลูกศรเดิมของ Chrome / Safari */
+    -moz-appearance: none !important;         /* ซ่อนลูกศรเดิมของ Firefox */
+    appearance: none !important;              /* ซ่อนลูกศรเดิมมาตรฐาน */
+    
+    /* ใส่ลูกศรใหม่สีม่วงเข้ม */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%233e2b67' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 14px center !important; /* ดันไอคอนลูกศรให้อยู่ห่างจากขอบขวา 14px */
+    padding-right: 32px !important;                     /* เว้นพื้นที่ไม่ให้ข้อความไปทับลูกศร */
+}
+
+@media (max-width: 428px) {
+    .filter-section select.filter-select,
+    .filter-inputs .filter-select,
+    select.filter-select {
+        background-position: right 12px center !important; /* ระยะขอบขวาบนมือถือ */
+        padding-right: 28px !important;
+    }
+}
